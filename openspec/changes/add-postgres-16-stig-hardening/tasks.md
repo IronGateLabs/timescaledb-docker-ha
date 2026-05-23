@@ -40,8 +40,14 @@
 
 ## 6. Final Verification
 
-- [ ] 6.1 Run the default build or existing checks to confirm non-STIG behavior is unchanged
+- [x] 6.1 Run the default build or existing checks to confirm non-STIG behavior is unchanged
 - [x] 6.2 Build the STIG PostgreSQL 16 image variant and run smoke checks
 - [x] 6.3 Run the reproducible validation workflow against the hardened image
-- [ ] 6.4 Update traceability with final pass, fail, manual, deployment-owned, and exception statuses
+- [x] 6.4 Update traceability with final pass, fail, manual, deployment-owned, and exception statuses
 - [x] 6.5 Run `openspec validate add-postgres-16-stig-hardening --strict` and resolve any reported issues
+
+Verification notes:
+
+- `make latest` completed successfully with `STIG_ENABLED=false`, validating the normal non-STIG latest-image path.
+- `make fast` was attempted first and failed while compiling TimescaleDB 2.17.0 for PostgreSQL 17 with a build jobserver error; that failure occurred outside STIG mode and was not used as the final non-STIG verification signal.
+- Final traceability classification is conservative: 61 controls are `validation_only` through forked-profile mapping candidates, and 50 controls are `manual`.

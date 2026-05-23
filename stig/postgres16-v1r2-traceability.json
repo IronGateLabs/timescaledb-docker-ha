@@ -14,13 +14,15 @@
       "cci_refs": [
         "CCI-000054"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233511"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261858",
@@ -30,13 +32,13 @@
       "cci_refs": [
         "CCI-000015"
       ],
-      "status": "not_yet_reviewed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
       "implemented_by": [],
       "validated_by": [],
-      "notes": ""
+      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
     },
     {
       "control_id": "V-261859",
@@ -46,13 +48,13 @@
       "cci_refs": [
         "CCI-000213"
       ],
-      "status": "not_yet_reviewed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
       "implemented_by": [],
       "validated_by": [],
-      "notes": ""
+      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
     },
     {
       "control_id": "V-261860",
@@ -62,13 +64,15 @@
       "cci_refs": [
         "CCI-000166"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233514"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261861",
@@ -78,13 +82,13 @@
       "cci_refs": [
         "CCI-000169"
       ],
-      "status": "not_yet_reviewed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
       "implemented_by": [],
       "validated_by": [],
-      "notes": ""
+      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
     },
     {
       "control_id": "V-261862",
@@ -94,13 +98,15 @@
       "cci_refs": [
         "CCI-000171"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233516"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261863",
@@ -110,13 +116,15 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233517"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261864",
@@ -126,13 +134,13 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "not_yet_reviewed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
       "implemented_by": [],
       "validated_by": [],
-      "notes": ""
+      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
     },
     {
       "control_id": "V-261865",
@@ -142,13 +150,13 @@
       "cci_refs": [
         "CCI-001464"
       ],
-      "status": "not_yet_reviewed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
       "implemented_by": [],
       "validated_by": [],
-      "notes": ""
+      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
     },
     {
       "control_id": "V-261866",
@@ -158,13 +166,13 @@
       "cci_refs": [
         "CCI-000130"
       ],
-      "status": "not_yet_reviewed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
       "implemented_by": [],
       "validated_by": [],
-      "notes": ""
+      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
     },
     {
       "control_id": "V-261867",
@@ -192,13 +200,15 @@
       "cci_refs": [
         "CCI-000132"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233522"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261869",
@@ -208,13 +218,15 @@
       "cci_refs": [
         "CCI-000133"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233523"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261870",
@@ -224,13 +236,15 @@
       "cci_refs": [
         "CCI-000134"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233524"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261871",
@@ -240,13 +254,13 @@
       "cci_refs": [
         "CCI-001487"
       ],
-      "status": "not_yet_reviewed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
       "implemented_by": [],
       "validated_by": [],
-      "notes": ""
+      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
     },
     {
       "control_id": "V-261872",
@@ -256,13 +270,13 @@
       "cci_refs": [
         "CCI-000135"
       ],
-      "status": "not_yet_reviewed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
       "implemented_by": [],
       "validated_by": [],
-      "notes": ""
+      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
     },
     {
       "control_id": "V-261873",
@@ -344,13 +358,15 @@
       "cci_refs": [
         "CCI-000164"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233530"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261878",
@@ -360,13 +376,15 @@
       "cci_refs": [
         "CCI-001493"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233531"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261879",
@@ -376,13 +394,15 @@
       "cci_refs": [
         "CCI-001494"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233532"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261880",
@@ -392,13 +412,15 @@
       "cci_refs": [
         "CCI-001495"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233533"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261881",
@@ -408,13 +430,15 @@
       "cci_refs": [
         "CCI-001499"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233534"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261882",
@@ -424,13 +448,13 @@
       "cci_refs": [
         "CCI-001499"
       ],
-      "status": "not_yet_reviewed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
       "implemented_by": [],
       "validated_by": [],
-      "notes": ""
+      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
     },
     {
       "control_id": "V-261883",
@@ -440,13 +464,13 @@
       "cci_refs": [
         "CCI-001499"
       ],
-      "status": "not_yet_reviewed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
       "implemented_by": [],
       "validated_by": [],
-      "notes": ""
+      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
     },
     {
       "control_id": "V-261884",
@@ -474,13 +498,15 @@
       "cci_refs": [
         "CCI-001499"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233538"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261886",
@@ -490,13 +516,13 @@
       "cci_refs": [
         "CCI-000381"
       ],
-      "status": "not_yet_reviewed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
       "implemented_by": [],
       "validated_by": [],
-      "notes": ""
+      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
     },
     {
       "control_id": "V-261887",
@@ -506,13 +532,15 @@
       "cci_refs": [
         "CCI-000381"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233541"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261888",
@@ -522,13 +550,13 @@
       "cci_refs": [
         "CCI-000381"
       ],
-      "status": "not_yet_reviewed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
       "implemented_by": [],
       "validated_by": [],
-      "notes": ""
+      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
     },
     {
       "control_id": "V-261889",
@@ -556,13 +584,15 @@
       "cci_refs": [
         "CCI-000764"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233543"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261891",
@@ -572,13 +602,13 @@
       "cci_refs": [
         "CCI-000196"
       ],
-      "status": "not_yet_reviewed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
       "implemented_by": [],
       "validated_by": [],
-      "notes": ""
+      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
     },
     {
       "control_id": "V-261892",
@@ -588,13 +618,13 @@
       "cci_refs": [
         "CCI-000197"
       ],
-      "status": "not_yet_reviewed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
       "implemented_by": [],
       "validated_by": [],
-      "notes": ""
+      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
     },
     {
       "control_id": "V-261893",
@@ -604,13 +634,15 @@
       "cci_refs": [
         "CCI-000185"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233546"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261894",
@@ -620,13 +652,13 @@
       "cci_refs": [
         "CCI-000186"
       ],
-      "status": "not_yet_reviewed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
       "implemented_by": [],
       "validated_by": [],
-      "notes": ""
+      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
     },
     {
       "control_id": "V-261895",
@@ -636,13 +668,15 @@
       "cci_refs": [
         "CCI-000187"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233549"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261896",
@@ -652,13 +686,13 @@
       "cci_refs": [
         "CCI-000803"
       ],
-      "status": "not_yet_reviewed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
       "implemented_by": [],
       "validated_by": [],
-      "notes": ""
+      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
     },
     {
       "control_id": "V-261897",
@@ -668,13 +702,15 @@
       "cci_refs": [
         "CCI-000804"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233552"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261898",
@@ -684,13 +720,15 @@
       "cci_refs": [
         "CCI-001082"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233553"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261899",
@@ -700,13 +738,15 @@
       "cci_refs": [
         "CCI-001185"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233554"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261900",
@@ -716,13 +756,15 @@
       "cci_refs": [
         "CCI-001188"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233556"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261901",
@@ -732,13 +774,13 @@
       "cci_refs": [
         "CCI-001199"
       ],
-      "status": "not_yet_reviewed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
       "implemented_by": [],
       "validated_by": [],
-      "notes": ""
+      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
     },
     {
       "control_id": "V-261902",
@@ -748,13 +790,15 @@
       "cci_refs": [
         "CCI-001084"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233560"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261903",
@@ -764,13 +808,15 @@
       "cci_refs": [
         "CCI-001090"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233561"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261904",
@@ -780,13 +826,15 @@
       "cci_refs": [
         "CCI-001090"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233563"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261905",
@@ -796,13 +844,15 @@
       "cci_refs": [
         "CCI-001310"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233564"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261906",
@@ -812,13 +862,15 @@
       "cci_refs": [
         "CCI-001310"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233565"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261907",
@@ -828,13 +880,15 @@
       "cci_refs": [
         "CCI-001310"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233566"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261908",
@@ -844,13 +898,15 @@
       "cci_refs": [
         "CCI-001312"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233567"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261909",
@@ -860,13 +916,15 @@
       "cci_refs": [
         "CCI-001314"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233568"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261910",
@@ -876,13 +934,15 @@
       "cci_refs": [
         "CCI-002361"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233569"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261911",
@@ -892,13 +952,15 @@
       "cci_refs": [
         "CCI-002262"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233571"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261912",
@@ -908,13 +970,15 @@
       "cci_refs": [
         "CCI-002263"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233572"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261913",
@@ -924,13 +988,15 @@
       "cci_refs": [
         "CCI-002264"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233573"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261914",
@@ -940,13 +1006,15 @@
       "cci_refs": [
         "CCI-002165"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233574"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261915",
@@ -956,13 +1024,15 @@
       "cci_refs": [
         "CCI-002235"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233575"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261916",
@@ -972,13 +1042,15 @@
       "cci_refs": [
         "CCI-002233"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233576"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261917",
@@ -988,13 +1060,15 @@
       "cci_refs": [
         "CCI-001844"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233577"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261918",
@@ -1004,13 +1078,15 @@
       "cci_refs": [
         "CCI-001849"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233579"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261919",
@@ -1020,13 +1096,13 @@
       "cci_refs": [
         "CCI-001855"
       ],
-      "status": "not_yet_reviewed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
       "implemented_by": [],
       "validated_by": [],
-      "notes": ""
+      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
     },
     {
       "control_id": "V-261920",
@@ -1054,13 +1130,13 @@
       "cci_refs": [
         "CCI-001890"
       ],
-      "status": "not_yet_reviewed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
       "implemented_by": [],
       "validated_by": [],
-      "notes": ""
+      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
     },
     {
       "control_id": "V-261922",
@@ -1070,13 +1146,13 @@
       "cci_refs": [
         "CCI-001889"
       ],
-      "status": "not_yet_reviewed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
       "implemented_by": [],
       "validated_by": [],
-      "notes": ""
+      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
     },
     {
       "control_id": "V-261923",
@@ -1086,13 +1162,15 @@
       "cci_refs": [
         "CCI-001812"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233581"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261924",
@@ -1102,13 +1180,15 @@
       "cci_refs": [
         "CCI-001813"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233582"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261925",
@@ -1118,13 +1198,13 @@
       "cci_refs": [
         "CCI-001814"
       ],
-      "status": "not_yet_reviewed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
       "implemented_by": [],
       "validated_by": [],
-      "notes": ""
+      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
     },
     {
       "control_id": "V-261926",
@@ -1134,13 +1214,13 @@
       "cci_refs": [
         "CCI-001762"
       ],
-      "status": "not_yet_reviewed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
       "implemented_by": [],
       "validated_by": [],
-      "notes": ""
+      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
     },
     {
       "control_id": "V-261927",
@@ -1150,13 +1230,13 @@
       "cci_refs": [
         "CCI-002038"
       ],
-      "status": "not_yet_reviewed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
       "implemented_by": [],
       "validated_by": [],
-      "notes": ""
+      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
     },
     {
       "control_id": "V-261928",
@@ -1166,13 +1246,15 @@
       "cci_refs": [
         "CCI-002450"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233586"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261929",
@@ -1200,13 +1282,15 @@
       "cci_refs": [
         "CCI-002475"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233588"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261931",
@@ -1216,13 +1300,15 @@
       "cci_refs": [
         "CCI-002476"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233589"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261932",
@@ -1232,13 +1318,15 @@
       "cci_refs": [
         "CCI-002420"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233591"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261933",
@@ -1248,13 +1336,15 @@
       "cci_refs": [
         "CCI-002422"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233592"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261934",
@@ -1264,13 +1354,13 @@
       "cci_refs": [
         "CCI-002754"
       ],
-      "status": "not_yet_reviewed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
       "implemented_by": [],
       "validated_by": [],
-      "notes": ""
+      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
     },
     {
       "control_id": "V-261935",
@@ -1280,13 +1370,15 @@
       "cci_refs": [
         "CCI-002617"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233593"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261936",
@@ -1332,13 +1424,13 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "not_yet_reviewed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
       "implemented_by": [],
       "validated_by": [],
-      "notes": ""
+      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
     },
     {
       "control_id": "V-261940",
@@ -1348,13 +1440,15 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233597"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261941",
@@ -1364,13 +1458,15 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233598"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261942",
@@ -1380,13 +1476,13 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "not_yet_reviewed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
       "implemented_by": [],
       "validated_by": [],
-      "notes": ""
+      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
     },
     {
       "control_id": "V-261943",
@@ -1414,13 +1510,15 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233600"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261945",
@@ -1448,13 +1546,13 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "not_yet_reviewed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
       "implemented_by": [],
       "validated_by": [],
-      "notes": ""
+      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
     },
     {
       "control_id": "V-261947",
@@ -1464,13 +1562,15 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233603"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261948",
@@ -1480,13 +1580,15 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233604"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261949",
@@ -1496,13 +1598,15 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233605"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261950",
@@ -1512,13 +1616,15 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233606"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261951",
@@ -1528,13 +1634,15 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233607"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261952",
@@ -1544,13 +1652,13 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "not_yet_reviewed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
       "implemented_by": [],
       "validated_by": [],
-      "notes": ""
+      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
     },
     {
       "control_id": "V-261953",
@@ -1560,13 +1668,13 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "not_yet_reviewed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
       "implemented_by": [],
       "validated_by": [],
-      "notes": ""
+      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
     },
     {
       "control_id": "V-261954",
@@ -1576,13 +1684,13 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "not_yet_reviewed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
       "implemented_by": [],
       "validated_by": [],
-      "notes": ""
+      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
     },
     {
       "control_id": "V-261955",
@@ -1592,13 +1700,15 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233608"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261956",
@@ -1608,13 +1718,15 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233609"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261957",
@@ -1624,13 +1736,15 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233610"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261958",
@@ -1640,13 +1754,15 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233611"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261959",
@@ -1656,13 +1772,15 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233612"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261960",
@@ -1690,13 +1808,13 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "not_yet_reviewed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
       "implemented_by": [],
       "validated_by": [],
-      "notes": ""
+      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
     },
     {
       "control_id": "V-261962",
@@ -1742,13 +1860,15 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233617"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261965",
@@ -1758,13 +1878,15 @@
       "cci_refs": [
         "CCI-002450"
       ],
-      "status": "not_yet_reviewed",
+      "status": "validation_only",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": ""
+      "validated_by": [
+        "forked-profile:V-233618"
+      ],
+      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
     },
     {
       "control_id": "V-261966",
@@ -1774,13 +1896,13 @@
       "cci_refs": [
         "CCI-002450"
       ],
-      "status": "not_yet_reviewed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
       "implemented_by": [],
       "validated_by": [],
-      "notes": ""
+      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
     },
     {
       "control_id": "V-261967",
@@ -1790,13 +1912,13 @@
       "cci_refs": [
         "CCI-001851"
       ],
-      "status": "not_yet_reviewed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
       "implemented_by": [],
       "validated_by": [],
-      "notes": ""
+      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
     },
     {
       "control_id": "V-283674",
@@ -1806,13 +1928,13 @@
       "cci_refs": [
         "CCI-003376"
       ],
-      "status": "not_yet_reviewed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
       "implemented_by": [],
       "validated_by": [],
-      "notes": ""
+      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
     }
   ]
 }
