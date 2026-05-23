@@ -47,11 +47,15 @@ The available STIG source package must be treated as reference material only. Th
 
    PostgreSQL 16 control identifiers must be mapped before controls are marked automated, manual, deployment-owned, or excepted. The mapping should start with all controls unmapped, then record reviewed links to reusable legacy controls, overlay checks, deployment responsibilities, manual review, or exceptions. Alternative considered: classify directly in traceability while reviewing. That makes it too easy to mix unreviewed assumptions with implementation status.
 
+7. Defer upstream validation-profile pull requests until the image work is verified.
+
+   The forked PostgreSQL STIG validation profile can receive portable PostgreSQL 16 inputs or compatibility updates, but upstream PRs should wait until this repository's default-build check and final traceability pass are complete. This keeps upstream changes focused on reusable profile behavior and avoids mixing TimescaleDB HA image-specific implementation details into the baseline profile.
+
 ## Risks / Trade-offs
 
 - PostgreSQL STIG controls may require host, Kubernetes, IAM, or organization policy context that an image cannot enforce -> classify each control by image, deployment, validation-only, manual, or exception responsibility.
 - STIG hardening may conflict with TimescaleDB HA, Patroni, pgBackRest, or Kubernetes operator expectations -> test against normal initialization, replica/bootstrap behavior, and backup/restore scripts before treating the mode as usable.
-- The validation profile may lag PostgreSQL 16 or contain Crunchy-specific assumptions -> maintain compatibility changes in a fork or overlay and document any assumptions before proposing upstream.
+- The validation profile may lag PostgreSQL 16 or contain Crunchy-specific assumptions -> maintain compatibility changes in a fork or overlay, document any assumptions, and defer upstream PRs until the local image and traceability work are verified.
 - Authentication controls may not match common container defaults -> keep secrets, users, and network trust decisions deployment-owned unless the image can enforce them without breaking orchestration.
 - Audit/logging settings can increase disk and performance overhead -> document operational impact and provide explicit enablement rather than silently changing default behavior.
 
@@ -70,5 +74,5 @@ The available STIG source package must be treated as reference material only. Th
 
 - Should the hardened image be a separate tag only, or should it also support runtime enablement through an environment variable?
 - Which controls must be considered deployment-owned for the intended Kubernetes environment?
-- Should validation profile changes live as a fork branch, an overlay profile, or a proposed upstream pull request?
+- Should validation profile changes live as a fork branch, an overlay profile, or a proposed upstream pull request? Current decision: use this repository's overlay for image-specific checks, keep any fork changes portable, and hold upstream PRs until final verification is complete.
 - What is the acceptable baseline for authentication methods in development validation versus production deployment?
