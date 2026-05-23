@@ -1,0 +1,72 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+usage() {
+	cat <<'USAGE'
+Usage: cicd/start-stig-validation-target
+
+Starts a disposable PostgreSQL 16 STIG validation target container.
+
+Required environment:
+  STIG_PG_PASSWORD       Password assigned to the postgres role.
+
+Optional environment:
+  STIG_IMAGE             Image to run. Default: localhost:5000/timescale/timescaledb-ha:pg16-all-stig
+  STIG_TARGET_CONTAINER  Container name. Default: ts-stig-validation
+  STIG_TARGET_PGDATA     Data directory inside the container. Default: /home/postgres/pgdata/data
+USAGE
+}
+
+if [ "${1:-}" = "-h" ] || [ "${1:-}" = "--help" ]; then
+	usage
+	exit 0
+fi
+
+if [ -z "${STIG_PG_PASSWORD:-}" ]; then
+	echo "STIG_PG_PASSWORD is required" >&2
+	exit 2
+fi
+
+STIG_IMAGE="${STIG_IMAGE:-localhost:5000/timescale/timescaledb-ha:pg16-all-stig}"
+STIG_TARGET_CONTAINER="${STIG_TARGET_CONTAINER:-ts-stig-validation}"
+STIG_TARGET_PGDATA="${STIG_TARGET_PGDATA:-/home/postgres/pgdata/data}"
+
+docker rm --force "${STIG_TARGET_CONTAINER}" >/dev/null 2>&1 || true
+
+docker run \
+	--rm \
+	--detach \
+	--platform linux/amd64 \
+	--name "${STIG_TARGET_CONTAINER}" \
+	--env PGDATA="${STIG_TARGET_PGDATA}" \
+	--env STIG_ENABLED=true \
+	--entrypoint sleep \
+	--user postgres \
+	"${STIG_IMAGE}" \
+	600 >/dev/null
+
+docker exec "${STIG_TARGET_CONTAINER}" initdb >/dev/null
+docker exec \
+	--env PGDATA="${STIG_TARGET_PGDATA}" \
+	--env STIG_ENABLED=true \
+	"${STIG_TARGET_CONTAINER}" \
+	/scripts/stig/apply_stig_config.sh
+
+docker exec "${STIG_TARGET_CONTAINER}" pg_ctl start -l /tmp/postgresql.log >/dev/null
+
+until docker exec "${STIG_TARGET_CONTAINER}" pg_isready >/dev/null 2>&1; do
+	sleep 0.2
+done
+
+docker exec \
+	--env STIG_PG_PASSWORD="${STIG_PG_PASSWORD}" \
+	"${STIG_TARGET_CONTAINER}" \
+	psql -d postgres -v password="${STIG_PG_PASSWORD}" <<'SQL' >/dev/null
+ALTER USER postgres WITH PASSWORD :'password';
+SQL
+
+docker exec "${STIG_TARGET_CONTAINER}" psql -d postgres -c "CREATE EXTENSION IF NOT EXISTS pgaudit;" >/dev/null
+docker exec "${STIG_TARGET_CONTAINER}" psql -d postgres -c "CREATE EXTENSION IF NOT EXISTS timescaledb;" >/dev/null
+
+echo "${STIG_TARGET_CONTAINER}"

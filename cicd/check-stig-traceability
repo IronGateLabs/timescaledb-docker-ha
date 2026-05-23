@@ -1,0 +1,150 @@
+#!/usr/bin/env python3
+"""Validate committed STIG traceability files."""
+
+import json
+import re
+import sys
+from pathlib import Path
+
+
+TRACEABILITY = Path("stig/postgres16-v1r2-traceability.json")
+REQUIRED_CONTROL_FIELDS = {
+    "control_id",
+    "rule_id",
+    "stig_id",
+    "severity",
+    "cci_refs",
+    "status",
+    "implementation_owner",
+    "validation_owner",
+    "deployment_responsibility",
+    "implemented_by",
+    "validated_by",
+    "notes",
+}
+ALLOWED_STATUS = {
+    "not_yet_reviewed",
+    "image_enforced",
+    "deployment_owned",
+    "validation_only",
+    "manual",
+    "exception",
+}
+ALLOWED_OWNER = {
+    "unassigned",
+    "image",
+    "deployment",
+    "validation_profile",
+    "documentation",
+    "manual",
+    "exception",
+}
+ALLOWED_DEPLOYMENT_RESPONSIBILITY = {
+    "undetermined",
+    "none",
+    "kubernetes",
+    "operator",
+    "organization_policy",
+    "identity_and_access",
+    "networking",
+    "secrets",
+    "manual",
+}
+PROHIBITED_KEYS = {
+    "title",
+    "description",
+    "discussion",
+    "check",
+    "check_content",
+    "fix",
+    "fixtext",
+    "fix_text",
+    "vuln_discussion",
+}
+PROHIBITED_STRING_PATTERNS = [
+    re.compile(r"/Users/[^\s\"']+"),
+    re.compile(r"/home/[^\s\"']+"),
+    re.compile(r"(?i)password\s*[:=]"),
+    re.compile(r"(?i)secret\s*[:=]"),
+    re.compile(r"(?i)token\s*[:=]"),
+    re.compile(r"(?i)private[_ -]?key"),
+]
+
+
+def fail(message):
+    print(f"traceability check failed: {message}", file=sys.stderr)
+    return 1
+
+
+def walk_strings(value):
+    if isinstance(value, dict):
+        for key, item in value.items():
+            yield str(key)
+            yield from walk_strings(item)
+    elif isinstance(value, list):
+        for item in value:
+            yield from walk_strings(item)
+    elif isinstance(value, str):
+        yield value
+
+
+def walk_keys(value):
+    if isinstance(value, dict):
+        for key, item in value.items():
+            yield key
+            yield from walk_keys(item)
+    elif isinstance(value, list):
+        for item in value:
+            yield from walk_keys(item)
+
+
+def main():
+    if not TRACEABILITY.exists():
+        return fail(f"missing {TRACEABILITY}")
+
+    data = json.loads(TRACEABILITY.read_text())
+    if data.get("schema_version") != 1:
+        return fail("schema_version must be 1")
+    if not isinstance(data.get("controls"), list) or not data["controls"]:
+        return fail("controls must be a non-empty list")
+
+    for key in walk_keys(data):
+        if key.lower() in PROHIBITED_KEYS:
+            return fail(f"prohibited prose-bearing key: {key}")
+    for value in walk_strings(data):
+        for pattern in PROHIBITED_STRING_PATTERNS:
+            if pattern.search(value):
+                return fail(f"prohibited string pattern matched: {pattern.pattern}")
+
+    seen = set()
+    for index, control in enumerate(data["controls"], start=1):
+        missing = REQUIRED_CONTROL_FIELDS - set(control)
+        extra = set(control) - REQUIRED_CONTROL_FIELDS
+        if missing:
+            return fail(f"control {index} missing fields: {sorted(missing)}")
+        if extra:
+            return fail(f"control {index} has unsupported fields: {sorted(extra)}")
+        if control["control_id"] in seen:
+            return fail(f"duplicate control_id: {control['control_id']}")
+        seen.add(control["control_id"])
+        if not re.fullmatch(r"V-\d+", control["control_id"]):
+            return fail(f"invalid control_id: {control['control_id']}")
+        if not re.fullmatch(r"SV-\d+r\d+_rule", control["rule_id"]):
+            return fail(f"invalid rule_id for {control['control_id']}")
+        if control["severity"] not in {"low", "medium", "high"}:
+            return fail(f"invalid severity for {control['control_id']}")
+        if control["status"] not in ALLOWED_STATUS:
+            return fail(f"invalid status for {control['control_id']}")
+        if control["implementation_owner"] not in ALLOWED_OWNER:
+            return fail(f"invalid implementation_owner for {control['control_id']}")
+        if control["validation_owner"] not in ALLOWED_OWNER:
+            return fail(f"invalid validation_owner for {control['control_id']}")
+        if control["deployment_responsibility"] not in ALLOWED_DEPLOYMENT_RESPONSIBILITY:
+            return fail(f"invalid deployment_responsibility for {control['control_id']}")
+
+    print(f"traceability check passed: {len(data['controls'])} controls")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -1,0 +1,1818 @@
+{
+  "schema_version": 1,
+  "benchmark": {
+    "id": "CD_Postgres_16_STIG",
+    "source": "PostgreSQL 16 STIG V1R2 XCCDF",
+    "content_policy": "Control identifiers and metadata only; do not copy benchmark prose."
+  },
+  "controls": [
+    {
+      "control_id": "V-261857",
+      "rule_id": "SV-261857r1000976_rule",
+      "stig_id": "CD16-00-000100",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000054"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261858",
+      "rule_id": "SV-261858r1043176_rule",
+      "stig_id": "CD16-00-000200",
+      "severity": "high",
+      "cci_refs": [
+        "CCI-000015"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261859",
+      "rule_id": "SV-261859r1137654_rule",
+      "stig_id": "CD16-00-000300",
+      "severity": "high",
+      "cci_refs": [
+        "CCI-000213"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261860",
+      "rule_id": "SV-261860r1000977_rule",
+      "stig_id": "CD16-00-000400",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000166"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261861",
+      "rule_id": "SV-261861r1000588_rule",
+      "stig_id": "CD16-00-000500",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000169"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261862",
+      "rule_id": "SV-261862r1000591_rule",
+      "stig_id": "CD16-00-000600",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000171"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261863",
+      "rule_id": "SV-261863r1000954_rule",
+      "stig_id": "CD16-00-000700",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261864",
+      "rule_id": "SV-261864r1000597_rule",
+      "stig_id": "CD16-00-000800",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261865",
+      "rule_id": "SV-261865r1000600_rule",
+      "stig_id": "CD16-00-000900",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001464"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261866",
+      "rule_id": "SV-261866r1000603_rule",
+      "stig_id": "CD16-00-001000",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000130"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261867",
+      "rule_id": "SV-261867r1000955_rule",
+      "stig_id": "CD16-00-001100",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000131"
+      ],
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233521"
+      ],
+      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+    },
+    {
+      "control_id": "V-261868",
+      "rule_id": "SV-261868r1000609_rule",
+      "stig_id": "CD16-00-001200",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000132"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261869",
+      "rule_id": "SV-261869r1000956_rule",
+      "stig_id": "CD16-00-001300",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000133"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261870",
+      "rule_id": "SV-261870r1000615_rule",
+      "stig_id": "CD16-00-001400",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000134"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261871",
+      "rule_id": "SV-261871r1000618_rule",
+      "stig_id": "CD16-00-001500",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001487"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261872",
+      "rule_id": "SV-261872r1000621_rule",
+      "stig_id": "CD16-00-001600",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000135"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261873",
+      "rule_id": "SV-261873r1043188_rule",
+      "stig_id": "CD16-00-001700",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000140"
+      ],
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233525"
+      ],
+      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+    },
+    {
+      "control_id": "V-261874",
+      "rule_id": "SV-261874r1043188_rule",
+      "stig_id": "CD16-00-001800",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000140"
+      ],
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233526"
+      ],
+      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+    },
+    {
+      "control_id": "V-261875",
+      "rule_id": "SV-261875r1000630_rule",
+      "stig_id": "CD16-00-002000",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000162"
+      ],
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233528"
+      ],
+      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+    },
+    {
+      "control_id": "V-261876",
+      "rule_id": "SV-261876r1000978_rule",
+      "stig_id": "CD16-00-002100",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000163"
+      ],
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233529"
+      ],
+      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+    },
+    {
+      "control_id": "V-261877",
+      "rule_id": "SV-261877r1000968_rule",
+      "stig_id": "CD16-00-002200",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000164"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261878",
+      "rule_id": "SV-261878r1000958_rule",
+      "stig_id": "CD16-00-002300",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001493"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261879",
+      "rule_id": "SV-261879r1000960_rule",
+      "stig_id": "CD16-00-002400",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001494"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261880",
+      "rule_id": "SV-261880r1000959_rule",
+      "stig_id": "CD16-00-002500",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001495"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261881",
+      "rule_id": "SV-261881r1000648_rule",
+      "stig_id": "CD16-00-002600",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001499"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261882",
+      "rule_id": "SV-261882r1000651_rule",
+      "stig_id": "CD16-00-002700",
+      "severity": "high",
+      "cci_refs": [
+        "CCI-001499"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261883",
+      "rule_id": "SV-261883r1000654_rule",
+      "stig_id": "CD16-00-002800",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001499"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261884",
+      "rule_id": "SV-261884r1000657_rule",
+      "stig_id": "CD16-00-002900",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001499"
+      ],
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233537"
+      ],
+      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+    },
+    {
+      "control_id": "V-261885",
+      "rule_id": "SV-261885r1000949_rule",
+      "stig_id": "CD16-00-003000",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001499"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261886",
+      "rule_id": "SV-261886r1000951_rule",
+      "stig_id": "CD16-00-003200",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000381"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261887",
+      "rule_id": "SV-261887r1000666_rule",
+      "stig_id": "CD16-00-003300",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000381"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261888",
+      "rule_id": "SV-261888r1000669_rule",
+      "stig_id": "CD16-00-003400",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000381"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261889",
+      "rule_id": "SV-261889r1043177_rule",
+      "stig_id": "CD16-00-003500",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000382"
+      ],
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233542"
+      ],
+      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+    },
+    {
+      "control_id": "V-261890",
+      "rule_id": "SV-261890r1051115_rule",
+      "stig_id": "CD16-00-003600",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000764"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261891",
+      "rule_id": "SV-261891r1000970_rule",
+      "stig_id": "CD16-00-003800",
+      "severity": "high",
+      "cci_refs": [
+        "CCI-000196"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261892",
+      "rule_id": "SV-261892r1000681_rule",
+      "stig_id": "CD16-00-003900",
+      "severity": "high",
+      "cci_refs": [
+        "CCI-000197"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261893",
+      "rule_id": "SV-261893r1000684_rule",
+      "stig_id": "CD16-00-004000",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000185"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261894",
+      "rule_id": "SV-261894r1000687_rule",
+      "stig_id": "CD16-00-004100",
+      "severity": "high",
+      "cci_refs": [
+        "CCI-000186"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261895",
+      "rule_id": "SV-261895r1000690_rule",
+      "stig_id": "CD16-00-004200",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000187"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261896",
+      "rule_id": "SV-261896r1193213_rule",
+      "stig_id": "CD16-00-004400",
+      "severity": "high",
+      "cci_refs": [
+        "CCI-000803"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261897",
+      "rule_id": "SV-261897r1000696_rule",
+      "stig_id": "CD16-00-004500",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000804"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261898",
+      "rule_id": "SV-261898r1137655_rule",
+      "stig_id": "CD16-00-004600",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001082"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261899",
+      "rule_id": "SV-261899r1043179_rule",
+      "stig_id": "CD16-00-004700",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001185"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261900",
+      "rule_id": "SV-261900r1043181_rule",
+      "stig_id": "CD16-00-004900",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001188"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261901",
+      "rule_id": "SV-261901r1000708_rule",
+      "stig_id": "CD16-00-005200",
+      "severity": "high",
+      "cci_refs": [
+        "CCI-001199"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261902",
+      "rule_id": "SV-261902r1000711_rule",
+      "stig_id": "CD16-00-005300",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001084"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261903",
+      "rule_id": "SV-261903r1137656_rule",
+      "stig_id": "CD16-00-005400",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001090"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261904",
+      "rule_id": "SV-261904r1137658_rule",
+      "stig_id": "CD16-00-005600",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001090"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261905",
+      "rule_id": "SV-261905r1000720_rule",
+      "stig_id": "CD16-00-005700",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001310"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261906",
+      "rule_id": "SV-261906r1000979_rule",
+      "stig_id": "CD16-00-005800",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001310"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261907",
+      "rule_id": "SV-261907r1000726_rule",
+      "stig_id": "CD16-00-005900",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001310"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261908",
+      "rule_id": "SV-261908r1000729_rule",
+      "stig_id": "CD16-00-006000",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001312"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261909",
+      "rule_id": "SV-261909r1000980_rule",
+      "stig_id": "CD16-00-006100",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001314"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261910",
+      "rule_id": "SV-261910r1043182_rule",
+      "stig_id": "CD16-00-006200",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002361"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261911",
+      "rule_id": "SV-261911r1138540_rule",
+      "stig_id": "CD16-00-006400",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002262"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261912",
+      "rule_id": "SV-261912r1138541_rule",
+      "stig_id": "CD16-00-006500",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002263"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261913",
+      "rule_id": "SV-261913r1138542_rule",
+      "stig_id": "CD16-00-006600",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002264"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261914",
+      "rule_id": "SV-261914r1000747_rule",
+      "stig_id": "CD16-00-006700",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002165"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261915",
+      "rule_id": "SV-261915r1000750_rule",
+      "stig_id": "CD16-00-006800",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002235"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261916",
+      "rule_id": "SV-261916r1000981_rule",
+      "stig_id": "CD16-00-006900",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002233"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261917",
+      "rule_id": "SV-261917r1000962_rule",
+      "stig_id": "CD16-00-007000",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001844"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261918",
+      "rule_id": "SV-261918r1000759_rule",
+      "stig_id": "CD16-00-007200",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001849"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261919",
+      "rule_id": "SV-261919r1000762_rule",
+      "stig_id": "CD16-00-007300",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001855"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261920",
+      "rule_id": "SV-261920r1000973_rule",
+      "stig_id": "CD16-00-007400",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001858"
+      ],
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233580"
+      ],
+      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+    },
+    {
+      "control_id": "V-261921",
+      "rule_id": "SV-261921r1000994_rule",
+      "stig_id": "CD16-00-007500",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001890"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261922",
+      "rule_id": "SV-261922r1000771_rule",
+      "stig_id": "CD16-00-007600",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001889"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261923",
+      "rule_id": "SV-261923r1000993_rule",
+      "stig_id": "CD16-00-007700",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001812"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261924",
+      "rule_id": "SV-261924r1000777_rule",
+      "stig_id": "CD16-00-007800",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001813"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261925",
+      "rule_id": "SV-261925r1000780_rule",
+      "stig_id": "CD16-00-007900",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001814"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261926",
+      "rule_id": "SV-261926r1000783_rule",
+      "stig_id": "CD16-00-008000",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001762"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261927",
+      "rule_id": "SV-261927r1050788_rule",
+      "stig_id": "CD16-00-008100",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002038"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261928",
+      "rule_id": "SV-261928r1117186_rule",
+      "stig_id": "CD16-00-008300",
+      "severity": "high",
+      "cci_refs": [
+        "CCI-002450"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261929",
+      "rule_id": "SV-261929r1193220_rule",
+      "stig_id": "CD16-00-008400",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002470"
+      ],
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233587"
+      ],
+      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+    },
+    {
+      "control_id": "V-261930",
+      "rule_id": "SV-261930r1018552_rule",
+      "stig_id": "CD16-00-008500",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002475"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261931",
+      "rule_id": "SV-261931r1018553_rule",
+      "stig_id": "CD16-00-008600",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002476"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261932",
+      "rule_id": "SV-261932r1000801_rule",
+      "stig_id": "CD16-00-008800",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002420"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261933",
+      "rule_id": "SV-261933r1000804_rule",
+      "stig_id": "CD16-00-008900",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002422"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261934",
+      "rule_id": "SV-261934r1000807_rule",
+      "stig_id": "CD16-00-009000",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002754"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261935",
+      "rule_id": "SV-261935r1000810_rule",
+      "stig_id": "CD16-00-009100",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002617"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261936",
+      "rule_id": "SV-261936r1137667_rule",
+      "stig_id": "CD16-00-009200",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002605"
+      ],
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233594"
+      ],
+      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+    },
+    {
+      "control_id": "V-261938",
+      "rule_id": "SV-261938r1000819_rule",
+      "stig_id": "CD16-00-009400",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233595"
+      ],
+      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+    },
+    {
+      "control_id": "V-261939",
+      "rule_id": "SV-261939r1000822_rule",
+      "stig_id": "CD16-00-009500",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261940",
+      "rule_id": "SV-261940r1000825_rule",
+      "stig_id": "CD16-00-009600",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261941",
+      "rule_id": "SV-261941r1000828_rule",
+      "stig_id": "CD16-00-009700",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261942",
+      "rule_id": "SV-261942r1000831_rule",
+      "stig_id": "CD16-00-009800",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261943",
+      "rule_id": "SV-261943r1000834_rule",
+      "stig_id": "CD16-00-009900",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233599"
+      ],
+      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+    },
+    {
+      "control_id": "V-261944",
+      "rule_id": "SV-261944r1000837_rule",
+      "stig_id": "CD16-00-010000",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261945",
+      "rule_id": "SV-261945r1000840_rule",
+      "stig_id": "CD16-00-010100",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233601"
+      ],
+      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+    },
+    {
+      "control_id": "V-261946",
+      "rule_id": "SV-261946r1000843_rule",
+      "stig_id": "CD16-00-010200",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261947",
+      "rule_id": "SV-261947r1000846_rule",
+      "stig_id": "CD16-00-010300",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261948",
+      "rule_id": "SV-261948r1000849_rule",
+      "stig_id": "CD16-00-010400",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261949",
+      "rule_id": "SV-261949r1000852_rule",
+      "stig_id": "CD16-00-010500",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261950",
+      "rule_id": "SV-261950r1000855_rule",
+      "stig_id": "CD16-00-010600",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261951",
+      "rule_id": "SV-261951r1000858_rule",
+      "stig_id": "CD16-00-010700",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261952",
+      "rule_id": "SV-261952r1000861_rule",
+      "stig_id": "CD16-00-010800",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261953",
+      "rule_id": "SV-261953r1000864_rule",
+      "stig_id": "CD16-00-010900",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261954",
+      "rule_id": "SV-261954r1000867_rule",
+      "stig_id": "CD16-00-011000",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261955",
+      "rule_id": "SV-261955r1000870_rule",
+      "stig_id": "CD16-00-011100",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261956",
+      "rule_id": "SV-261956r1000975_rule",
+      "stig_id": "CD16-00-011200",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261957",
+      "rule_id": "SV-261957r1000876_rule",
+      "stig_id": "CD16-00-011300",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261958",
+      "rule_id": "SV-261958r1000879_rule",
+      "stig_id": "CD16-00-011400",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261959",
+      "rule_id": "SV-261959r1000882_rule",
+      "stig_id": "CD16-00-011500",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261960",
+      "rule_id": "SV-261960r1000885_rule",
+      "stig_id": "CD16-00-011600",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233613"
+      ],
+      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+    },
+    {
+      "control_id": "V-261961",
+      "rule_id": "SV-261961r1000888_rule",
+      "stig_id": "CD16-00-011700",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261962",
+      "rule_id": "SV-261962r1000891_rule",
+      "stig_id": "CD16-00-011800",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233615"
+      ],
+      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+    },
+    {
+      "control_id": "V-261963",
+      "rule_id": "SV-261963r1000894_rule",
+      "stig_id": "CD16-00-011900",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233616"
+      ],
+      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+    },
+    {
+      "control_id": "V-261964",
+      "rule_id": "SV-261964r1000897_rule",
+      "stig_id": "CD16-00-012000",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261965",
+      "rule_id": "SV-261965r1137661_rule",
+      "stig_id": "CD16-00-012200",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002450"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261966",
+      "rule_id": "SV-261966r1137664_rule",
+      "stig_id": "CD16-00-012300",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002450"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-261967",
+      "rule_id": "SV-261967r1000906_rule",
+      "stig_id": "CD16-00-012400",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001851"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    },
+    {
+      "control_id": "V-283674",
+      "rule_id": "SV-283674r1193281_rule",
+      "stig_id": "CD16-00-009300",
+      "severity": "high",
+      "cci_refs": [
+        "CCI-003376"
+      ],
+      "status": "not_yet_reviewed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": ""
+    }
+  ]
+}

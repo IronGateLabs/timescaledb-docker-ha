@@ -1,0 +1,3317 @@
+{
+  "schema_version": 1,
+  "source_traceability": "stig/postgres16-v1r2-traceability.json",
+  "content_policy": "Control identifiers and project-authored metadata only; do not copy benchmark prose.",
+  "legacy_profile_summary": {
+    "controls_count": 113,
+    "direct_overlap_count": 0,
+    "stig_id_suffix_candidate_count": 94
+  },
+  "mappings": [
+    {
+      "control_id": "V-261857",
+      "stig_id": "CD16-00-000100",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000054"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233511"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233511"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000142-DB-000094"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261858",
+      "stig_id": "CD16-00-000200",
+      "severity": "high",
+      "cci_refs": [
+        "CCI-000015"
+      ],
+      "mapping_status": "unmapped",
+      "legacy_control_ids": [],
+      "candidate_legacy_control_ids": [
+        "V-233512"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000099-DB-000043"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": [
+          "V-233512"
+        ]
+      },
+      "overlay_checks": [],
+      "automation_status": "not_yet_assessed",
+      "container_validation": "not_yet_assessed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "notes": ""
+    },
+    {
+      "control_id": "V-261859",
+      "stig_id": "CD16-00-000300",
+      "severity": "high",
+      "cci_refs": [
+        "CCI-000213"
+      ],
+      "mapping_status": "unmapped",
+      "legacy_control_ids": [],
+      "candidate_legacy_control_ids": [
+        "V-233513"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000456-DB-000390"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": [
+          "V-233513"
+        ]
+      },
+      "overlay_checks": [],
+      "automation_status": "not_yet_assessed",
+      "container_validation": "not_yet_assessed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "notes": ""
+    },
+    {
+      "control_id": "V-261860",
+      "stig_id": "CD16-00-000400",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000166"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233514"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233514"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000119-DB-000060"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261861",
+      "stig_id": "CD16-00-000500",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000169"
+      ],
+      "mapping_status": "unmapped",
+      "legacy_control_ids": [],
+      "candidate_legacy_control_ids": [
+        "V-233515"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000023-DB-000001"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": [
+          "V-233515"
+        ]
+      },
+      "overlay_checks": [],
+      "automation_status": "not_yet_assessed",
+      "container_validation": "not_yet_assessed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "notes": ""
+    },
+    {
+      "control_id": "V-261862",
+      "stig_id": "CD16-00-000600",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000171"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233516"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233516"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000266-DB-000162"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261863",
+      "stig_id": "CD16-00-000700",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233517"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233517"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000133-DB-000179"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261864",
+      "stig_id": "CD16-00-000800",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "mapping_status": "unmapped",
+      "legacy_control_ids": [],
+      "candidate_legacy_control_ids": [
+        "V-233519"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000172-DB-000075"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": [
+          "V-233519"
+        ]
+      },
+      "overlay_checks": [],
+      "automation_status": "not_yet_assessed",
+      "container_validation": "not_yet_assessed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "notes": ""
+    },
+    {
+      "control_id": "V-261865",
+      "stig_id": "CD16-00-000900",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001464"
+      ],
+      "mapping_status": "unmapped",
+      "legacy_control_ids": [],
+      "candidate_legacy_control_ids": [
+        "V-233520"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000033-DB-000084"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": [
+          "V-233520"
+        ]
+      },
+      "overlay_checks": [],
+      "automation_status": "not_yet_assessed",
+      "container_validation": "not_yet_assessed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "notes": ""
+    },
+    {
+      "control_id": "V-261866",
+      "stig_id": "CD16-00-001000",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000130"
+      ],
+      "mapping_status": "unmapped",
+      "legacy_control_ids": [],
+      "candidate_legacy_control_ids": [],
+      "candidate_srg_ids": [],
+      "candidate_basis": [],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "not_yet_assessed",
+      "container_validation": "not_yet_assessed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "notes": ""
+    },
+    {
+      "control_id": "V-261867",
+      "stig_id": "CD16-00-001100",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000131"
+      ],
+      "mapping_status": "manual_only",
+      "legacy_control_ids": [
+        "V-233521"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233521"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000314-DB-000310"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "manual",
+      "container_validation": "not_supported",
+      "implementation_owner": "unassigned",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
+      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+    },
+    {
+      "control_id": "V-261868",
+      "stig_id": "CD16-00-001200",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000132"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233522"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233522"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000001-DB-000031"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261869",
+      "stig_id": "CD16-00-001300",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000133"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233523"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233523"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000133-DB-000362"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261870",
+      "stig_id": "CD16-00-001400",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000134"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233524"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233524"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000180-DB-000115"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261871",
+      "stig_id": "CD16-00-001500",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001487"
+      ],
+      "mapping_status": "unmapped",
+      "legacy_control_ids": [],
+      "candidate_legacy_control_ids": [],
+      "candidate_srg_ids": [],
+      "candidate_basis": [],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "not_yet_assessed",
+      "container_validation": "not_yet_assessed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "notes": ""
+    },
+    {
+      "control_id": "V-261872",
+      "stig_id": "CD16-00-001600",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000135"
+      ],
+      "mapping_status": "unmapped",
+      "legacy_control_ids": [],
+      "candidate_legacy_control_ids": [],
+      "candidate_srg_ids": [],
+      "candidate_basis": [],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "not_yet_assessed",
+      "container_validation": "not_yet_assessed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "notes": ""
+    },
+    {
+      "control_id": "V-261873",
+      "stig_id": "CD16-00-001700",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000140"
+      ],
+      "mapping_status": "manual_only",
+      "legacy_control_ids": [
+        "V-233525"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233525"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000311-DB-000308"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "manual",
+      "container_validation": "not_supported",
+      "implementation_owner": "unassigned",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
+      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+    },
+    {
+      "control_id": "V-261874",
+      "stig_id": "CD16-00-001800",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000140"
+      ],
+      "mapping_status": "manual_only",
+      "legacy_control_ids": [
+        "V-233526"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233526"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000251-DB-000160"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "manual",
+      "container_validation": "not_supported",
+      "implementation_owner": "unassigned",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
+      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+    },
+    {
+      "control_id": "V-261875",
+      "stig_id": "CD16-00-002000",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000162"
+      ],
+      "mapping_status": "manual_only",
+      "legacy_control_ids": [
+        "V-233528"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233528"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000251-DB-000392"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "manual",
+      "container_validation": "not_supported",
+      "implementation_owner": "unassigned",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
+      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+    },
+    {
+      "control_id": "V-261876",
+      "stig_id": "CD16-00-002100",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000163"
+      ],
+      "mapping_status": "manual_only",
+      "legacy_control_ids": [
+        "V-233529"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233529"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000357-DB-000316"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "manual",
+      "container_validation": "not_supported",
+      "implementation_owner": "unassigned",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
+      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+    },
+    {
+      "control_id": "V-261877",
+      "stig_id": "CD16-00-002200",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000164"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233530"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233530"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000328-DB-000301"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261878",
+      "stig_id": "CD16-00-002300",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001493"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233531"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233531"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000120-DB-000061"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261879",
+      "stig_id": "CD16-00-002400",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001494"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233532"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233532"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000374-DB-000322"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261880",
+      "stig_id": "CD16-00-002500",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001495"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233533"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233533"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000267-DB-000163"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261881",
+      "stig_id": "CD16-00-002600",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001499"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233534"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233534"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000090-DB-000065"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261882",
+      "stig_id": "CD16-00-002700",
+      "severity": "high",
+      "cci_refs": [
+        "CCI-001499"
+      ],
+      "mapping_status": "unmapped",
+      "legacy_control_ids": [],
+      "candidate_legacy_control_ids": [
+        "V-233535"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000360-DB-000320"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": [
+          "V-233535"
+        ]
+      },
+      "overlay_checks": [],
+      "automation_status": "not_yet_assessed",
+      "container_validation": "not_yet_assessed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "notes": ""
+    },
+    {
+      "control_id": "V-261883",
+      "stig_id": "CD16-00-002800",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001499"
+      ],
+      "mapping_status": "unmapped",
+      "legacy_control_ids": [],
+      "candidate_legacy_control_ids": [
+        "V-233536"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000109-DB-000321"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": [
+          "V-233536"
+        ]
+      },
+      "overlay_checks": [],
+      "automation_status": "not_yet_assessed",
+      "container_validation": "not_yet_assessed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "notes": ""
+    },
+    {
+      "control_id": "V-261884",
+      "stig_id": "CD16-00-002900",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001499"
+      ],
+      "mapping_status": "manual_only",
+      "legacy_control_ids": [
+        "V-233537"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233537"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000109-DB-000049"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "manual",
+      "container_validation": "not_supported",
+      "implementation_owner": "unassigned",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
+      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+    },
+    {
+      "control_id": "V-261885",
+      "stig_id": "CD16-00-003000",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001499"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233538"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233538"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000442-DB-000379"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261886",
+      "stig_id": "CD16-00-003200",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000381"
+      ],
+      "mapping_status": "unmapped",
+      "legacy_control_ids": [],
+      "candidate_legacy_control_ids": [
+        "V-233540"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000133-DB-000198"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": [
+          "V-233540"
+        ]
+      },
+      "overlay_checks": [],
+      "automation_status": "not_yet_assessed",
+      "container_validation": "not_yet_assessed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "notes": ""
+    },
+    {
+      "control_id": "V-261887",
+      "stig_id": "CD16-00-003300",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000381"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233541"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233541"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000133-DB-000199"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261888",
+      "stig_id": "CD16-00-003400",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000381"
+      ],
+      "mapping_status": "unmapped",
+      "legacy_control_ids": [],
+      "candidate_legacy_control_ids": [],
+      "candidate_srg_ids": [],
+      "candidate_basis": [],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "not_yet_assessed",
+      "container_validation": "not_yet_assessed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "notes": ""
+    },
+    {
+      "control_id": "V-261889",
+      "stig_id": "CD16-00-003500",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000382"
+      ],
+      "mapping_status": "manual_only",
+      "legacy_control_ids": [
+        "V-233542"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233542"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000101-DB-000044"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "manual",
+      "container_validation": "not_supported",
+      "implementation_owner": "unassigned",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
+      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+    },
+    {
+      "control_id": "V-261890",
+      "stig_id": "CD16-00-003600",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000764"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233543"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233543"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000342-DB-000302"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261891",
+      "stig_id": "CD16-00-003800",
+      "severity": "high",
+      "cci_refs": [
+        "CCI-000196"
+      ],
+      "mapping_status": "unmapped",
+      "legacy_control_ids": [],
+      "candidate_legacy_control_ids": [],
+      "candidate_srg_ids": [],
+      "candidate_basis": [],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "not_yet_assessed",
+      "container_validation": "not_yet_assessed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "notes": ""
+    },
+    {
+      "control_id": "V-261892",
+      "stig_id": "CD16-00-003900",
+      "severity": "high",
+      "cci_refs": [
+        "CCI-000197"
+      ],
+      "mapping_status": "unmapped",
+      "legacy_control_ids": [],
+      "candidate_legacy_control_ids": [],
+      "candidate_srg_ids": [],
+      "candidate_basis": [],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "not_yet_assessed",
+      "container_validation": "not_yet_assessed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "notes": ""
+    },
+    {
+      "control_id": "V-261893",
+      "stig_id": "CD16-00-004000",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000185"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233546"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233546"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000233-DB-000124"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261894",
+      "stig_id": "CD16-00-004100",
+      "severity": "high",
+      "cci_refs": [
+        "CCI-000186"
+      ],
+      "mapping_status": "unmapped",
+      "legacy_control_ids": [],
+      "candidate_legacy_control_ids": [
+        "V-233547"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000381-DB-000361"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": [
+          "V-233547"
+        ]
+      },
+      "overlay_checks": [],
+      "automation_status": "not_yet_assessed",
+      "container_validation": "not_yet_assessed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "notes": ""
+    },
+    {
+      "control_id": "V-261895",
+      "stig_id": "CD16-00-004200",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000187"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233549"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233549"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000118-DB-000059"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261896",
+      "stig_id": "CD16-00-004400",
+      "severity": "high",
+      "cci_refs": [
+        "CCI-000803"
+      ],
+      "mapping_status": "unmapped",
+      "legacy_control_ids": [],
+      "candidate_legacy_control_ids": [
+        "V-233551"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000494-DB-000344"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": [
+          "V-233551"
+        ]
+      },
+      "overlay_checks": [],
+      "automation_status": "not_yet_assessed",
+      "container_validation": "not_yet_assessed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "notes": ""
+    },
+    {
+      "control_id": "V-261897",
+      "stig_id": "CD16-00-004500",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000804"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233552"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233552"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000492-DB-000333"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261898",
+      "stig_id": "CD16-00-004600",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001082"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233553"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233553"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000503-DB-000351"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261899",
+      "stig_id": "CD16-00-004700",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001185"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233554"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233554"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000505-DB-000352"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261900",
+      "stig_id": "CD16-00-004900",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001188"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233556"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233556"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000495-DB-000326"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261901",
+      "stig_id": "CD16-00-005200",
+      "severity": "high",
+      "cci_refs": [
+        "CCI-001199"
+      ],
+      "mapping_status": "unmapped",
+      "legacy_control_ids": [],
+      "candidate_legacy_control_ids": [
+        "V-233559"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000501-DB-000336"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": [
+          "V-233559"
+        ]
+      },
+      "overlay_checks": [],
+      "automation_status": "not_yet_assessed",
+      "container_validation": "not_yet_assessed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "notes": ""
+    },
+    {
+      "control_id": "V-261902",
+      "stig_id": "CD16-00-005300",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001084"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233560"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233560"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000091-DB-000325"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261903",
+      "stig_id": "CD16-00-005400",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001090"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233561"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233561"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000499-DB-000331"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261904",
+      "stig_id": "CD16-00-005600",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001090"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233563"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233563"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000498-DB-000347"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261905",
+      "stig_id": "CD16-00-005700",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001310"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233564"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233564"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000507-DB-000357"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261906",
+      "stig_id": "CD16-00-005800",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001310"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233565"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233565"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000504-DB-000354"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261907",
+      "stig_id": "CD16-00-005900",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001310"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233566"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233566"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000494-DB-000345"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261908",
+      "stig_id": "CD16-00-006000",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001312"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233567"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233567"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000492-DB-000332"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261909",
+      "stig_id": "CD16-00-006100",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001314"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233568"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233568"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000499-DB-000330"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261910",
+      "stig_id": "CD16-00-006200",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002361"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233569"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233569"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000506-DB-000353"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261911",
+      "stig_id": "CD16-00-006400",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002262"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233571"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233571"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000495-DB-000328"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261912",
+      "stig_id": "CD16-00-006500",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002263"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233572"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233572"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000504-DB-000355"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261913",
+      "stig_id": "CD16-00-006600",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002264"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233573"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233573"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000496-DB-000334"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261914",
+      "stig_id": "CD16-00-006700",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002165"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233574"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233574"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000498-DB-000346"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261915",
+      "stig_id": "CD16-00-006800",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002235"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233575"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233575"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000495-DB-000329"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261916",
+      "stig_id": "CD16-00-006900",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002233"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233576"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233576"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000495-DB-000327"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261917",
+      "stig_id": "CD16-00-007000",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001844"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233577"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233577"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000175-DB-000067"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261918",
+      "stig_id": "CD16-00-007200",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001849"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233579"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233579"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000441-DB-000378"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261919",
+      "stig_id": "CD16-00-007300",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001855"
+      ],
+      "mapping_status": "unmapped",
+      "legacy_control_ids": [],
+      "candidate_legacy_control_ids": [],
+      "candidate_srg_ids": [],
+      "candidate_basis": [],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "not_yet_assessed",
+      "container_validation": "not_yet_assessed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "notes": ""
+    },
+    {
+      "control_id": "V-261920",
+      "stig_id": "CD16-00-007400",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001858"
+      ],
+      "mapping_status": "manual_only",
+      "legacy_control_ids": [
+        "V-233580"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233580"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000089-DB-000064"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "manual",
+      "container_validation": "not_supported",
+      "implementation_owner": "unassigned",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
+      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+    },
+    {
+      "control_id": "V-261921",
+      "stig_id": "CD16-00-007500",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001890"
+      ],
+      "mapping_status": "unmapped",
+      "legacy_control_ids": [],
+      "candidate_legacy_control_ids": [],
+      "candidate_srg_ids": [],
+      "candidate_basis": [],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "not_yet_assessed",
+      "container_validation": "not_yet_assessed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "notes": ""
+    },
+    {
+      "control_id": "V-261922",
+      "stig_id": "CD16-00-007600",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001889"
+      ],
+      "mapping_status": "unmapped",
+      "legacy_control_ids": [],
+      "candidate_legacy_control_ids": [],
+      "candidate_srg_ids": [],
+      "candidate_basis": [],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "not_yet_assessed",
+      "container_validation": "not_yet_assessed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "notes": ""
+    },
+    {
+      "control_id": "V-261923",
+      "stig_id": "CD16-00-007700",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001812"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233581"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233581"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000375-DB-000323"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261924",
+      "stig_id": "CD16-00-007800",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001813"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233582"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233582"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000100-DB-000201"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261925",
+      "stig_id": "CD16-00-007900",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001814"
+      ],
+      "mapping_status": "unmapped",
+      "legacy_control_ids": [],
+      "candidate_legacy_control_ids": [],
+      "candidate_srg_ids": [],
+      "candidate_basis": [],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "not_yet_assessed",
+      "container_validation": "not_yet_assessed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "notes": ""
+    },
+    {
+      "control_id": "V-261926",
+      "stig_id": "CD16-00-008000",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001762"
+      ],
+      "mapping_status": "unmapped",
+      "legacy_control_ids": [],
+      "candidate_legacy_control_ids": [
+        "V-233583"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000514-DB-000382"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": [
+          "V-233583"
+        ]
+      },
+      "overlay_checks": [],
+      "automation_status": "not_yet_assessed",
+      "container_validation": "not_yet_assessed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "notes": ""
+    },
+    {
+      "control_id": "V-261927",
+      "stig_id": "CD16-00-008100",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002038"
+      ],
+      "mapping_status": "unmapped",
+      "legacy_control_ids": [],
+      "candidate_legacy_control_ids": [
+        "V-233584"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000416-DB-000380"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": [
+          "V-233584"
+        ]
+      },
+      "overlay_checks": [],
+      "automation_status": "not_yet_assessed",
+      "container_validation": "not_yet_assessed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "notes": ""
+    },
+    {
+      "control_id": "V-261928",
+      "stig_id": "CD16-00-008300",
+      "severity": "high",
+      "cci_refs": [
+        "CCI-002450"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233586"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233586"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000231-DB-000154"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261929",
+      "stig_id": "CD16-00-008400",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002470"
+      ],
+      "mapping_status": "manual_only",
+      "legacy_control_ids": [
+        "V-233587"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233587"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000378-DB-000365"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "manual",
+      "container_validation": "not_supported",
+      "implementation_owner": "unassigned",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
+      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+    },
+    {
+      "control_id": "V-261930",
+      "stig_id": "CD16-00-008500",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002475"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233588"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233588"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000211-DB-000122"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261931",
+      "stig_id": "CD16-00-008600",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002476"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233589"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233589"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000092-DB-000208"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261932",
+      "stig_id": "CD16-00-008800",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002420"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233591"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233591"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000098-DB-000042"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261933",
+      "stig_id": "CD16-00-008900",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002422"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233592"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233592"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000141-DB-000091"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261934",
+      "stig_id": "CD16-00-009000",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002754"
+      ],
+      "mapping_status": "unmapped",
+      "legacy_control_ids": [],
+      "candidate_legacy_control_ids": [],
+      "candidate_srg_ids": [],
+      "candidate_basis": [],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "not_yet_assessed",
+      "container_validation": "not_yet_assessed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "notes": ""
+    },
+    {
+      "control_id": "V-261935",
+      "stig_id": "CD16-00-009100",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002617"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233593"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233593"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000141-DB-000093"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261936",
+      "stig_id": "CD16-00-009200",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002605"
+      ],
+      "mapping_status": "manual_only",
+      "legacy_control_ids": [
+        "V-233594"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233594"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000141-DB-000092"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "manual",
+      "container_validation": "not_supported",
+      "implementation_owner": "unassigned",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
+      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+    },
+    {
+      "control_id": "V-261938",
+      "stig_id": "CD16-00-009400",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "mapping_status": "manual_only",
+      "legacy_control_ids": [
+        "V-233595"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233595"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000313-DB-000309"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "manual",
+      "container_validation": "not_supported",
+      "implementation_owner": "unassigned",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
+      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+    },
+    {
+      "control_id": "V-261939",
+      "stig_id": "CD16-00-009500",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "mapping_status": "unmapped",
+      "legacy_control_ids": [],
+      "candidate_legacy_control_ids": [
+        "V-233596"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000171-DB-000074"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": [
+          "V-233596"
+        ]
+      },
+      "overlay_checks": [],
+      "automation_status": "not_yet_assessed",
+      "container_validation": "not_yet_assessed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "notes": ""
+    },
+    {
+      "control_id": "V-261940",
+      "stig_id": "CD16-00-009600",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233597"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233597"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000380-DB-000360"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261941",
+      "stig_id": "CD16-00-009700",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233598"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233598"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000080-DB-000063"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261942",
+      "stig_id": "CD16-00-009800",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "mapping_status": "unmapped",
+      "legacy_control_ids": [],
+      "candidate_legacy_control_ids": [],
+      "candidate_srg_ids": [],
+      "candidate_basis": [],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "not_yet_assessed",
+      "container_validation": "not_yet_assessed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "notes": ""
+    },
+    {
+      "control_id": "V-261943",
+      "stig_id": "CD16-00-009900",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "mapping_status": "manual_only",
+      "legacy_control_ids": [
+        "V-233599"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233599"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000359-DB-000319"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "manual",
+      "container_validation": "not_supported",
+      "implementation_owner": "unassigned",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
+      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+    },
+    {
+      "control_id": "V-261944",
+      "stig_id": "CD16-00-010000",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233600"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233600"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000516-DB-000363"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261945",
+      "stig_id": "CD16-00-010100",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "mapping_status": "manual_only",
+      "legacy_control_ids": [
+        "V-233601"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233601"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000389-DB-000372"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "manual",
+      "container_validation": "not_supported",
+      "implementation_owner": "unassigned",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
+      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+    },
+    {
+      "control_id": "V-261946",
+      "stig_id": "CD16-00-010200",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "mapping_status": "unmapped",
+      "legacy_control_ids": [],
+      "candidate_legacy_control_ids": [
+        "V-233602"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000176-DB-000068"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": [
+          "V-233602"
+        ]
+      },
+      "overlay_checks": [],
+      "automation_status": "not_yet_assessed",
+      "container_validation": "not_yet_assessed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "notes": ""
+    },
+    {
+      "control_id": "V-261947",
+      "stig_id": "CD16-00-010300",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233603"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233603"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000427-DB-000385"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261948",
+      "stig_id": "CD16-00-010400",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233604"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233604"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000095-DB-000039"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261949",
+      "stig_id": "CD16-00-010500",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233605"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233605"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000429-DB-000387"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261950",
+      "stig_id": "CD16-00-010600",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233606"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233606"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000220-DB-000149"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261951",
+      "stig_id": "CD16-00-010700",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233607"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233607"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000121-DB-000202"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261952",
+      "stig_id": "CD16-00-010800",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "mapping_status": "unmapped",
+      "legacy_control_ids": [],
+      "candidate_legacy_control_ids": [],
+      "candidate_srg_ids": [],
+      "candidate_basis": [],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "not_yet_assessed",
+      "container_validation": "not_yet_assessed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "notes": ""
+    },
+    {
+      "control_id": "V-261953",
+      "stig_id": "CD16-00-010900",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "mapping_status": "unmapped",
+      "legacy_control_ids": [],
+      "candidate_legacy_control_ids": [],
+      "candidate_srg_ids": [],
+      "candidate_basis": [],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "not_yet_assessed",
+      "container_validation": "not_yet_assessed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "notes": ""
+    },
+    {
+      "control_id": "V-261954",
+      "stig_id": "CD16-00-011000",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "mapping_status": "unmapped",
+      "legacy_control_ids": [],
+      "candidate_legacy_control_ids": [],
+      "candidate_srg_ids": [],
+      "candidate_basis": [],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "not_yet_assessed",
+      "container_validation": "not_yet_assessed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "notes": ""
+    },
+    {
+      "control_id": "V-261955",
+      "stig_id": "CD16-00-011100",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233608"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233608"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000096-DB-000040"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261956",
+      "stig_id": "CD16-00-011200",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233609"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233609"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000123-DB-000204"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261957",
+      "stig_id": "CD16-00-011300",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233610"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233610"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000515-DB-000318"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261958",
+      "stig_id": "CD16-00-011400",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233611"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233611"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000224-DB-000384"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261959",
+      "stig_id": "CD16-00-011500",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233612"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233612"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000148-DB-000103"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261960",
+      "stig_id": "CD16-00-011600",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "mapping_status": "manual_only",
+      "legacy_control_ids": [
+        "V-233613"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233613"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000295-DB-000305"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "manual",
+      "container_validation": "not_supported",
+      "implementation_owner": "unassigned",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
+      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+    },
+    {
+      "control_id": "V-261961",
+      "stig_id": "CD16-00-011700",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "mapping_status": "unmapped",
+      "legacy_control_ids": [],
+      "candidate_legacy_control_ids": [
+        "V-233614"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000340-DB-000304"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": [
+          "V-233614"
+        ]
+      },
+      "overlay_checks": [],
+      "automation_status": "not_yet_assessed",
+      "container_validation": "not_yet_assessed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "notes": ""
+    },
+    {
+      "control_id": "V-261962",
+      "stig_id": "CD16-00-011800",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "mapping_status": "manual_only",
+      "legacy_control_ids": [
+        "V-233615"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233615"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000177-DB-000069"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "manual",
+      "container_validation": "not_supported",
+      "implementation_owner": "unassigned",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
+      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+    },
+    {
+      "control_id": "V-261963",
+      "stig_id": "CD16-00-011900",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "mapping_status": "manual_only",
+      "legacy_control_ids": [
+        "V-233616"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233616"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000243-DB-000128"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "manual",
+      "container_validation": "not_supported",
+      "implementation_owner": "unassigned",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
+      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+    },
+    {
+      "control_id": "V-261964",
+      "stig_id": "CD16-00-012000",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233617"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233617"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000243-DB-000374"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261965",
+      "stig_id": "CD16-00-012200",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002450"
+      ],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233618"
+      ],
+      "candidate_legacy_control_ids": [
+        "V-233618"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000122-DB-000203"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "undetermined",
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+    },
+    {
+      "control_id": "V-261966",
+      "stig_id": "CD16-00-012300",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002450"
+      ],
+      "mapping_status": "unmapped",
+      "legacy_control_ids": [],
+      "candidate_legacy_control_ids": [
+        "V-233619"
+      ],
+      "candidate_srg_ids": [
+        "SRG-APP-000179-DB-000114"
+      ],
+      "candidate_basis": [
+        "stig_id_suffix"
+      ],
+      "candidate_warnings": {
+        "severity_mismatch": [
+          "V-233619"
+        ]
+      },
+      "overlay_checks": [],
+      "automation_status": "not_yet_assessed",
+      "container_validation": "not_yet_assessed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "notes": ""
+    },
+    {
+      "control_id": "V-261967",
+      "stig_id": "CD16-00-012400",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001851"
+      ],
+      "mapping_status": "unmapped",
+      "legacy_control_ids": [],
+      "candidate_legacy_control_ids": [],
+      "candidate_srg_ids": [],
+      "candidate_basis": [],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "not_yet_assessed",
+      "container_validation": "not_yet_assessed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "notes": ""
+    },
+    {
+      "control_id": "V-283674",
+      "stig_id": "CD16-00-009300",
+      "severity": "high",
+      "cci_refs": [
+        "CCI-003376"
+      ],
+      "mapping_status": "unmapped",
+      "legacy_control_ids": [],
+      "candidate_legacy_control_ids": [],
+      "candidate_srg_ids": [],
+      "candidate_basis": [],
+      "candidate_warnings": {
+        "severity_mismatch": []
+      },
+      "overlay_checks": [],
+      "automation_status": "not_yet_assessed",
+      "container_validation": "not_yet_assessed",
+      "implementation_owner": "unassigned",
+      "validation_owner": "unassigned",
+      "deployment_responsibility": "undetermined",
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+cicd/check-stig-traceability
+cicd/check-stig-mapping
+
+bash -n scripts/stig/apply_stig_config.sh
+bash -n cicd/start-stig-validation-target
+bash -n cicd/run-stig-validation
+
+PYTHONPYCACHEPREFIX="${PYTHONPYCACHEPREFIX:-/tmp/pycache}" \
+	python3 -m py_compile scripts/stig/summarize_inspec_results.py
+
+make -n build-stig >/dev/null
+make -n start-stig-validation-target >/dev/null
+make -n validate-stig-overlay >/dev/null
+make -n summarize-stig-validation >/dev/null
+
+echo "STIG workflow check passed"

@@ -328,7 +328,8 @@ RUN install -o postgres -g postgres -m 0750 -d /usr/local/lib/pgai
 
 USER postgres
 
-ENV MAKEFLAGS=-j4
+ARG BUILD_MAKEFLAGS=-j4
+ENV MAKEFLAGS=${BUILD_MAKEFLAGS}
 
 # pgai is an extension for artificial intelligence workloads
 ARG PGAI_VERSION
@@ -441,6 +442,7 @@ RUN if [ "${ALLOW_ADDING_EXTENSIONS}" != "true" ]; then \
 RUN apt-get clean
 
 ARG PG_MAJOR
+ARG STIG_ENABLED=false
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["postgres"]
 
@@ -452,6 +454,10 @@ RUN ln -s /timescaledb_entrypoint.sh /patroni_entrypoint.sh
 COPY pgbackrest_entrypoint.sh /
 ## Some patroni callbacks are configured by default by the operator.
 COPY scripts /scripts/
+
+RUN if [ "${STIG_ENABLED}" = "true" ]; then \
+        ln -s /scripts/stig/apply_stig_config.sh /docker-entrypoint-initdb.d/015_apply_stig_config.sh; \
+    fi
 
 ## The mount being used by the Zalando postgres-operator is /home/postgres/pgdata
 ## for Patroni to do it's work it will sometimes move an old/invalid data directory
@@ -502,8 +508,10 @@ RUN set -eux; \
 ARG DOCKER_FROM
 ARG BUILDER_URL
 ARG RELEASE_URL
+ARG STIG_ENABLED=false
 RUN /build/scripts/install_extensions versions > /.image_config; \
     echo "OSS_ONLY=\"$OSS_ONLY\"" >> /.image_config; \
+    echo "STIG_ENABLED=\"${STIG_ENABLED}\"" >> /.image_config; \
     echo "PG_LOGERRORS=\"${PG_LOGERRORS}\"" >> /.image_config; \
     echo "PG_STAT_MONITOR=\"${PG_STAT_MONITOR}\"" >> /.image_config; \
     echo "PGVECTO_RS=\"${PGVECTO_RS}\"" >> /.image_config; \
@@ -565,6 +573,7 @@ FROM scratch AS release
 COPY --from=trimmed / /
 
 ARG PG_MAJOR
+ARG STIG_ENABLED=false
 
 ENV PGROOT=/home/postgres \
     PGDATA=/home/postgres/pgdata/data \
@@ -576,6 +585,7 @@ ENV PGROOT=/home/postgres \
     PATH=/usr/lib/postgresql/${PG_MAJOR}/bin:${PATH} \
     LC_ALL=C.UTF-8 \
     LANG=C.UTF-8 \
+    STIG_ENABLED=${STIG_ENABLED} \
     PAGER=""
 
 # https://github.com/docker-library/postgres/commit/bfc5d81c8f5647c690f452dc558e64fddb1802f6

@@ -1,0 +1,76 @@
+name: timescaledb-ha-postgresql16-stig-overlay
+title: TimescaleDB HA PostgreSQL 16 STIG Compatibility Overlay
+maintainer: TimescaleDB HA contributors
+license: Apache-2.0
+summary: Repository-owned compatibility checks for PostgreSQL 16 STIG validation against the TimescaleDB HA image
+version: 0.1.0
+inspec_version: ">= 4.0"
+
+inputs:
+  - name: pg_owner
+    type: string
+    value: postgres
+  - name: pg_group
+    type: string
+    value: postgres
+  - name: pg_dba
+    type: string
+    value: postgres
+    sensitive: true
+  - name: pg_dba_password
+    type: string
+    value: ""
+    sensitive: true
+  - name: pg_host
+    type: string
+    value: "127.0.0.1"
+  - name: pg_port
+    type: numeric
+    value: 5432
+  - name: pg_db
+    type: string
+    value: postgres
+  - name: pg_version
+    type: string
+    value: "16.x"
+  - name: pg_data_dir
+    type: string
+    value: "/home/postgres/pgdata/data"
+  - name: pg_log_dir
+    type: string
+    value: "/home/postgres/pg_log"
+  - name: pg_audit_log_dir
+    type: string
+    value: "/home/postgres/pg_log"
+  - name: pg_conf_file
+    type: string
+    value: "/home/postgres/pgdata/data/postgresql.conf"
+  - name: pg_hba_conf_file
+    type: string
+    value: "/home/postgres/pgdata/data/pg_hba.conf"
+  - name: pg_ident_conf_file
+    type: string
+    value: "/home/postgres/pgdata/data/pg_ident.conf"
+  - name: pg_shared_dirs
+    type: array
+    value:
+      - "/usr/lib/postgresql/16"
+      - "/usr/lib/postgresql/16/bin"
+      - "/usr/lib/postgresql/16/lib"
+      - "/usr/share/postgresql/16"
+  - name: pgaudit_installation
+    type: string
+    value: "/usr/lib/postgresql/16/lib"
+  - name: approved_packages
+    type: array
+    value:
+      - "postgresql-16"
+      - "postgresql-client-16"
+      - "postgresql-16-pgaudit"
+      - "timescaledb-2-postgresql-16"
+  - name: approved_ext
+    type: array
+    value:
+      - "plpgsql"
+      - "pgaudit"
+      - "timescaledb"
