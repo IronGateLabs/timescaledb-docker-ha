@@ -13,7 +13,7 @@ This report summarizes identifier-level mapping between the PostgreSQL 16 tracea
 - Current confirmed mapping status: 60 `mapped`, 18 `replaced_by_overlay`, 31 `deployment_owned`, 2 `manual_only`, 0 `unmapped`.
 - Current automation status: 78 `partially_automated`, 31 `deployment_owned`, 2 `manual`, 0 `not_yet_assessed`.
 - Traceability status after reviewed classification: 60 `validation_only`, 18 `image_enforced`, 31 `deployment_owned`, 2 `manual`.
-- Of the 60 `validation_only` controls, 32 are `validation_state: executed` (their mapped legacy profile checks passed against the hardened image in the CI validation run) and 28 are `validation_state: candidate` (pending a legacy-check fix or an image-config remediation before the executed result is trustworthy).
+- Of the 60 `validation_only` controls, 39 are `validation_state: executed` (their mapped legacy profile checks passed against the hardened image in the CI validation run) and 21 are `validation_state: candidate` (pending a portable legacy-check fix before the executed result is trustworthy). The remaining candidates are blocked by legacy-check portability issues (PostgreSQL 16 catalog/role-wording assumptions and two outright check bugs) to be addressed in the forked profile, not by the image.
 - Remaining unmapped controls: 0.
 - Remaining manual-only controls: 2.
 
