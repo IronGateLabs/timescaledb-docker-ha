@@ -37,7 +37,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "candidate"
     },
     {
       "control_id": "V-261858",
@@ -70,7 +71,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Reviewed severity-mismatch candidate; reusable audit configuration and log validation logic remains applicable to PostgreSQL 16 with repository inputs. Treat as validation-only until implementation ownership is separately confirmed."
+      "notes": "Reviewed severity-mismatch candidate; reusable audit configuration and log validation logic remains applicable to PostgreSQL 16 with repository inputs. Treat as validation-only until implementation ownership is separately confirmed.",
+      "validation_state": "candidate"
     },
     {
       "control_id": "V-261859",
@@ -132,7 +134,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261861",
@@ -194,7 +197,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "candidate"
     },
     {
       "control_id": "V-261863",
@@ -225,7 +229,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "candidate"
     },
     {
       "control_id": "V-261864",
@@ -258,7 +263,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "identity_and_access",
-      "notes": "Reviewed severity-mismatch candidate; reusable pg_hba authentication-method validation applies to PostgreSQL 16, while final approved method selection remains deployment-owned."
+      "notes": "Reviewed severity-mismatch candidate; reusable pg_hba authentication-method validation applies to PostgreSQL 16, while final approved method selection remains deployment-owned.",
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261865",
@@ -267,7 +273,7 @@
       "cci_refs": [
         "CCI-001464"
       ],
-      "mapping_status": "mapped",
+      "mapping_status": "deployment_owned",
       "legacy_control_ids": [
         "V-233520"
       ],
@@ -286,12 +292,12 @@
         ]
       },
       "overlay_checks": [],
-      "automation_status": "partially_automated",
-      "container_validation": "partial",
-      "implementation_owner": "unassigned",
-      "validation_owner": "validation_profile",
+      "automation_status": "deployment_owned",
+      "container_validation": "not_supported",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
       "deployment_responsibility": "identity_and_access",
-      "notes": "Reviewed severity-mismatch candidate; reusable role, privilege, and pg_hba validation logic can provide partial PostgreSQL 16 coverage, while authorization policy remains deployment-owned."
+      "notes": "Reclassified to deployment-owned after executed validation: host-based authentication topology (pg_hba local and replication rules) is rendered by Patroni and provided at deployment, not by the image."
     },
     {
       "control_id": "V-261866",
@@ -380,7 +386,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "candidate"
     },
     {
       "control_id": "V-261869",
@@ -411,7 +418,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "candidate"
     },
     {
       "control_id": "V-261870",
@@ -442,7 +450,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261871",
@@ -649,7 +658,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "candidate"
     },
     {
       "control_id": "V-261878",
@@ -680,7 +690,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261879",
@@ -711,7 +722,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261880",
@@ -742,7 +754,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "candidate"
     },
     {
       "control_id": "V-261881",
@@ -773,7 +786,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261882",
@@ -897,7 +911,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "candidate"
     },
     {
       "control_id": "V-261886",
@@ -959,7 +974,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "candidate"
     },
     {
       "control_id": "V-261888",
@@ -1046,7 +1062,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "candidate"
     },
     {
       "control_id": "V-261891",
@@ -1127,7 +1144,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "candidate"
     },
     {
       "control_id": "V-261894",
@@ -1160,7 +1178,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Reviewed severity-mismatch candidate; reusable audit logging validation for configuration and access-restriction events remains applicable to PostgreSQL 16 with repository log inputs."
+      "notes": "Reviewed severity-mismatch candidate; reusable audit logging validation for configuration and access-restriction events remains applicable to PostgreSQL 16 with repository log inputs.",
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261895",
@@ -1191,7 +1210,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "candidate"
     },
     {
       "control_id": "V-261896",
@@ -1255,7 +1275,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261898",
@@ -1286,7 +1307,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261899",
@@ -1317,7 +1339,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261900",
@@ -1348,7 +1371,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261901",
@@ -1381,7 +1405,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Reviewed severity-mismatch candidate; reusable pgaudit event validation remains applicable to PostgreSQL 16 with repository audit log inputs."
+      "notes": "Reviewed severity-mismatch candidate; reusable pgaudit event validation remains applicable to PostgreSQL 16 with repository audit log inputs.",
+      "validation_state": "candidate"
     },
     {
       "control_id": "V-261902",
@@ -1412,7 +1437,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261903",
@@ -1443,7 +1469,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "candidate"
     },
     {
       "control_id": "V-261904",
@@ -1474,7 +1501,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261905",
@@ -1505,7 +1533,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261906",
@@ -1536,7 +1565,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261907",
@@ -1567,7 +1597,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261908",
@@ -1598,7 +1629,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261909",
@@ -1629,7 +1661,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261910",
@@ -1660,7 +1693,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "candidate"
     },
     {
       "control_id": "V-261911",
@@ -1691,7 +1725,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261912",
@@ -1722,7 +1757,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "candidate"
     },
     {
       "control_id": "V-261913",
@@ -1753,7 +1789,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "candidate"
     },
     {
       "control_id": "V-261914",
@@ -1784,7 +1821,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261915",
@@ -1815,7 +1853,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261916",
@@ -1846,7 +1885,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "candidate"
     },
     {
       "control_id": "V-261917",
@@ -1855,7 +1895,7 @@
       "cci_refs": [
         "CCI-001844"
       ],
-      "mapping_status": "mapped",
+      "mapping_status": "deployment_owned",
       "legacy_control_ids": [
         "V-233577"
       ],
@@ -1872,12 +1912,12 @@
         "severity_mismatch": []
       },
       "overlay_checks": [],
-      "automation_status": "partially_automated",
-      "container_validation": "partial",
-      "implementation_owner": "unassigned",
-      "validation_owner": "validation_profile",
-      "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "automation_status": "deployment_owned",
+      "container_validation": "not_supported",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "secrets",
+      "notes": "Reclassified to deployment-owned after executed validation: certificate revocation and client-certificate authentication depend on deployment-provided PKI material."
     },
     {
       "control_id": "V-261918",
@@ -1886,7 +1926,7 @@
       "cci_refs": [
         "CCI-001849"
       ],
-      "mapping_status": "mapped",
+      "mapping_status": "deployment_owned",
       "legacy_control_ids": [
         "V-233579"
       ],
@@ -1903,12 +1943,12 @@
         "severity_mismatch": []
       },
       "overlay_checks": [],
-      "automation_status": "partially_automated",
-      "container_validation": "partial",
-      "implementation_owner": "unassigned",
-      "validation_owner": "validation_profile",
-      "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "automation_status": "deployment_owned",
+      "container_validation": "not_supported",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "secrets",
+      "notes": "Reclassified to deployment-owned after executed validation: TLS enablement and server certificates are deployment-provided; the image ships no certificates."
     },
     {
       "control_id": "V-261919",
@@ -2043,7 +2083,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261924",
@@ -2074,7 +2115,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "candidate"
     },
     {
       "control_id": "V-261925",
@@ -2192,7 +2234,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261929",
@@ -2254,7 +2297,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261931",
@@ -2285,7 +2329,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261932",
@@ -2316,7 +2361,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "candidate"
     },
     {
       "control_id": "V-261933",
@@ -2347,7 +2393,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261934",
@@ -2401,7 +2448,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261936",
@@ -2498,7 +2546,8 @@
       "implementation_owner": "image",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "identity_and_access",
-      "notes": "Reviewed severity-mismatch candidate; reusable password encryption and role password validation applies to PostgreSQL 16, and the STIG image fragment sets SCRAM password encryption."
+      "notes": "Reviewed severity-mismatch candidate; reusable password encryption and role password validation applies to PostgreSQL 16, and the STIG image fragment sets SCRAM password encryption.",
+      "validation_state": "candidate"
     },
     {
       "control_id": "V-261940",
@@ -2529,7 +2578,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "candidate"
     },
     {
       "control_id": "V-261941",
@@ -2560,7 +2610,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "candidate"
     },
     {
       "control_id": "V-261942",
@@ -2649,7 +2700,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261945",
@@ -2722,7 +2774,7 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "mapping_status": "mapped",
+      "mapping_status": "deployment_owned",
       "legacy_control_ids": [
         "V-233603"
       ],
@@ -2739,12 +2791,12 @@
         "severity_mismatch": []
       },
       "overlay_checks": [],
-      "automation_status": "partially_automated",
-      "container_validation": "partial",
-      "implementation_owner": "unassigned",
-      "validation_owner": "validation_profile",
-      "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "automation_status": "deployment_owned",
+      "container_validation": "not_supported",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "secrets",
+      "notes": "Reclassified to deployment-owned after executed validation: trusted certificate-authority configuration depends on deployment-provided PKI trust policy."
     },
     {
       "control_id": "V-261948",
@@ -2775,7 +2827,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "candidate"
     },
     {
       "control_id": "V-261949",
@@ -2806,7 +2859,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261950",
@@ -2837,7 +2891,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "candidate"
     },
     {
       "control_id": "V-261951",
@@ -2868,7 +2923,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "candidate"
     },
     {
       "control_id": "V-261952",
@@ -2972,7 +3028,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261956",
@@ -3003,7 +3060,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "candidate"
     },
     {
       "control_id": "V-261957",
@@ -3012,7 +3070,7 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "mapping_status": "mapped",
+      "mapping_status": "deployment_owned",
       "legacy_control_ids": [
         "V-233610"
       ],
@@ -3029,12 +3087,12 @@
         "severity_mismatch": []
       },
       "overlay_checks": [],
-      "automation_status": "partially_automated",
-      "container_validation": "partial",
-      "implementation_owner": "unassigned",
-      "validation_owner": "validation_profile",
-      "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "automation_status": "deployment_owned",
+      "container_validation": "not_supported",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "operator",
+      "notes": "Reclassified to deployment-owned after executed validation: audit log off-load to a central facility depends on deployment logging infrastructure outside the image."
     },
     {
       "control_id": "V-261958",
@@ -3043,7 +3101,7 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "mapping_status": "mapped",
+      "mapping_status": "deployment_owned",
       "legacy_control_ids": [
         "V-233611"
       ],
@@ -3060,12 +3118,12 @@
         "severity_mismatch": []
       },
       "overlay_checks": [],
-      "automation_status": "partially_automated",
-      "container_validation": "partial",
-      "implementation_owner": "unassigned",
-      "validation_owner": "validation_profile",
-      "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "automation_status": "deployment_owned",
+      "container_validation": "not_supported",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "secrets",
+      "notes": "Reclassified to deployment-owned after executed validation: TLS enablement for encrypted transport is deployment-provided; the image does not enable SSL by default."
     },
     {
       "control_id": "V-261959",
@@ -3074,7 +3132,7 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "mapping_status": "mapped",
+      "mapping_status": "deployment_owned",
       "legacy_control_ids": [
         "V-233612"
       ],
@@ -3091,12 +3149,12 @@
         "severity_mismatch": []
       },
       "overlay_checks": [],
-      "automation_status": "partially_automated",
-      "container_validation": "partial",
-      "implementation_owner": "unassigned",
-      "validation_owner": "validation_profile",
-      "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "automation_status": "deployment_owned",
+      "container_validation": "not_supported",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "identity_and_access",
+      "notes": "Reclassified to deployment-owned after executed validation: host-based authentication and identity topology are deployment-provided; a portable PostgreSQL 16 overlay check remains a follow-up."
     },
     {
       "control_id": "V-261960",
@@ -3259,7 +3317,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261965",
@@ -3290,7 +3349,8 @@
       "implementation_owner": "unassigned",
       "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261966",

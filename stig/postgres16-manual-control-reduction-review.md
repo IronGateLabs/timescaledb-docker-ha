@@ -8,11 +8,11 @@ This review artifact is generated from committed project metadata. It uses contr
 
 | Status | Count |
 | --- | --- |
-| mapped | 67 |
+| mapped | 60 |
 | manual_only | 2 |
 | unmapped | 0 |
 | replaced_by_overlay | 18 |
-| deployment_owned | 24 |
+| deployment_owned | 31 |
 | exception | 0 |
 
 ### Automation Status
@@ -20,10 +20,10 @@ This review artifact is generated from committed project metadata. It uses contr
 | Status | Count |
 | --- | --- |
 | automated | 0 |
-| partially_automated | 85 |
+| partially_automated | 78 |
 | manual | 2 |
 | not_yet_assessed | 0 |
-| deployment_owned | 24 |
+| deployment_owned | 31 |
 | exception | 0 |
 
 ### Traceability Status
@@ -31,8 +31,8 @@ This review artifact is generated from committed project metadata. It uses contr
 | Status | Count |
 | --- | --- |
 | image_enforced | 18 |
-| deployment_owned | 24 |
-| validation_only | 67 |
+| deployment_owned | 31 |
+| validation_only | 60 |
 | manual | 2 |
 | exception | 0 |
 | not_yet_reviewed | 0 |
@@ -50,7 +50,7 @@ This review artifact is generated from committed project metadata. It uses contr
 | V-261859 | CD16-00-000300 | deployment_owned | deployment_owned | not_supported | organization_policy | Reviewed severity-mismatch candidate; security update timing depends on image rebuild, release, and deployment patch policy rather than a stable container runtime assertion. |
 | V-261861 | CD16-00-000500 | deployment_owned | deployment_owned | partial | identity_and_access | Reviewed severity-mismatch candidate; authentication integration depends on deployment identity architecture, with only partial pg_hba method validation possible from the container. |
 | V-261864 | CD16-00-000800 | mapped | partially_automated | partial | identity_and_access | Reviewed severity-mismatch candidate; reusable pg_hba authentication-method validation applies to PostgreSQL 16, while final approved method selection remains deployment-owned. |
-| V-261865 | CD16-00-000900 | mapped | partially_automated | partial | identity_and_access | Reviewed severity-mismatch candidate; reusable role, privilege, and pg_hba validation logic can provide partial PostgreSQL 16 coverage, while authorization policy remains deployment-owned. |
+| V-261865 | CD16-00-000900 | deployment_owned | deployment_owned | not_supported | identity_and_access | Reclassified to deployment-owned after executed validation: host-based authentication topology (pg_hba local and replication rules) is rendered by Patroni and provided at deployment, not by the image. |
 | V-261882 | CD16-00-002700 | deployment_owned | deployment_owned | not_supported | organization_policy | Reviewed severity-mismatch candidate; real-time audit failure alerting depends on deployment logging and monitoring integration outside the image boundary. |
 | V-261883 | CD16-00-002800 | deployment_owned | deployment_owned | not_supported | organization_policy | Reviewed severity-mismatch candidate; audit storage exhaustion behavior and retention policy depend on deployment log management outside the image boundary. |
 | V-261886 | CD16-00-003200 | deployment_owned | deployment_owned | not_supported | identity_and_access | Reviewed severity-mismatch candidate; authorization and tracking of software installation account access is an operational access-control responsibility outside this image. |

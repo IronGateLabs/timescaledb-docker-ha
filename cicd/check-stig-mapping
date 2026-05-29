@@ -29,6 +29,13 @@ REQUIRED_MAPPING_FIELDS = {
     "deployment_responsibility",
     "notes",
 }
+OPTIONAL_MAPPING_FIELDS = {
+    "validation_state",
+}
+ALLOWED_VALIDATION_STATE = {
+    "executed",
+    "candidate",
+}
 ALLOWED_MAPPING_STATUS = {
     "unmapped",
     "direct_match",
@@ -123,7 +130,7 @@ def main():
     mapping_ids = set()
     for index, item in enumerate(mapping["mappings"], start=1):
         missing = REQUIRED_MAPPING_FIELDS - set(item)
-        extra = set(item) - REQUIRED_MAPPING_FIELDS
+        extra = set(item) - REQUIRED_MAPPING_FIELDS - OPTIONAL_MAPPING_FIELDS
         if missing:
             return fail(f"mapping {index} missing fields: {sorted(missing)}")
         if extra:
@@ -146,6 +153,8 @@ def main():
             return fail(f"invalid validation_owner for {control_id}")
         if item["deployment_responsibility"] not in ALLOWED_DEPLOYMENT_RESPONSIBILITY:
             return fail(f"invalid deployment_responsibility for {control_id}")
+        if "validation_state" in item and item["validation_state"] not in ALLOWED_VALIDATION_STATE:
+            return fail(f"invalid validation_state for {control_id}")
         for legacy_id in item["legacy_control_ids"]:
             if not re.fullmatch(r"V-\d+", legacy_id):
                 return fail(f"invalid legacy control id for {control_id}: {legacy_id}")

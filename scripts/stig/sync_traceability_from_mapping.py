@@ -94,6 +94,10 @@ def main():
         if mapped["overlay_checks"]:
             control["validated_by"].extend(f"overlay:{check}" for check in mapped["overlay_checks"])
         control["notes"] = mapped["notes"]
+        if mapped.get("validation_state"):
+            control["validation_state"] = mapped["validation_state"]
+        else:
+            control.pop("validation_state", None)
         updated += 1
 
     traceability_path.write_text(json.dumps(traceability, indent=2) + "\n")

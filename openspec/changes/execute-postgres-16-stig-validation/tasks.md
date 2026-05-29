@@ -9,7 +9,7 @@
 - [x] 2.1 Reference the forked Crunchy PostgreSQL STIG profile as a portable InSpec dependency (pinned git ref) without vendoring its controls into this repository
 - [x] 2.2 Wire the dependency into `cicd/run-stig-validation` so the mapped legacy controls execute against the hardened image alongside the repository overlay
 - [x] 2.3 Run the combined validation against a launched hardened image and capture per-control results
-- [ ] 2.4 Verify per-control PostgreSQL 16 behavior for the legacy-mapped controls before treating any as authoritative coverage
+- [x] 2.4 Verify per-control PostgreSQL 16 behavior for the legacy-mapped controls before treating any as authoritative coverage
 
 Notes: the input file `stig/inputs_timescaledb_ha_pg16_example.yml` already mapped this image's paths/packages; refined `pg_users` to match the forked profile's PostgreSQL 16 example so built-in roles do not produce false failures. The dependency is wired as a separate commit-pinned profile `stig/validation-legacy` (depends on `IronGateLabs/crunchy-data-postgresql-stig-baseline` @ `f4ff7d74` + `include_controls`), run via `make validate-stig-legacy`; this keeps the offline repository overlay run unchanged and adds the legacy execution as an explicit pass. Tasks 2.3/2.4 remain open because they require building the hardened image (`make build-stig`) and running the containerized auditor (with network egress) against it, then per-control PostgreSQL 16 verification — this is the CI job in section 7.
 
@@ -41,10 +41,12 @@ Notes: the 6 asserting overlay controls now carry non-zero impact (0.5 medium, 0
 
 ## 6. Guardrails and Status Semantics
 
-- [ ] 6.1 Extend `cicd/check-stig-traceability` to reject legacy-only validation references presented as validated coverage
-- [ ] 6.2 Update the traceability schema and status semantics to distinguish candidate-mapped from executed/validated
-- [ ] 6.3 Reclassify the legacy-only `validation_only` controls to candidate-mapped except those proven by an executed run
-- [ ] 6.4 Ensure validation summaries distinguish executed pass/fail from candidate, manual, deployment-owned, and exception
+- [x] 6.1 Extend `cicd/check-stig-traceability` to reject legacy-only validation references presented as validated coverage
+- [x] 6.2 Update the traceability schema and status semantics to distinguish candidate-mapped from executed/validated
+- [x] 6.3 Reclassify the legacy-only `validation_only` controls to candidate-mapped except those proven by an executed run
+- [x] 6.4 Ensure validation summaries distinguish executed pass/fail from candidate, manual, deployment-owned, and exception
+
+Notes: added an optional `validation_state` field (`executed` | `candidate`) to the mapping and traceability schemas, propagated by `sync_traceability_from_mapping.py` and enforced by both guardrails (a `validation_only` control MUST declare a state; the field is rejected on any other status). Driven by the CI run: 32 controls whose mapped legacy checks PASSED are `executed`; 28 are `candidate` (pending a legacy-check fix or image-config remediation). 7 controls were reclassified `validation_only` → `deployment_owned` (TLS/PKI/pg_hba/log-offload). `summarize_inspec_results.py` now de-duplicates the include_controls wrapper double-count and reports the executed/candidate split. New counts: validation_only 60 (32 executed / 28 candidate), deployment_owned 31, image_enforced 18, manual 2.
 
 ## 7. CI Integration
 

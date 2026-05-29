@@ -128,6 +128,9 @@
           },
           "notes": {
             "type": "string"
+          },
+          "validation_state": {
+            "enum": ["executed", "candidate"]
           }
         }
       }

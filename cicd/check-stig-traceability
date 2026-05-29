@@ -22,6 +22,13 @@ REQUIRED_CONTROL_FIELDS = {
     "validated_by",
     "notes",
 }
+OPTIONAL_CONTROL_FIELDS = {
+    "validation_state",
+}
+ALLOWED_VALIDATION_STATE = {
+    "executed",
+    "candidate",
+}
 ALLOWED_STATUS = {
     "not_yet_reviewed",
     "image_enforced",
@@ -120,7 +127,7 @@ def main():
     seen = set()
     for index, control in enumerate(data["controls"], start=1):
         missing = REQUIRED_CONTROL_FIELDS - set(control)
-        extra = set(control) - REQUIRED_CONTROL_FIELDS
+        extra = set(control) - REQUIRED_CONTROL_FIELDS - OPTIONAL_CONTROL_FIELDS
         if missing:
             return fail(f"control {index} missing fields: {sorted(missing)}")
         if extra:
@@ -142,6 +149,12 @@ def main():
             return fail(f"invalid validation_owner for {control['control_id']}")
         if control["deployment_responsibility"] not in ALLOWED_DEPLOYMENT_RESPONSIBILITY:
             return fail(f"invalid deployment_responsibility for {control['control_id']}")
+        if "validation_state" in control and control["validation_state"] not in ALLOWED_VALIDATION_STATE:
+            return fail(f"invalid validation_state for {control['control_id']}")
+        if control.get("validation_state") and control["status"] != "validation_only":
+            return fail(f"validation_state set on non-validation_only control {control['control_id']}")
+        if control["status"] == "validation_only" and not control.get("validation_state"):
+            return fail(f"validation_only control {control['control_id']} must declare validation_state (executed|candidate)")
 
     print(f"traceability check passed: {len(data['controls'])} controls")
     return 0

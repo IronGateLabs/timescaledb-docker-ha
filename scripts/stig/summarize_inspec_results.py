@@ -49,18 +49,22 @@ def main() -> int:
     with args.report.open(encoding="utf-8") as report_file:
         report = json.load(report_file)
 
-    controls = []
-    counts: Counter[str] = Counter()
+    # Collapse controls that appear in more than one profile (an include_controls
+    # wrapper lists each control as not_run while the dependency profile carries the
+    # real result); prefer the evaluated status so counts are not double-reported.
+    by_id: dict = {}
     for profile_name, control in iter_controls(report):
+        cid = control.get("id", "unknown-control")
         status = control_status(control)
-        counts[status] += 1
-        controls.append(
-            {
+        prev = by_id.get(cid)
+        if prev is None or (prev["status"] == "not_run" and status != "not_run"):
+            by_id[cid] = {
                 "profile": profile_name,
-                "control_id": control.get("id", "unknown-control"),
+                "control_id": cid,
                 "status": status,
             }
-        )
+    controls = list(by_id.values())
+    counts: Counter[str] = Counter(control["status"] for control in controls)
 
     summary = {
         "total_controls": len(controls),
@@ -75,6 +79,12 @@ def main() -> int:
         )
         summary["traceability_total_controls"] = len(traceability.get("controls", []))
         summary["traceability_status_counts"] = dict(sorted(traceability_counts.items()))
+        validation_state_counts: Counter[str] = Counter(
+            control.get("validation_state")
+            for control in traceability.get("controls", [])
+            if control.get("status") == "validation_only" and control.get("validation_state")
+        )
+        summary["traceability_validation_only_states"] = dict(sorted(validation_state_counts.items()))
 
     if args.json:
         print(json.dumps(summary, indent=2, sort_keys=True))
@@ -86,6 +96,8 @@ def main() -> int:
             print(f"traceability_total_controls={summary['traceability_total_controls']}")
             for status, count in summary["traceability_status_counts"].items():
                 print(f"traceability_{status}={count}")
+            for state, count in summary.get("traceability_validation_only_states", {}).items():
+                print(f"traceability_validation_only_{state}={count}")
         for control in controls:
             print(f"{control['profile']} {control['control_id']} {control['status']}")
 
