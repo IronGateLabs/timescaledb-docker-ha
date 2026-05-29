@@ -23,10 +23,12 @@ Notes: the audit (adversarially verified) confirmed only V-261888 and V-261892 w
 
 ## 4. Overlay Enforcement and Mapping
 
-- [ ] 4.1 Give overlay controls that assert a STIG requirement a non-zero InSpec impact
-- [ ] 4.2 Tag each asserting overlay control with its V-26xxxx control identifier so results map to traceability
-- [ ] 4.3 Label remaining preflight or input-shape checks as informational and exclude them from coverage counts
+- [x] 4.1 Give overlay controls that assert a STIG requirement a non-zero InSpec impact
+- [x] 4.2 Tag each asserting overlay control with its V-26xxxx control identifier so results map to traceability
+- [x] 4.3 Label remaining preflight or input-shape checks as informational and exclude them from coverage counts
 - [ ] 4.4 Re-run the overlay and confirm a deliberately failing check fails the run
+
+Notes: the 6 asserting overlay controls now carry non-zero impact (0.5 medium, 0.7 high for password-storage/V-261891) and a `stig_controls` tag listing the V-26xxxx ids they cover; the two controls for the now-deployment_owned V-261888/V-261892, plus the inputs/runtime preflight controls, are explicitly `tag informational: true` at impact 0.0. 4.4 (confirming a failing check fails the run) needs an actual run and is covered by the section 7 CI job.
 
 ## 5. Extend Image Enforcement
 
@@ -44,9 +46,11 @@ Notes: the audit (adversarially verified) confirmed only V-261888 and V-261892 w
 
 ## 7. CI Integration
 
-- [ ] 7.1 Add a CI job that builds or launches the hardened image and runs the full STIG validation
-- [ ] 7.2 Publish per-control results as a CI artifact mappable to control identifiers
-- [ ] 7.3 Gate the job so STIG configuration, overlay, or input changes trigger validation
+- [x] 7.1 Add a CI job that builds or launches the hardened image and runs the full STIG validation
+- [x] 7.2 Publish per-control results as a CI artifact mappable to control identifiers
+- [x] 7.3 Gate the job so STIG configuration, overlay, or input changes trigger validation
+
+Notes: `.github/workflows/stig-validation.yaml` builds `pg16-all-stig` with `make build-stig PG_MAJOR=16 TIMESCALEDB_VERSIONS=latest` (local `--load`, no Docker Hub credentials), starts the disposable hardened target, runs the overlay (and the forked legacy profile as a non-blocking step), summarizes against traceability, and uploads `.build/stig-validation/*.json`. Triggers on `workflow_dispatch` and STIG-path pull requests. The build itself runs only in CI (not locally verifiable here), so its first green run also closes 2.3 and 4.4.
 
 ## 8. Default-Hardening Posture
 
