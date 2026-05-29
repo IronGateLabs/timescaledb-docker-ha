@@ -51,3 +51,4 @@ Verification notes:
 - `make latest` completed successfully with `STIG_ENABLED=false`, validating the normal non-STIG latest-image path.
 - `make fast` was attempted first and failed while compiling TimescaleDB 2.17.0 for PostgreSQL 17 with a build jobserver error; that failure occurred outside STIG mode and was not used as the final non-STIG verification signal.
 - Final traceability classification is conservative: 61 controls are `validation_only` through forked-profile mapping candidates, and 50 controls are `manual`.
+- Superseded by the follow-up change `reduce-postgres-16-stig-manual-controls`: the manual surface was reduced from 50 to 2 by introducing `image_enforced` (20) and `deployment_owned` (22) classes, leaving 67 `validation_only` / 22 `deployment_owned` / 20 `image_enforced` / 2 `manual`. The `validation_only` mappings remain candidate (legacy-profile) references that are not yet executed against the hardened image.
