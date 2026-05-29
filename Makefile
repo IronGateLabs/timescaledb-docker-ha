@@ -295,6 +295,10 @@ start-stig-validation-target: # start a disposable local container for STIG vali
 validate-stig-overlay: # run the repository-owned STIG overlay with a containerized CINC/InSpec runner
 	cicd/run-stig-validation
 
+.PHONY: validate-stig-legacy
+validate-stig-legacy: # run the forked, commit-pinned Crunchy PostgreSQL STIG profile against the hardened target (requires network)
+	STIG_PROFILE=stig/validation-legacy STIG_RESULTS_FILE=timescaledb-ha-pg16-legacy.json cicd/run-stig-validation
+
 .PHONY: summarize-stig-validation
 summarize-stig-validation: # summarize the default STIG overlay JSON report
 	scripts/stig/summarize_inspec_results.py .build/stig-validation/timescaledb-ha-pg16-overlay.json --traceability stig/postgres16-v1r2-traceability.json

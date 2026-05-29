@@ -89,6 +89,7 @@ tmp_inputs="${tmpdir}/inputs.yml"
 } >"${tmp_inputs}"
 chmod 0600 "${tmp_inputs}"
 
+set +e
 docker run \
 	--rm \
 	--volume /var/run/docker.sock:/var/run/docker.sock \
@@ -101,5 +102,20 @@ docker run \
 	--target "docker://${STIG_TARGET_CONTAINER}" \
 	--input-file /validation/inputs.yml \
 	--reporter cli "json:/results/${STIG_RESULTS_FILE}"
+status=$?
+set -e
+
+# CINC Auditor/InSpec exit codes: 0 = all controls passed, 100 = at least one
+# control failed, 101 = at least one control skipped. All three mean the run
+# completed and produced a report; only other codes indicate a runner error.
+# The legacy profile is expected to report failures until per-control PostgreSQL
+# 16 verification is complete, so failures must not abort the run.
+case "${status}" in
+0 | 100 | 101) ;;
+*)
+	echo "validation runner failed (exit ${status})" >&2
+	exit "${status}"
+	;;
+esac
 
 echo "${STIG_RESULTS_DIR}/${STIG_RESULTS_FILE}"

@@ -21,6 +21,13 @@ This note tracks compatibility signals for adapting the forked PostgreSQL STIG v
 - The forked profile's example approved package names include platform-specific package naming that does not match this Ubuntu-based image.
 - Existing control filenames and tags cannot be treated as PostgreSQL 16 coverage without mapping old identifiers to PostgreSQL 16 identifiers or replacing controls with PostgreSQL 16-specific controls.
 
+## Legacy Profile Execution
+
+- The forked profile is referenced as a portable, commit-pinned InSpec dependency by `stig/validation-legacy` (pinned to `IronGateLabs/crunchy-data-postgresql-stig-baseline` commit `f4ff7d74`). It is never copied into this repository.
+- `make validate-stig-legacy` runs that profile against the hardened target through the same containerized CINC Auditor/InSpec runner, using `stig/inputs_timescaledb_ha_pg16_example.yml` so the legacy controls evaluate against this image's paths and package names. Results are written to `.build/stig-validation/timescaledb-ha-pg16-legacy.json`.
+- The legacy run requires network egress to fetch the pinned dependency; the repository overlay run does not and is unaffected.
+- Executed legacy results are not authoritative until per-control PostgreSQL 16 behavior is verified; until then a result informs, but does not promote, a control's traceability status.
+
 ## Required Follow-up
 
 - Build an identifier mapping between PostgreSQL 16 controls and any reusable forked profile controls.

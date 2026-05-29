@@ -1,15 +1,17 @@
 ## 1. Baseline and Inputs
 
-- [ ] 1.1 Snapshot current traceability counts (image_enforced, validation_only, deployment_owned, manual, exception) as the starting point for this change
-- [ ] 1.2 Author a portable TimescaleDB HA PostgreSQL 16 InSpec input file that overrides legacy PG12-15 defaults with this image's data directory, log directory, binary path, and package names, using placeholders only
-- [ ] 1.3 Confirm the input file contains no host-specific paths, hostnames, or secrets and passes the review-artifact guardrail
+- [x] 1.1 Snapshot current traceability counts (image_enforced, validation_only, deployment_owned, manual, exception) as the starting point for this change
+- [x] 1.2 Author a portable TimescaleDB HA PostgreSQL 16 InSpec input file that overrides legacy PG12-15 defaults with this image's data directory, log directory, binary path, and package names, using placeholders only
+- [x] 1.3 Confirm the input file contains no host-specific paths, hostnames, or secrets and passes the review-artifact guardrail
 
 ## 2. Execute Mapped Legacy Validation
 
-- [ ] 2.1 Reference the forked Crunchy PostgreSQL STIG profile as a portable InSpec dependency (pinned git ref) without vendoring its controls into this repository
-- [ ] 2.2 Wire the dependency into `cicd/run-stig-validation` so the mapped legacy controls execute against the hardened image alongside the repository overlay
+- [x] 2.1 Reference the forked Crunchy PostgreSQL STIG profile as a portable InSpec dependency (pinned git ref) without vendoring its controls into this repository
+- [x] 2.2 Wire the dependency into `cicd/run-stig-validation` so the mapped legacy controls execute against the hardened image alongside the repository overlay
 - [ ] 2.3 Run the combined validation against a launched hardened image and capture per-control results
 - [ ] 2.4 Verify per-control PostgreSQL 16 behavior for the legacy-mapped controls before treating any as authoritative coverage
+
+Notes: the input file `stig/inputs_timescaledb_ha_pg16_example.yml` already mapped this image's paths/packages; refined `pg_users` to match the forked profile's PostgreSQL 16 example so built-in roles do not produce false failures. The dependency is wired as a separate commit-pinned profile `stig/validation-legacy` (depends on `IronGateLabs/crunchy-data-postgresql-stig-baseline` @ `f4ff7d74` + `include_controls`), run via `make validate-stig-legacy`; this keeps the offline repository overlay run unchanged and adds the legacy execution as an explicit pass. Tasks 2.3/2.4 remain open because they require building the hardened image (`make build-stig`) and running the containerized auditor (with network egress) against it, then per-control PostgreSQL 16 verification — this is the CI job in section 7.
 
 ## 3. Correct Enforcement Classification
 

@@ -20,6 +20,7 @@ PYTHONPYCACHEPREFIX="${PYTHONPYCACHEPREFIX:-.build/pycache}" \
 make -n build-stig >/dev/null
 make -n start-stig-validation-target >/dev/null
 make -n validate-stig-overlay >/dev/null
+make -n validate-stig-legacy >/dev/null
 make -n summarize-stig-validation >/dev/null
 
 echo "STIG workflow check passed"
