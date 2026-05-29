@@ -13,8 +13,10 @@ Required environment:
 
 Optional environment:
   STIG_IMAGE             Image to run. Default: localhost:5000/timescale/timescaledb-ha:pg16-all-stig
+  STIG_PLATFORM          Optional Docker platform, such as linux/amd64 or linux/arm64. Default: Docker selects the image platform.
   STIG_TARGET_CONTAINER  Container name. Default: ts-stig-validation
   STIG_TARGET_PGDATA     Data directory inside the container. Default: /home/postgres/pgdata/data
+  STIG_TARGET_SLEEP      Seconds to keep the disposable target alive. Default: 3600
 USAGE
 }
 
@@ -29,24 +31,32 @@ if [ -z "${STIG_PG_PASSWORD:-}" ]; then
 fi
 
 STIG_IMAGE="${STIG_IMAGE:-localhost:5000/timescale/timescaledb-ha:pg16-all-stig}"
+STIG_PLATFORM="${STIG_PLATFORM:-}"
 STIG_TARGET_CONTAINER="${STIG_TARGET_CONTAINER:-ts-stig-validation}"
 STIG_TARGET_PGDATA="${STIG_TARGET_PGDATA:-/home/postgres/pgdata/data}"
+STIG_TARGET_SLEEP="${STIG_TARGET_SLEEP:-3600}"
+docker_run_args=(
+	--rm
+	--detach
+)
+
+if [ -n "${STIG_PLATFORM}" ]; then
+	docker_run_args+=(--platform "${STIG_PLATFORM}")
+fi
 
 docker rm --force "${STIG_TARGET_CONTAINER}" >/dev/null 2>&1 || true
 
 docker run \
-	--rm \
-	--detach \
-	--platform linux/amd64 \
+	"${docker_run_args[@]}" \
 	--name "${STIG_TARGET_CONTAINER}" \
 	--env PGDATA="${STIG_TARGET_PGDATA}" \
 	--env STIG_ENABLED=true \
 	--entrypoint sleep \
 	--user postgres \
 	"${STIG_IMAGE}" \
-	600 >/dev/null
+	"${STIG_TARGET_SLEEP}" >/dev/null
 
-docker exec "${STIG_TARGET_CONTAINER}" initdb >/dev/null
+docker exec "${STIG_TARGET_CONTAINER}" initdb --auth-local=peer --auth-host=scram-sha-256 >/dev/null
 docker exec \
 	--env PGDATA="${STIG_TARGET_PGDATA}" \
 	--env STIG_ENABLED=true \
@@ -60,6 +70,7 @@ until docker exec "${STIG_TARGET_CONTAINER}" pg_isready >/dev/null 2>&1; do
 done
 
 docker exec \
+	--interactive \
 	--env STIG_PG_PASSWORD="${STIG_PG_PASSWORD}" \
 	"${STIG_TARGET_CONTAINER}" \
 	psql -d postgres -v password="${STIG_PG_PASSWORD}" <<'SQL' >/dev/null

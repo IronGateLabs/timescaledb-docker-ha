@@ -74,6 +74,7 @@ if [ ! -f "${REPO_ROOT}/${STIG_INPUTS}" ]; then
 fi
 
 mkdir -p "${REPO_ROOT}/${STIG_RESULTS_DIR}"
+rm -f "${REPO_ROOT}/${STIG_RESULTS_DIR}/${STIG_RESULTS_FILE}"
 tmpdir="$(mktemp -d "${TMPDIR:-/tmp}/stig-validation.XXXXXX")"
 trap 'rm -rf "${tmpdir}"' EXIT
 

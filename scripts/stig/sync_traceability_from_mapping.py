@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Sync manual/deployment/exception mapping decisions into traceability."""
+"""Sync reviewed mapping decisions into traceability."""
 
 import argparse
 import json
@@ -7,21 +7,39 @@ from pathlib import Path
 
 
 SYNC_STATUSES = {
+    "mapped": {
+        "status": "validation_only",
+        "implementation_owner": "unassigned",
+        "validation_owner": "validation_profile",
+        "deployment_responsibility": "none",
+        "implemented_by": [],
+    },
+    "replaced_by_overlay": {
+        "status": "image_enforced",
+        "implementation_owner": "image",
+        "validation_owner": "overlay",
+        "deployment_responsibility": "none",
+        "implemented_by": ["stig:image-stig-mode"],
+    },
     "manual_only": {
         "status": "manual",
         "implementation_owner": "manual",
         "validation_owner": "manual",
         "deployment_responsibility": "manual",
+        "implemented_by": [],
     },
     "deployment_owned": {
         "status": "deployment_owned",
         "implementation_owner": "deployment",
         "validation_owner": "documentation",
+        "implemented_by": [],
     },
     "exception": {
         "status": "exception",
         "implementation_owner": "exception",
         "validation_owner": "exception",
+        "deployment_responsibility": "none",
+        "implemented_by": [],
     },
 }
 
@@ -47,8 +65,14 @@ def main():
             continue
         for key, value in sync.items():
             control[key] = value
+        if (
+            mapped["mapping_status"] == "deployment_owned"
+            and mapped["deployment_responsibility"] != "undetermined"
+        ):
+            control["deployment_responsibility"] = mapped["deployment_responsibility"]
+        control["validated_by"] = []
         if mapped["legacy_control_ids"]:
-            control["validated_by"] = [f"legacy:{legacy_id}" for legacy_id in mapped["legacy_control_ids"]]
+            control["validated_by"].extend(f"legacy:{legacy_id}" for legacy_id in mapped["legacy_control_ids"])
         if mapped["overlay_checks"]:
             control["validated_by"].extend(f"overlay:{check}" for check in mapped["overlay_checks"])
         control["notes"] = mapped["notes"]

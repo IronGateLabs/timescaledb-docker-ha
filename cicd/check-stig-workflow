@@ -4,13 +4,18 @@ set -euo pipefail
 
 cicd/check-stig-traceability
 cicd/check-stig-mapping
+cicd/check-stig-review-artifacts
 
 bash -n scripts/stig/apply_stig_config.sh
 bash -n cicd/start-stig-validation-target
 bash -n cicd/run-stig-validation
 
-PYTHONPYCACHEPREFIX="${PYTHONPYCACHEPREFIX:-/tmp/pycache}" \
+PYTHONPYCACHEPREFIX="${PYTHONPYCACHEPREFIX:-.build/pycache}" \
 	python3 -m py_compile scripts/stig/summarize_inspec_results.py
+PYTHONPYCACHEPREFIX="${PYTHONPYCACHEPREFIX:-.build/pycache}" \
+	python3 -m py_compile scripts/stig/generate_manual_control_review.py
+PYTHONPYCACHEPREFIX="${PYTHONPYCACHEPREFIX:-.build/pycache}" \
+	python3 -m py_compile scripts/stig/sync_traceability_from_mapping.py
 
 make -n build-stig >/dev/null
 make -n start-stig-validation-target >/dev/null

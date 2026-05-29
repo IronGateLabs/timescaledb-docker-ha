@@ -46,8 +46,10 @@
       "cci_refs": [
         "CCI-000015"
       ],
-      "mapping_status": "unmapped",
-      "legacy_control_ids": [],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233512"
+      ],
       "candidate_legacy_control_ids": [
         "V-233512"
       ],
@@ -63,12 +65,12 @@
         ]
       },
       "overlay_checks": [],
-      "automation_status": "not_yet_assessed",
-      "container_validation": "not_yet_assessed",
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
+      "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": ""
+      "notes": "Reviewed severity-mismatch candidate; reusable audit configuration and log validation logic remains applicable to PostgreSQL 16 with repository inputs. Treat as validation-only until implementation ownership is separately confirmed."
     },
     {
       "control_id": "V-261859",
@@ -77,7 +79,7 @@
       "cci_refs": [
         "CCI-000213"
       ],
-      "mapping_status": "unmapped",
+      "mapping_status": "deployment_owned",
       "legacy_control_ids": [],
       "candidate_legacy_control_ids": [
         "V-233513"
@@ -94,12 +96,12 @@
         ]
       },
       "overlay_checks": [],
-      "automation_status": "not_yet_assessed",
-      "container_validation": "not_yet_assessed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
-      "notes": ""
+      "automation_status": "deployment_owned",
+      "container_validation": "not_supported",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
+      "notes": "Reviewed severity-mismatch candidate; security update timing depends on image rebuild, release, and deployment patch policy rather than a stable container runtime assertion."
     },
     {
       "control_id": "V-261860",
@@ -139,7 +141,7 @@
       "cci_refs": [
         "CCI-000169"
       ],
-      "mapping_status": "unmapped",
+      "mapping_status": "deployment_owned",
       "legacy_control_ids": [],
       "candidate_legacy_control_ids": [
         "V-233515"
@@ -156,12 +158,12 @@
         ]
       },
       "overlay_checks": [],
-      "automation_status": "not_yet_assessed",
-      "container_validation": "not_yet_assessed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
-      "notes": ""
+      "automation_status": "deployment_owned",
+      "container_validation": "partial",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "identity_and_access",
+      "notes": "Reviewed severity-mismatch candidate; authentication integration depends on deployment identity architecture, with only partial pg_hba method validation possible from the container."
     },
     {
       "control_id": "V-261862",
@@ -232,8 +234,10 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "mapping_status": "unmapped",
-      "legacy_control_ids": [],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233519"
+      ],
       "candidate_legacy_control_ids": [
         "V-233519"
       ],
@@ -249,12 +253,12 @@
         ]
       },
       "overlay_checks": [],
-      "automation_status": "not_yet_assessed",
-      "container_validation": "not_yet_assessed",
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
-      "notes": ""
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "identity_and_access",
+      "notes": "Reviewed severity-mismatch candidate; reusable pg_hba authentication-method validation applies to PostgreSQL 16, while final approved method selection remains deployment-owned."
     },
     {
       "control_id": "V-261865",
@@ -263,8 +267,10 @@
       "cci_refs": [
         "CCI-001464"
       ],
-      "mapping_status": "unmapped",
-      "legacy_control_ids": [],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233520"
+      ],
       "candidate_legacy_control_ids": [
         "V-233520"
       ],
@@ -280,12 +286,12 @@
         ]
       },
       "overlay_checks": [],
-      "automation_status": "not_yet_assessed",
-      "container_validation": "not_yet_assessed",
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
-      "notes": ""
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "identity_and_access",
+      "notes": "Reviewed severity-mismatch candidate; reusable role, privilege, and pg_hba validation logic can provide partial PostgreSQL 16 coverage, while authorization policy remains deployment-owned."
     },
     {
       "control_id": "V-261866",
@@ -294,7 +300,7 @@
       "cci_refs": [
         "CCI-000130"
       ],
-      "mapping_status": "unmapped",
+      "mapping_status": "replaced_by_overlay",
       "legacy_control_ids": [],
       "candidate_legacy_control_ids": [],
       "candidate_srg_ids": [],
@@ -302,13 +308,15 @@
       "candidate_warnings": {
         "severity_mismatch": []
       },
-      "overlay_checks": [],
-      "automation_status": "not_yet_assessed",
-      "container_validation": "not_yet_assessed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
-      "notes": ""
+      "overlay_checks": [
+        "timescaledb-ha-pg16-audit-settings"
+      ],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "notes": "Reviewed no-candidate control; repository STIG configuration enables pgaudit event coverage that can be validated with an overlay check against PostgreSQL settings."
     },
     {
       "control_id": "V-261867",
@@ -317,7 +325,7 @@
       "cci_refs": [
         "CCI-000131"
       ],
-      "mapping_status": "manual_only",
+      "mapping_status": "replaced_by_overlay",
       "legacy_control_ids": [
         "V-233521"
       ],
@@ -333,13 +341,15 @@
       "candidate_warnings": {
         "severity_mismatch": []
       },
-      "overlay_checks": [],
-      "automation_status": "manual",
-      "container_validation": "not_supported",
-      "implementation_owner": "unassigned",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
-      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+      "overlay_checks": [
+        "timescaledb-ha-pg16-time-settings"
+      ],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "notes": "Reassessed manual-only control; audit timestamp behavior can be validated from PostgreSQL log prefix and runtime timestamp settings."
     },
     {
       "control_id": "V-261868",
@@ -441,7 +451,7 @@
       "cci_refs": [
         "CCI-001487"
       ],
-      "mapping_status": "unmapped",
+      "mapping_status": "replaced_by_overlay",
       "legacy_control_ids": [],
       "candidate_legacy_control_ids": [],
       "candidate_srg_ids": [],
@@ -449,13 +459,15 @@
       "candidate_warnings": {
         "severity_mismatch": []
       },
-      "overlay_checks": [],
-      "automation_status": "not_yet_assessed",
-      "container_validation": "not_yet_assessed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
-      "notes": ""
+      "overlay_checks": [
+        "timescaledb-ha-pg16-audit-identity-fields"
+      ],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "notes": "Reviewed no-candidate control; repository log prefix and audit settings provide observable user, database, and remote address fields for overlay validation."
     },
     {
       "control_id": "V-261872",
@@ -464,7 +476,7 @@
       "cci_refs": [
         "CCI-000135"
       ],
-      "mapping_status": "unmapped",
+      "mapping_status": "deployment_owned",
       "legacy_control_ids": [],
       "candidate_legacy_control_ids": [],
       "candidate_srg_ids": [],
@@ -473,12 +485,12 @@
         "severity_mismatch": []
       },
       "overlay_checks": [],
-      "automation_status": "not_yet_assessed",
-      "container_validation": "not_yet_assessed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
-      "notes": ""
+      "automation_status": "deployment_owned",
+      "container_validation": "not_supported",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
+      "notes": "Reviewed no-candidate control; additional audit fields are organization-defined and depend on deployment policy beyond the image defaults."
     },
     {
       "control_id": "V-261873",
@@ -487,7 +499,7 @@
       "cci_refs": [
         "CCI-000140"
       ],
-      "mapping_status": "manual_only",
+      "mapping_status": "deployment_owned",
       "legacy_control_ids": [
         "V-233525"
       ],
@@ -504,12 +516,12 @@
         "severity_mismatch": []
       },
       "overlay_checks": [],
-      "automation_status": "manual",
+      "automation_status": "deployment_owned",
       "container_validation": "not_supported",
-      "implementation_owner": "unassigned",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
-      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
+      "notes": "Reassessed manual-only control; audit-failure shutdown behavior depends on deployment storage and availability policy outside the image boundary."
     },
     {
       "control_id": "V-261874",
@@ -518,7 +530,7 @@
       "cci_refs": [
         "CCI-000140"
       ],
-      "mapping_status": "manual_only",
+      "mapping_status": "deployment_owned",
       "legacy_control_ids": [
         "V-233526"
       ],
@@ -535,12 +547,12 @@
         "severity_mismatch": []
       },
       "overlay_checks": [],
-      "automation_status": "manual",
+      "automation_status": "deployment_owned",
       "container_validation": "not_supported",
-      "implementation_owner": "unassigned",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
-      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
+      "notes": "Reassessed manual-only control; audit log overwrite and rotation behavior depends on deployment log storage policy outside the image boundary."
     },
     {
       "control_id": "V-261875",
@@ -549,7 +561,7 @@
       "cci_refs": [
         "CCI-000162"
       ],
-      "mapping_status": "manual_only",
+      "mapping_status": "replaced_by_overlay",
       "legacy_control_ids": [
         "V-233528"
       ],
@@ -565,13 +577,15 @@
       "candidate_warnings": {
         "severity_mismatch": []
       },
-      "overlay_checks": [],
-      "automation_status": "manual",
-      "container_validation": "not_supported",
-      "implementation_owner": "unassigned",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
-      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+      "overlay_checks": [
+        "timescaledb-ha-pg16-audit-log-permissions"
+      ],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "notes": "Reassessed manual-only control; repository STIG setup creates audit log locations and file modes that can be validated from container filesystem state."
     },
     {
       "control_id": "V-261876",
@@ -580,7 +594,7 @@
       "cci_refs": [
         "CCI-000163"
       ],
-      "mapping_status": "manual_only",
+      "mapping_status": "replaced_by_overlay",
       "legacy_control_ids": [
         "V-233529"
       ],
@@ -596,13 +610,15 @@
       "candidate_warnings": {
         "severity_mismatch": []
       },
-      "overlay_checks": [],
-      "automation_status": "manual",
-      "container_validation": "not_supported",
-      "implementation_owner": "unassigned",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
-      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+      "overlay_checks": [
+        "timescaledb-ha-pg16-audit-log-permissions"
+      ],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "notes": "Reassessed manual-only control; repository STIG setup restricts audit log directory and file permissions that can be validated from container filesystem state."
     },
     {
       "control_id": "V-261877",
@@ -766,7 +782,7 @@
       "cci_refs": [
         "CCI-001499"
       ],
-      "mapping_status": "unmapped",
+      "mapping_status": "deployment_owned",
       "legacy_control_ids": [],
       "candidate_legacy_control_ids": [
         "V-233535"
@@ -783,12 +799,12 @@
         ]
       },
       "overlay_checks": [],
-      "automation_status": "not_yet_assessed",
-      "container_validation": "not_yet_assessed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
-      "notes": ""
+      "automation_status": "deployment_owned",
+      "container_validation": "not_supported",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
+      "notes": "Reviewed severity-mismatch candidate; real-time audit failure alerting depends on deployment logging and monitoring integration outside the image boundary."
     },
     {
       "control_id": "V-261883",
@@ -797,7 +813,7 @@
       "cci_refs": [
         "CCI-001499"
       ],
-      "mapping_status": "unmapped",
+      "mapping_status": "deployment_owned",
       "legacy_control_ids": [],
       "candidate_legacy_control_ids": [
         "V-233536"
@@ -814,12 +830,12 @@
         ]
       },
       "overlay_checks": [],
-      "automation_status": "not_yet_assessed",
-      "container_validation": "not_yet_assessed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
-      "notes": ""
+      "automation_status": "deployment_owned",
+      "container_validation": "not_supported",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
+      "notes": "Reviewed severity-mismatch candidate; audit storage exhaustion behavior and retention policy depend on deployment log management outside the image boundary."
     },
     {
       "control_id": "V-261884",
@@ -828,7 +844,7 @@
       "cci_refs": [
         "CCI-001499"
       ],
-      "mapping_status": "manual_only",
+      "mapping_status": "deployment_owned",
       "legacy_control_ids": [
         "V-233537"
       ],
@@ -845,12 +861,12 @@
         "severity_mismatch": []
       },
       "overlay_checks": [],
-      "automation_status": "manual",
+      "automation_status": "deployment_owned",
       "container_validation": "not_supported",
-      "implementation_owner": "unassigned",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
-      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
+      "notes": "Reassessed manual-only control; data object ownership is application and deployment policy, not a generic image-level decision."
     },
     {
       "control_id": "V-261885",
@@ -890,7 +906,7 @@
       "cci_refs": [
         "CCI-000381"
       ],
-      "mapping_status": "unmapped",
+      "mapping_status": "deployment_owned",
       "legacy_control_ids": [],
       "candidate_legacy_control_ids": [
         "V-233540"
@@ -907,12 +923,12 @@
         ]
       },
       "overlay_checks": [],
-      "automation_status": "not_yet_assessed",
-      "container_validation": "not_yet_assessed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
-      "notes": ""
+      "automation_status": "deployment_owned",
+      "container_validation": "not_supported",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "identity_and_access",
+      "notes": "Reviewed severity-mismatch candidate; authorization and tracking of software installation account access is an operational access-control responsibility outside this image."
     },
     {
       "control_id": "V-261887",
@@ -952,7 +968,7 @@
       "cci_refs": [
         "CCI-000381"
       ],
-      "mapping_status": "unmapped",
+      "mapping_status": "replaced_by_overlay",
       "legacy_control_ids": [],
       "candidate_legacy_control_ids": [],
       "candidate_srg_ids": [],
@@ -960,13 +976,15 @@
       "candidate_warnings": {
         "severity_mismatch": []
       },
-      "overlay_checks": [],
-      "automation_status": "not_yet_assessed",
-      "container_validation": "not_yet_assessed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
-      "notes": ""
+      "overlay_checks": [
+        "timescaledb-ha-pg16-external-executable-access"
+      ],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "identity_and_access",
+      "notes": "Reviewed no-candidate control; PostgreSQL role membership for external program execution can be checked from runtime state, while final role assignment policy remains deployment-owned."
     },
     {
       "control_id": "V-261889",
@@ -975,7 +993,7 @@
       "cci_refs": [
         "CCI-000382"
       ],
-      "mapping_status": "manual_only",
+      "mapping_status": "deployment_owned",
       "legacy_control_ids": [
         "V-233542"
       ],
@@ -992,12 +1010,12 @@
         "severity_mismatch": []
       },
       "overlay_checks": [],
-      "automation_status": "manual",
+      "automation_status": "deployment_owned",
       "container_validation": "not_supported",
-      "implementation_owner": "unassigned",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
-      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "networking",
+      "notes": "Reassessed manual-only control; allowed services, ports, and protocol exposure depend on deployment network policy and service configuration."
     },
     {
       "control_id": "V-261890",
@@ -1037,7 +1055,7 @@
       "cci_refs": [
         "CCI-000196"
       ],
-      "mapping_status": "unmapped",
+      "mapping_status": "replaced_by_overlay",
       "legacy_control_ids": [],
       "candidate_legacy_control_ids": [],
       "candidate_srg_ids": [],
@@ -1045,13 +1063,15 @@
       "candidate_warnings": {
         "severity_mismatch": []
       },
-      "overlay_checks": [],
-      "automation_status": "not_yet_assessed",
-      "container_validation": "not_yet_assessed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
-      "notes": ""
+      "overlay_checks": [
+        "timescaledb-ha-pg16-password-storage"
+      ],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "identity_and_access",
+      "notes": "Reviewed no-candidate control; repository STIG configuration sets SCRAM password hashing and runtime role metadata can be checked by overlay validation."
     },
     {
       "control_id": "V-261892",
@@ -1060,7 +1080,7 @@
       "cci_refs": [
         "CCI-000197"
       ],
-      "mapping_status": "unmapped",
+      "mapping_status": "replaced_by_overlay",
       "legacy_control_ids": [],
       "candidate_legacy_control_ids": [],
       "candidate_srg_ids": [],
@@ -1068,13 +1088,15 @@
       "candidate_warnings": {
         "severity_mismatch": []
       },
-      "overlay_checks": [],
-      "automation_status": "not_yet_assessed",
-      "container_validation": "not_yet_assessed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
-      "notes": ""
+      "overlay_checks": [
+        "timescaledb-ha-pg16-password-authentication-transport"
+      ],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "deployment",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "identity_and_access",
+      "notes": "Reviewed no-candidate control; authentication method configuration can be partially validated from pg_hba state, while transport and identity policy remain deployment-owned."
     },
     {
       "control_id": "V-261893",
@@ -1114,8 +1136,10 @@
       "cci_refs": [
         "CCI-000186"
       ],
-      "mapping_status": "unmapped",
-      "legacy_control_ids": [],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233547"
+      ],
       "candidate_legacy_control_ids": [
         "V-233547"
       ],
@@ -1131,12 +1155,12 @@
         ]
       },
       "overlay_checks": [],
-      "automation_status": "not_yet_assessed",
-      "container_validation": "not_yet_assessed",
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
+      "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": ""
+      "notes": "Reviewed severity-mismatch candidate; reusable audit logging validation for configuration and access-restriction events remains applicable to PostgreSQL 16 with repository log inputs."
     },
     {
       "control_id": "V-261895",
@@ -1176,8 +1200,10 @@
       "cci_refs": [
         "CCI-000803"
       ],
-      "mapping_status": "unmapped",
-      "legacy_control_ids": [],
+      "mapping_status": "deployment_owned",
+      "legacy_control_ids": [
+        "V-233551"
+      ],
       "candidate_legacy_control_ids": [
         "V-233551"
       ],
@@ -1193,12 +1219,12 @@
         ]
       },
       "overlay_checks": [],
-      "automation_status": "not_yet_assessed",
-      "container_validation": "not_yet_assessed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
-      "notes": ""
+      "automation_status": "deployment_owned",
+      "container_validation": "not_supported",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
+      "notes": "Reassessed manual-only control; FIPS-validated cryptographic module use depends on base platform and runtime cryptographic configuration outside the database image."
     },
     {
       "control_id": "V-261897",
@@ -1331,8 +1357,10 @@
       "cci_refs": [
         "CCI-001199"
       ],
-      "mapping_status": "unmapped",
-      "legacy_control_ids": [],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233559"
+      ],
       "candidate_legacy_control_ids": [
         "V-233559"
       ],
@@ -1348,12 +1376,12 @@
         ]
       },
       "overlay_checks": [],
-      "automation_status": "not_yet_assessed",
-      "container_validation": "not_yet_assessed",
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
       "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
+      "validation_owner": "validation_profile",
       "deployment_responsibility": "undetermined",
-      "notes": ""
+      "notes": "Reviewed severity-mismatch candidate; reusable pgaudit event validation remains applicable to PostgreSQL 16 with repository audit log inputs."
     },
     {
       "control_id": "V-261902",
@@ -1889,7 +1917,7 @@
       "cci_refs": [
         "CCI-001855"
       ],
-      "mapping_status": "unmapped",
+      "mapping_status": "deployment_owned",
       "legacy_control_ids": [],
       "candidate_legacy_control_ids": [],
       "candidate_srg_ids": [],
@@ -1898,12 +1926,12 @@
         "severity_mismatch": []
       },
       "overlay_checks": [],
-      "automation_status": "not_yet_assessed",
-      "container_validation": "not_yet_assessed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
-      "notes": ""
+      "automation_status": "deployment_owned",
+      "container_validation": "not_supported",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
+      "notes": "Reviewed no-candidate control; audit storage capacity warning depends on deployment log storage and monitoring integration outside the image boundary."
     },
     {
       "control_id": "V-261920",
@@ -1912,7 +1940,7 @@
       "cci_refs": [
         "CCI-001858"
       ],
-      "mapping_status": "manual_only",
+      "mapping_status": "deployment_owned",
       "legacy_control_ids": [
         "V-233580"
       ],
@@ -1929,12 +1957,12 @@
         "severity_mismatch": []
       },
       "overlay_checks": [],
-      "automation_status": "manual",
+      "automation_status": "deployment_owned",
       "container_validation": "not_supported",
-      "implementation_owner": "unassigned",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
-      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
+      "notes": "Reassessed manual-only control; real-time audit failure alerting depends on deployment monitoring and alert routing outside the image boundary."
     },
     {
       "control_id": "V-261921",
@@ -1943,7 +1971,7 @@
       "cci_refs": [
         "CCI-001890"
       ],
-      "mapping_status": "unmapped",
+      "mapping_status": "replaced_by_overlay",
       "legacy_control_ids": [],
       "candidate_legacy_control_ids": [],
       "candidate_srg_ids": [],
@@ -1951,13 +1979,15 @@
       "candidate_warnings": {
         "severity_mismatch": []
       },
-      "overlay_checks": [],
-      "automation_status": "not_yet_assessed",
-      "container_validation": "not_yet_assessed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
-      "notes": ""
+      "overlay_checks": [
+        "timescaledb-ha-pg16-time-settings"
+      ],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "notes": "Reviewed no-candidate control; PostgreSQL timezone and log timestamp behavior can be validated from runtime settings and repository STIG configuration."
     },
     {
       "control_id": "V-261922",
@@ -1966,7 +1996,7 @@
       "cci_refs": [
         "CCI-001889"
       ],
-      "mapping_status": "unmapped",
+      "mapping_status": "replaced_by_overlay",
       "legacy_control_ids": [],
       "candidate_legacy_control_ids": [],
       "candidate_srg_ids": [],
@@ -1974,13 +2004,15 @@
       "candidate_warnings": {
         "severity_mismatch": []
       },
-      "overlay_checks": [],
-      "automation_status": "not_yet_assessed",
-      "container_validation": "not_yet_assessed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
-      "notes": ""
+      "overlay_checks": [
+        "timescaledb-ha-pg16-time-settings"
+      ],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "notes": "Reviewed no-candidate control; PostgreSQL timestamp precision can be validated from runtime query output in the overlay."
     },
     {
       "control_id": "V-261923",
@@ -2051,7 +2083,7 @@
       "cci_refs": [
         "CCI-001814"
       ],
-      "mapping_status": "unmapped",
+      "mapping_status": "replaced_by_overlay",
       "legacy_control_ids": [],
       "candidate_legacy_control_ids": [],
       "candidate_srg_ids": [],
@@ -2059,13 +2091,15 @@
       "candidate_warnings": {
         "severity_mismatch": []
       },
-      "overlay_checks": [],
-      "automation_status": "not_yet_assessed",
-      "container_validation": "not_yet_assessed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
-      "notes": ""
+      "overlay_checks": [
+        "timescaledb-ha-pg16-audit-settings"
+      ],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "notes": "Reviewed no-candidate control; repository audit settings cover configuration-change event classes that can be validated from PostgreSQL settings."
     },
     {
       "control_id": "V-261926",
@@ -2074,7 +2108,7 @@
       "cci_refs": [
         "CCI-001762"
       ],
-      "mapping_status": "unmapped",
+      "mapping_status": "deployment_owned",
       "legacy_control_ids": [],
       "candidate_legacy_control_ids": [
         "V-233583"
@@ -2091,12 +2125,12 @@
         ]
       },
       "overlay_checks": [],
-      "automation_status": "not_yet_assessed",
-      "container_validation": "not_yet_assessed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
-      "notes": ""
+      "automation_status": "deployment_owned",
+      "container_validation": "not_supported",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
+      "notes": "Reviewed severity-mismatch candidate; FIPS mode for cryptographic hash validation depends on host and base platform configuration outside the database image."
     },
     {
       "control_id": "V-261927",
@@ -2105,7 +2139,7 @@
       "cci_refs": [
         "CCI-002038"
       ],
-      "mapping_status": "unmapped",
+      "mapping_status": "deployment_owned",
       "legacy_control_ids": [],
       "candidate_legacy_control_ids": [
         "V-233584"
@@ -2122,12 +2156,12 @@
         ]
       },
       "overlay_checks": [],
-      "automation_status": "not_yet_assessed",
-      "container_validation": "not_yet_assessed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
-      "notes": ""
+      "automation_status": "deployment_owned",
+      "container_validation": "not_supported",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
+      "notes": "Reviewed severity-mismatch candidate; classified-data cryptography requirements depend on deployment classification, TLS policy, and platform cryptographic configuration outside the image."
     },
     {
       "control_id": "V-261928",
@@ -2167,7 +2201,7 @@
       "cci_refs": [
         "CCI-002470"
       ],
-      "mapping_status": "manual_only",
+      "mapping_status": "deployment_owned",
       "legacy_control_ids": [
         "V-233587"
       ],
@@ -2184,12 +2218,12 @@
         "severity_mismatch": []
       },
       "overlay_checks": [],
-      "automation_status": "manual",
+      "automation_status": "deployment_owned",
       "container_validation": "not_supported",
-      "implementation_owner": "unassigned",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
-      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "secrets",
+      "notes": "Reassessed manual-only control; certificate authority selection and certificate lifecycle are deployment-provided TLS responsibilities outside the image."
     },
     {
       "control_id": "V-261930",
@@ -2322,7 +2356,7 @@
       "cci_refs": [
         "CCI-002754"
       ],
-      "mapping_status": "unmapped",
+      "mapping_status": "manual_only",
       "legacy_control_ids": [],
       "candidate_legacy_control_ids": [],
       "candidate_srg_ids": [],
@@ -2331,12 +2365,12 @@
         "severity_mismatch": []
       },
       "overlay_checks": [],
-      "automation_status": "not_yet_assessed",
-      "container_validation": "not_yet_assessed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
-      "notes": ""
+      "automation_status": "manual",
+      "container_validation": "not_supported",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
+      "notes": "Reviewed no-candidate control; predictable handling of invalid inputs requires system-specific behavioral evidence and documentation beyond a generic image assertion."
     },
     {
       "control_id": "V-261935",
@@ -2376,7 +2410,7 @@
       "cci_refs": [
         "CCI-002605"
       ],
-      "mapping_status": "manual_only",
+      "mapping_status": "deployment_owned",
       "legacy_control_ids": [
         "V-233594"
       ],
@@ -2393,12 +2427,12 @@
         "severity_mismatch": []
       },
       "overlay_checks": [],
-      "automation_status": "manual",
+      "automation_status": "deployment_owned",
       "container_validation": "not_supported",
-      "implementation_owner": "unassigned",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
-      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
+      "notes": "Reassessed manual-only control; security update timing depends on release, rebuild, and deployment patch policy rather than a stable runtime assertion."
     },
     {
       "control_id": "V-261938",
@@ -2407,7 +2441,7 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "mapping_status": "manual_only",
+      "mapping_status": "replaced_by_overlay",
       "legacy_control_ids": [
         "V-233595"
       ],
@@ -2423,13 +2457,15 @@
       "candidate_warnings": {
         "severity_mismatch": []
       },
-      "overlay_checks": [],
-      "automation_status": "manual",
-      "container_validation": "not_supported",
-      "implementation_owner": "unassigned",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
-      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+      "overlay_checks": [
+        "timescaledb-ha-pg16-audit-settings"
+      ],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "notes": "Reassessed manual-only control; repository pgaudit settings include object access event coverage that can be validated from PostgreSQL settings."
     },
     {
       "control_id": "V-261939",
@@ -2438,8 +2474,10 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "mapping_status": "unmapped",
-      "legacy_control_ids": [],
+      "mapping_status": "mapped",
+      "legacy_control_ids": [
+        "V-233596"
+      ],
       "candidate_legacy_control_ids": [
         "V-233596"
       ],
@@ -2455,12 +2493,12 @@
         ]
       },
       "overlay_checks": [],
-      "automation_status": "not_yet_assessed",
-      "container_validation": "not_yet_assessed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
-      "notes": ""
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "image",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "identity_and_access",
+      "notes": "Reviewed severity-mismatch candidate; reusable password encryption and role password validation applies to PostgreSQL 16, and the STIG image fragment sets SCRAM password encryption."
     },
     {
       "control_id": "V-261940",
@@ -2531,7 +2569,7 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "mapping_status": "unmapped",
+      "mapping_status": "replaced_by_overlay",
       "legacy_control_ids": [],
       "candidate_legacy_control_ids": [],
       "candidate_srg_ids": [],
@@ -2539,13 +2577,15 @@
       "candidate_warnings": {
         "severity_mismatch": []
       },
-      "overlay_checks": [],
-      "automation_status": "not_yet_assessed",
-      "container_validation": "not_yet_assessed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
-      "notes": ""
+      "overlay_checks": [
+        "timescaledb-ha-pg16-audit-settings"
+      ],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "notes": "Reviewed no-candidate control; repository audit settings include role and DDL events that can be validated as privilege-change audit coverage."
     },
     {
       "control_id": "V-261943",
@@ -2554,7 +2594,7 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "mapping_status": "manual_only",
+      "mapping_status": "replaced_by_overlay",
       "legacy_control_ids": [
         "V-233599"
       ],
@@ -2570,13 +2610,15 @@
       "candidate_warnings": {
         "severity_mismatch": []
       },
-      "overlay_checks": [],
-      "automation_status": "manual",
-      "container_validation": "not_supported",
-      "implementation_owner": "unassigned",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
-      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+      "overlay_checks": [
+        "timescaledb-ha-pg16-audit-settings"
+      ],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "notes": "Reassessed manual-only control; repository pgaudit role event coverage can support overlay validation for unsuccessful privilege changes."
     },
     {
       "control_id": "V-261944",
@@ -2616,7 +2658,7 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "mapping_status": "manual_only",
+      "mapping_status": "replaced_by_overlay",
       "legacy_control_ids": [
         "V-233601"
       ],
@@ -2632,13 +2674,15 @@
       "candidate_warnings": {
         "severity_mismatch": []
       },
-      "overlay_checks": [],
-      "automation_status": "manual",
-      "container_validation": "not_supported",
-      "implementation_owner": "unassigned",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
-      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+      "overlay_checks": [
+        "timescaledb-ha-pg16-audit-settings"
+      ],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "notes": "Reassessed manual-only control; repository pgaudit role event coverage can support overlay validation for unsuccessful permission modifications."
     },
     {
       "control_id": "V-261946",
@@ -2647,7 +2691,7 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "mapping_status": "unmapped",
+      "mapping_status": "deployment_owned",
       "legacy_control_ids": [],
       "candidate_legacy_control_ids": [
         "V-233602"
@@ -2664,12 +2708,12 @@
         ]
       },
       "overlay_checks": [],
-      "automation_status": "not_yet_assessed",
-      "container_validation": "not_yet_assessed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
-      "notes": ""
+      "automation_status": "deployment_owned",
+      "container_validation": "partial",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "secrets",
+      "notes": "Reviewed severity-mismatch candidate; TLS key material placement and permissions depend on deployment-provided TLS assets, with only partial validation possible when those inputs are supplied."
     },
     {
       "control_id": "V-261947",
@@ -2833,7 +2877,7 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "mapping_status": "unmapped",
+      "mapping_status": "replaced_by_overlay",
       "legacy_control_ids": [],
       "candidate_legacy_control_ids": [],
       "candidate_srg_ids": [],
@@ -2841,13 +2885,15 @@
       "candidate_warnings": {
         "severity_mismatch": []
       },
-      "overlay_checks": [],
-      "automation_status": "not_yet_assessed",
-      "container_validation": "not_yet_assessed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
-      "notes": ""
+      "overlay_checks": [
+        "timescaledb-ha-pg16-audit-settings"
+      ],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "notes": "Reviewed no-candidate control; repository audit settings include event classes used for security-object deletion audit coverage."
     },
     {
       "control_id": "V-261953",
@@ -2856,7 +2902,7 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "mapping_status": "unmapped",
+      "mapping_status": "replaced_by_overlay",
       "legacy_control_ids": [],
       "candidate_legacy_control_ids": [],
       "candidate_srg_ids": [],
@@ -2864,13 +2910,15 @@
       "candidate_warnings": {
         "severity_mismatch": []
       },
-      "overlay_checks": [],
-      "automation_status": "not_yet_assessed",
-      "container_validation": "not_yet_assessed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
-      "notes": ""
+      "overlay_checks": [
+        "timescaledb-ha-pg16-audit-settings"
+      ],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "notes": "Reviewed no-candidate control; repository audit settings and log configuration can support overlay validation for unsuccessful security-object deletion attempts."
     },
     {
       "control_id": "V-261954",
@@ -2879,7 +2927,7 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "mapping_status": "unmapped",
+      "mapping_status": "manual_only",
       "legacy_control_ids": [],
       "candidate_legacy_control_ids": [],
       "candidate_srg_ids": [],
@@ -2888,12 +2936,12 @@
         "severity_mismatch": []
       },
       "overlay_checks": [],
-      "automation_status": "not_yet_assessed",
-      "container_validation": "not_yet_assessed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
-      "notes": ""
+      "automation_status": "manual",
+      "container_validation": "not_supported",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
+      "notes": "Reviewed no-candidate control; information category deletion is application- and data-model-specific and cannot be inferred from the generic database image."
     },
     {
       "control_id": "V-261955",
@@ -3057,7 +3105,7 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "mapping_status": "manual_only",
+      "mapping_status": "replaced_by_overlay",
       "legacy_control_ids": [
         "V-233613"
       ],
@@ -3073,13 +3121,15 @@
       "candidate_warnings": {
         "severity_mismatch": []
       },
-      "overlay_checks": [],
-      "automation_status": "manual",
-      "container_validation": "not_supported",
-      "implementation_owner": "unassigned",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
-      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+      "overlay_checks": [
+        "timescaledb-ha-pg16-connection-audit-settings"
+      ],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "notes": "Reassessed manual-only control; repository STIG configuration enables connection and disconnection logging that can be validated from PostgreSQL settings."
     },
     {
       "control_id": "V-261961",
@@ -3088,8 +3138,10 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "mapping_status": "unmapped",
-      "legacy_control_ids": [],
+      "mapping_status": "deployment_owned",
+      "legacy_control_ids": [
+        "V-233614"
+      ],
       "candidate_legacy_control_ids": [
         "V-233614"
       ],
@@ -3105,12 +3157,12 @@
         ]
       },
       "overlay_checks": [],
-      "automation_status": "not_yet_assessed",
-      "container_validation": "not_yet_assessed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
-      "notes": ""
+      "automation_status": "deployment_owned",
+      "container_validation": "not_supported",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
+      "notes": "Reassessed manual-only control; concurrent session correlation requires deployment monitoring and user activity policy beyond static image validation."
     },
     {
       "control_id": "V-261962",
@@ -3119,7 +3171,7 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "mapping_status": "manual_only",
+      "mapping_status": "replaced_by_overlay",
       "legacy_control_ids": [
         "V-233615"
       ],
@@ -3135,13 +3187,15 @@
       "candidate_warnings": {
         "severity_mismatch": []
       },
-      "overlay_checks": [],
-      "automation_status": "manual",
-      "container_validation": "not_supported",
-      "implementation_owner": "unassigned",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
-      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+      "overlay_checks": [
+        "timescaledb-ha-pg16-audit-settings"
+      ],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "notes": "Reassessed manual-only control; repository pgaudit read and write settings can support overlay validation for successful object access auditing."
     },
     {
       "control_id": "V-261963",
@@ -3150,7 +3204,7 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "mapping_status": "manual_only",
+      "mapping_status": "replaced_by_overlay",
       "legacy_control_ids": [
         "V-233616"
       ],
@@ -3166,13 +3220,15 @@
       "candidate_warnings": {
         "severity_mismatch": []
       },
-      "overlay_checks": [],
-      "automation_status": "manual",
-      "container_validation": "not_supported",
-      "implementation_owner": "unassigned",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
-      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+      "overlay_checks": [
+        "timescaledb-ha-pg16-audit-settings"
+      ],
+      "automation_status": "partially_automated",
+      "container_validation": "partial",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "notes": "Reassessed manual-only control; repository pgaudit and log settings can support overlay validation for unsuccessful object access auditing."
     },
     {
       "control_id": "V-261964",
@@ -3243,7 +3299,7 @@
       "cci_refs": [
         "CCI-002450"
       ],
-      "mapping_status": "unmapped",
+      "mapping_status": "deployment_owned",
       "legacy_control_ids": [],
       "candidate_legacy_control_ids": [
         "V-233619"
@@ -3260,12 +3316,12 @@
         ]
       },
       "overlay_checks": [],
-      "automation_status": "not_yet_assessed",
-      "container_validation": "not_yet_assessed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
-      "notes": ""
+      "automation_status": "deployment_owned",
+      "container_validation": "not_supported",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
+      "notes": "Reviewed severity-mismatch candidate; FIPS-validated cryptographic operation requirements depend on base platform and OpenSSL FIPS configuration outside the database image."
     },
     {
       "control_id": "V-261967",
@@ -3274,7 +3330,7 @@
       "cci_refs": [
         "CCI-001851"
       ],
-      "mapping_status": "unmapped",
+      "mapping_status": "deployment_owned",
       "legacy_control_ids": [],
       "candidate_legacy_control_ids": [],
       "candidate_srg_ids": [],
@@ -3283,12 +3339,12 @@
         "severity_mismatch": []
       },
       "overlay_checks": [],
-      "automation_status": "not_yet_assessed",
-      "container_validation": "not_yet_assessed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
-      "notes": ""
+      "automation_status": "deployment_owned",
+      "container_validation": "not_supported",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
+      "notes": "Reviewed no-candidate control; continuous audit log offload depends on deployment log forwarding and external storage integration outside the image boundary."
     },
     {
       "control_id": "V-283674",
@@ -3297,7 +3353,7 @@
       "cci_refs": [
         "CCI-003376"
       ],
-      "mapping_status": "unmapped",
+      "mapping_status": "deployment_owned",
       "legacy_control_ids": [],
       "candidate_legacy_control_ids": [],
       "candidate_srg_ids": [],
@@ -3306,12 +3362,12 @@
         "severity_mismatch": []
       },
       "overlay_checks": [],
-      "automation_status": "not_yet_assessed",
-      "container_validation": "not_yet_assessed",
-      "implementation_owner": "unassigned",
-      "validation_owner": "unassigned",
-      "deployment_responsibility": "undetermined",
-      "notes": ""
+      "automation_status": "deployment_owned",
+      "container_validation": "partial",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
+      "notes": "Reviewed no-candidate control; runtime version can be checked by validation, but vendor support determination depends on release policy and operational patch management."
     }
   ]
 }

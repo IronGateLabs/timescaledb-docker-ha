@@ -83,6 +83,7 @@
               "image",
               "deployment",
               "validation_profile",
+              "overlay",
               "documentation",
               "manual",
               "exception"
@@ -94,6 +95,7 @@
               "image",
               "deployment",
               "validation_profile",
+              "overlay",
               "documentation",
               "manual",
               "exception"

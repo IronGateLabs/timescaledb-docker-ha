@@ -9,14 +9,18 @@ This review uses identifiers only. Candidate links are not confirmed validation 
 - 17 PostgreSQL 16 controls have no legacy candidate by normalized `stig_id` suffix.
 - 61 same-severity candidates with executable legacy validation have been promoted to partial reusable mappings.
 - 16 same-severity candidates without executable legacy validation have been classified as `manual_only`.
-- 34 PostgreSQL 16 controls remain `unmapped` until reviewed.
+- 34 previously unresolved PostgreSQL 16 controls have been reviewed.
+- 0 PostgreSQL 16 controls remain `unmapped`.
+- 20 controls are covered by repository-owned overlay checks.
+- 22 controls are classified as `deployment_owned`.
+- 2 controls remain `manual_only`.
 
 ## Remaining Unmapped Categories
 
-- 17 severity mismatch candidates.
-- 17 controls with no legacy candidate.
+- 0 severity mismatch candidates.
+- 0 controls with no legacy candidate.
 
-## Severity Mismatch Candidates
+## Reviewed Severity Mismatch Candidates
 
 | PG16 control | PG16 STIG ID | Legacy candidate | SRG ID |
 | --- | --- | --- | --- |
@@ -38,7 +42,7 @@ This review uses identifiers only. Candidate links are not confirmed validation 
 | V-261961 | CD16-00-011700 | V-233614 | SRG-APP-000340-DB-000304 |
 | V-261966 | CD16-00-012300 | V-233619 | SRG-APP-000179-DB-000114 |
 
-## No Legacy Candidate
+## Reviewed No Legacy Candidate Controls
 
 | PG16 control | PG16 STIG ID | CCI refs |
 | --- | --- | --- |
@@ -59,3 +63,10 @@ This review uses identifiers only. Candidate links are not confirmed validation 
 | V-261954 | CD16-00-011000 | CCI-000172 |
 | V-261967 | CD16-00-012400 | CCI-001851 |
 | V-283674 | CD16-00-009300 | CCI-003376 |
+
+## Remaining Manual-Only Controls
+
+| PG16 control | PG16 STIG ID | Rationale |
+| --- | --- | --- |
+| V-261934 | CD16-00-009000 | Requires system-specific behavioral evidence beyond a generic image assertion. |
+| V-261954 | CD16-00-011000 | Requires application- and data-model-specific evidence beyond a generic image assertion. |

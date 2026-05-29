@@ -35,6 +35,7 @@ ALLOWED_OWNER = {
     "image",
     "deployment",
     "validation_profile",
+    "overlay",
     "documentation",
     "manual",
     "exception",

@@ -20,9 +20,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233511"
+        "legacy:V-233511"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261858",
@@ -32,13 +32,15 @@
       "cci_refs": [
         "CCI-000015"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
+      "validated_by": [
+        "legacy:V-233512"
+      ],
+      "notes": "Reviewed severity-mismatch candidate; reusable audit configuration and log validation logic remains applicable to PostgreSQL 16 with repository inputs. Treat as validation-only until implementation ownership is separately confirmed."
     },
     {
       "control_id": "V-261859",
@@ -48,13 +50,13 @@
       "cci_refs": [
         "CCI-000213"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
       "implemented_by": [],
       "validated_by": [],
-      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
+      "notes": "Reviewed severity-mismatch candidate; security update timing depends on image rebuild, release, and deployment patch policy rather than a stable container runtime assertion."
     },
     {
       "control_id": "V-261860",
@@ -70,9 +72,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233514"
+        "legacy:V-233514"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261861",
@@ -82,13 +84,13 @@
       "cci_refs": [
         "CCI-000169"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "identity_and_access",
       "implemented_by": [],
       "validated_by": [],
-      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
+      "notes": "Reviewed severity-mismatch candidate; authentication integration depends on deployment identity architecture, with only partial pg_hba method validation possible from the container."
     },
     {
       "control_id": "V-261862",
@@ -104,9 +106,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233516"
+        "legacy:V-233516"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261863",
@@ -122,9 +124,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233517"
+        "legacy:V-233517"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261864",
@@ -134,13 +136,15 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
+      "validated_by": [
+        "legacy:V-233519"
+      ],
+      "notes": "Reviewed severity-mismatch candidate; reusable pg_hba authentication-method validation applies to PostgreSQL 16, while final approved method selection remains deployment-owned."
     },
     {
       "control_id": "V-261865",
@@ -150,13 +154,15 @@
       "cci_refs": [
         "CCI-001464"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
+      "validated_by": [
+        "legacy:V-233520"
+      ],
+      "notes": "Reviewed severity-mismatch candidate; reusable role, privilege, and pg_hba validation logic can provide partial PostgreSQL 16 coverage, while authorization policy remains deployment-owned."
     },
     {
       "control_id": "V-261866",
@@ -166,13 +172,17 @@
       "cci_refs": [
         "CCI-000130"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
-      "implemented_by": [],
-      "validated_by": [],
-      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
+      ],
+      "validated_by": [
+        "overlay:timescaledb-ha-pg16-audit-settings"
+      ],
+      "notes": "Reviewed no-candidate control; repository STIG configuration enables pgaudit event coverage that can be validated with an overlay check against PostgreSQL settings."
     },
     {
       "control_id": "V-261867",
@@ -182,15 +192,18 @@
       "cci_refs": [
         "CCI-000131"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
-      "implemented_by": [],
-      "validated_by": [
-        "legacy:V-233521"
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
       ],
-      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+      "validated_by": [
+        "legacy:V-233521",
+        "overlay:timescaledb-ha-pg16-time-settings"
+      ],
+      "notes": "Reassessed manual-only control; audit timestamp behavior can be validated from PostgreSQL log prefix and runtime timestamp settings."
     },
     {
       "control_id": "V-261868",
@@ -206,9 +219,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233522"
+        "legacy:V-233522"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261869",
@@ -224,9 +237,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233523"
+        "legacy:V-233523"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261870",
@@ -242,9 +255,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233524"
+        "legacy:V-233524"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261871",
@@ -254,13 +267,17 @@
       "cci_refs": [
         "CCI-001487"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
-      "implemented_by": [],
-      "validated_by": [],
-      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
+      ],
+      "validated_by": [
+        "overlay:timescaledb-ha-pg16-audit-identity-fields"
+      ],
+      "notes": "Reviewed no-candidate control; repository log prefix and audit settings provide observable user, database, and remote address fields for overlay validation."
     },
     {
       "control_id": "V-261872",
@@ -270,13 +287,13 @@
       "cci_refs": [
         "CCI-000135"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
       "implemented_by": [],
       "validated_by": [],
-      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
+      "notes": "Reviewed no-candidate control; additional audit fields are organization-defined and depend on deployment policy beyond the image defaults."
     },
     {
       "control_id": "V-261873",
@@ -286,15 +303,15 @@
       "cci_refs": [
         "CCI-000140"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
       "implemented_by": [],
       "validated_by": [
         "legacy:V-233525"
       ],
-      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+      "notes": "Reassessed manual-only control; audit-failure shutdown behavior depends on deployment storage and availability policy outside the image boundary."
     },
     {
       "control_id": "V-261874",
@@ -304,15 +321,15 @@
       "cci_refs": [
         "CCI-000140"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
       "implemented_by": [],
       "validated_by": [
         "legacy:V-233526"
       ],
-      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+      "notes": "Reassessed manual-only control; audit log overwrite and rotation behavior depends on deployment log storage policy outside the image boundary."
     },
     {
       "control_id": "V-261875",
@@ -322,15 +339,18 @@
       "cci_refs": [
         "CCI-000162"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
-      "implemented_by": [],
-      "validated_by": [
-        "legacy:V-233528"
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
       ],
-      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+      "validated_by": [
+        "legacy:V-233528",
+        "overlay:timescaledb-ha-pg16-audit-log-permissions"
+      ],
+      "notes": "Reassessed manual-only control; repository STIG setup creates audit log locations and file modes that can be validated from container filesystem state."
     },
     {
       "control_id": "V-261876",
@@ -340,15 +360,18 @@
       "cci_refs": [
         "CCI-000163"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
-      "implemented_by": [],
-      "validated_by": [
-        "legacy:V-233529"
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
       ],
-      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+      "validated_by": [
+        "legacy:V-233529",
+        "overlay:timescaledb-ha-pg16-audit-log-permissions"
+      ],
+      "notes": "Reassessed manual-only control; repository STIG setup restricts audit log directory and file permissions that can be validated from container filesystem state."
     },
     {
       "control_id": "V-261877",
@@ -364,9 +387,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233530"
+        "legacy:V-233530"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261878",
@@ -382,9 +405,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233531"
+        "legacy:V-233531"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261879",
@@ -400,9 +423,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233532"
+        "legacy:V-233532"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261880",
@@ -418,9 +441,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233533"
+        "legacy:V-233533"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261881",
@@ -436,9 +459,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233534"
+        "legacy:V-233534"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261882",
@@ -448,13 +471,13 @@
       "cci_refs": [
         "CCI-001499"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
       "implemented_by": [],
       "validated_by": [],
-      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
+      "notes": "Reviewed severity-mismatch candidate; real-time audit failure alerting depends on deployment logging and monitoring integration outside the image boundary."
     },
     {
       "control_id": "V-261883",
@@ -464,13 +487,13 @@
       "cci_refs": [
         "CCI-001499"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
       "implemented_by": [],
       "validated_by": [],
-      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
+      "notes": "Reviewed severity-mismatch candidate; audit storage exhaustion behavior and retention policy depend on deployment log management outside the image boundary."
     },
     {
       "control_id": "V-261884",
@@ -480,15 +503,15 @@
       "cci_refs": [
         "CCI-001499"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
       "implemented_by": [],
       "validated_by": [
         "legacy:V-233537"
       ],
-      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+      "notes": "Reassessed manual-only control; data object ownership is application and deployment policy, not a generic image-level decision."
     },
     {
       "control_id": "V-261885",
@@ -504,9 +527,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233538"
+        "legacy:V-233538"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261886",
@@ -516,13 +539,13 @@
       "cci_refs": [
         "CCI-000381"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "identity_and_access",
       "implemented_by": [],
       "validated_by": [],
-      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
+      "notes": "Reviewed severity-mismatch candidate; authorization and tracking of software installation account access is an operational access-control responsibility outside this image."
     },
     {
       "control_id": "V-261887",
@@ -538,9 +561,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233541"
+        "legacy:V-233541"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261888",
@@ -550,13 +573,17 @@
       "cci_refs": [
         "CCI-000381"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
-      "implemented_by": [],
-      "validated_by": [],
-      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
+      ],
+      "validated_by": [
+        "overlay:timescaledb-ha-pg16-external-executable-access"
+      ],
+      "notes": "Reviewed no-candidate control; PostgreSQL role membership for external program execution can be checked from runtime state, while final role assignment policy remains deployment-owned."
     },
     {
       "control_id": "V-261889",
@@ -566,15 +593,15 @@
       "cci_refs": [
         "CCI-000382"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "networking",
       "implemented_by": [],
       "validated_by": [
         "legacy:V-233542"
       ],
-      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+      "notes": "Reassessed manual-only control; allowed services, ports, and protocol exposure depend on deployment network policy and service configuration."
     },
     {
       "control_id": "V-261890",
@@ -590,9 +617,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233543"
+        "legacy:V-233543"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261891",
@@ -602,13 +629,17 @@
       "cci_refs": [
         "CCI-000196"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
-      "implemented_by": [],
-      "validated_by": [],
-      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
+      ],
+      "validated_by": [
+        "overlay:timescaledb-ha-pg16-password-storage"
+      ],
+      "notes": "Reviewed no-candidate control; repository STIG configuration sets SCRAM password hashing and runtime role metadata can be checked by overlay validation."
     },
     {
       "control_id": "V-261892",
@@ -618,13 +649,17 @@
       "cci_refs": [
         "CCI-000197"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
-      "implemented_by": [],
-      "validated_by": [],
-      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
+      ],
+      "validated_by": [
+        "overlay:timescaledb-ha-pg16-password-authentication-transport"
+      ],
+      "notes": "Reviewed no-candidate control; authentication method configuration can be partially validated from pg_hba state, while transport and identity policy remain deployment-owned."
     },
     {
       "control_id": "V-261893",
@@ -640,9 +675,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233546"
+        "legacy:V-233546"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261894",
@@ -652,13 +687,15 @@
       "cci_refs": [
         "CCI-000186"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
+      "validated_by": [
+        "legacy:V-233547"
+      ],
+      "notes": "Reviewed severity-mismatch candidate; reusable audit logging validation for configuration and access-restriction events remains applicable to PostgreSQL 16 with repository log inputs."
     },
     {
       "control_id": "V-261895",
@@ -674,9 +711,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233549"
+        "legacy:V-233549"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261896",
@@ -686,13 +723,15 @@
       "cci_refs": [
         "CCI-000803"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
+      "validated_by": [
+        "legacy:V-233551"
+      ],
+      "notes": "Reassessed manual-only control; FIPS-validated cryptographic module use depends on base platform and runtime cryptographic configuration outside the database image."
     },
     {
       "control_id": "V-261897",
@@ -708,9 +747,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233552"
+        "legacy:V-233552"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261898",
@@ -726,9 +765,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233553"
+        "legacy:V-233553"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261899",
@@ -744,9 +783,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233554"
+        "legacy:V-233554"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261900",
@@ -762,9 +801,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233556"
+        "legacy:V-233556"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261901",
@@ -774,13 +813,15 @@
       "cci_refs": [
         "CCI-001199"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
+      "validated_by": [
+        "legacy:V-233559"
+      ],
+      "notes": "Reviewed severity-mismatch candidate; reusable pgaudit event validation remains applicable to PostgreSQL 16 with repository audit log inputs."
     },
     {
       "control_id": "V-261902",
@@ -796,9 +837,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233560"
+        "legacy:V-233560"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261903",
@@ -814,9 +855,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233561"
+        "legacy:V-233561"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261904",
@@ -832,9 +873,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233563"
+        "legacy:V-233563"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261905",
@@ -850,9 +891,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233564"
+        "legacy:V-233564"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261906",
@@ -868,9 +909,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233565"
+        "legacy:V-233565"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261907",
@@ -886,9 +927,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233566"
+        "legacy:V-233566"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261908",
@@ -904,9 +945,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233567"
+        "legacy:V-233567"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261909",
@@ -922,9 +963,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233568"
+        "legacy:V-233568"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261910",
@@ -940,9 +981,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233569"
+        "legacy:V-233569"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261911",
@@ -958,9 +999,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233571"
+        "legacy:V-233571"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261912",
@@ -976,9 +1017,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233572"
+        "legacy:V-233572"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261913",
@@ -994,9 +1035,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233573"
+        "legacy:V-233573"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261914",
@@ -1012,9 +1053,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233574"
+        "legacy:V-233574"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261915",
@@ -1030,9 +1071,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233575"
+        "legacy:V-233575"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261916",
@@ -1048,9 +1089,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233576"
+        "legacy:V-233576"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261917",
@@ -1066,9 +1107,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233577"
+        "legacy:V-233577"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261918",
@@ -1084,9 +1125,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233579"
+        "legacy:V-233579"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261919",
@@ -1096,13 +1137,13 @@
       "cci_refs": [
         "CCI-001855"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
       "implemented_by": [],
       "validated_by": [],
-      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
+      "notes": "Reviewed no-candidate control; audit storage capacity warning depends on deployment log storage and monitoring integration outside the image boundary."
     },
     {
       "control_id": "V-261920",
@@ -1112,15 +1153,15 @@
       "cci_refs": [
         "CCI-001858"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
       "implemented_by": [],
       "validated_by": [
         "legacy:V-233580"
       ],
-      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+      "notes": "Reassessed manual-only control; real-time audit failure alerting depends on deployment monitoring and alert routing outside the image boundary."
     },
     {
       "control_id": "V-261921",
@@ -1130,13 +1171,17 @@
       "cci_refs": [
         "CCI-001890"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
-      "implemented_by": [],
-      "validated_by": [],
-      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
+      ],
+      "validated_by": [
+        "overlay:timescaledb-ha-pg16-time-settings"
+      ],
+      "notes": "Reviewed no-candidate control; PostgreSQL timezone and log timestamp behavior can be validated from runtime settings and repository STIG configuration."
     },
     {
       "control_id": "V-261922",
@@ -1146,13 +1191,17 @@
       "cci_refs": [
         "CCI-001889"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
-      "implemented_by": [],
-      "validated_by": [],
-      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
+      ],
+      "validated_by": [
+        "overlay:timescaledb-ha-pg16-time-settings"
+      ],
+      "notes": "Reviewed no-candidate control; PostgreSQL timestamp precision can be validated from runtime query output in the overlay."
     },
     {
       "control_id": "V-261923",
@@ -1168,9 +1217,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233581"
+        "legacy:V-233581"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261924",
@@ -1186,9 +1235,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233582"
+        "legacy:V-233582"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261925",
@@ -1198,13 +1247,17 @@
       "cci_refs": [
         "CCI-001814"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
-      "implemented_by": [],
-      "validated_by": [],
-      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
+      ],
+      "validated_by": [
+        "overlay:timescaledb-ha-pg16-audit-settings"
+      ],
+      "notes": "Reviewed no-candidate control; repository audit settings cover configuration-change event classes that can be validated from PostgreSQL settings."
     },
     {
       "control_id": "V-261926",
@@ -1214,13 +1267,13 @@
       "cci_refs": [
         "CCI-001762"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
       "implemented_by": [],
       "validated_by": [],
-      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
+      "notes": "Reviewed severity-mismatch candidate; FIPS mode for cryptographic hash validation depends on host and base platform configuration outside the database image."
     },
     {
       "control_id": "V-261927",
@@ -1230,13 +1283,13 @@
       "cci_refs": [
         "CCI-002038"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
       "implemented_by": [],
       "validated_by": [],
-      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
+      "notes": "Reviewed severity-mismatch candidate; classified-data cryptography requirements depend on deployment classification, TLS policy, and platform cryptographic configuration outside the image."
     },
     {
       "control_id": "V-261928",
@@ -1252,9 +1305,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233586"
+        "legacy:V-233586"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261929",
@@ -1264,15 +1317,15 @@
       "cci_refs": [
         "CCI-002470"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "secrets",
       "implemented_by": [],
       "validated_by": [
         "legacy:V-233587"
       ],
-      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+      "notes": "Reassessed manual-only control; certificate authority selection and certificate lifecycle are deployment-provided TLS responsibilities outside the image."
     },
     {
       "control_id": "V-261930",
@@ -1288,9 +1341,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233588"
+        "legacy:V-233588"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261931",
@@ -1306,9 +1359,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233589"
+        "legacy:V-233589"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261932",
@@ -1324,9 +1377,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233591"
+        "legacy:V-233591"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261933",
@@ -1342,9 +1395,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233592"
+        "legacy:V-233592"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261934",
@@ -1360,7 +1413,7 @@
       "deployment_responsibility": "manual",
       "implemented_by": [],
       "validated_by": [],
-      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
+      "notes": "Reviewed no-candidate control; predictable handling of invalid inputs requires system-specific behavioral evidence and documentation beyond a generic image assertion."
     },
     {
       "control_id": "V-261935",
@@ -1376,9 +1429,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233593"
+        "legacy:V-233593"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261936",
@@ -1388,15 +1441,15 @@
       "cci_refs": [
         "CCI-002605"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
       "implemented_by": [],
       "validated_by": [
         "legacy:V-233594"
       ],
-      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+      "notes": "Reassessed manual-only control; security update timing depends on release, rebuild, and deployment patch policy rather than a stable runtime assertion."
     },
     {
       "control_id": "V-261938",
@@ -1406,15 +1459,18 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
-      "implemented_by": [],
-      "validated_by": [
-        "legacy:V-233595"
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
       ],
-      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+      "validated_by": [
+        "legacy:V-233595",
+        "overlay:timescaledb-ha-pg16-audit-settings"
+      ],
+      "notes": "Reassessed manual-only control; repository pgaudit settings include object access event coverage that can be validated from PostgreSQL settings."
     },
     {
       "control_id": "V-261939",
@@ -1424,13 +1480,15 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
+      "validated_by": [
+        "legacy:V-233596"
+      ],
+      "notes": "Reviewed severity-mismatch candidate; reusable password encryption and role password validation applies to PostgreSQL 16, and the STIG image fragment sets SCRAM password encryption."
     },
     {
       "control_id": "V-261940",
@@ -1446,9 +1504,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233597"
+        "legacy:V-233597"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261941",
@@ -1464,9 +1522,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233598"
+        "legacy:V-233598"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261942",
@@ -1476,13 +1534,17 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
-      "implemented_by": [],
-      "validated_by": [],
-      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
+      ],
+      "validated_by": [
+        "overlay:timescaledb-ha-pg16-audit-settings"
+      ],
+      "notes": "Reviewed no-candidate control; repository audit settings include role and DDL events that can be validated as privilege-change audit coverage."
     },
     {
       "control_id": "V-261943",
@@ -1492,15 +1554,18 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
-      "implemented_by": [],
-      "validated_by": [
-        "legacy:V-233599"
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
       ],
-      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+      "validated_by": [
+        "legacy:V-233599",
+        "overlay:timescaledb-ha-pg16-audit-settings"
+      ],
+      "notes": "Reassessed manual-only control; repository pgaudit role event coverage can support overlay validation for unsuccessful privilege changes."
     },
     {
       "control_id": "V-261944",
@@ -1516,9 +1581,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233600"
+        "legacy:V-233600"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261945",
@@ -1528,15 +1593,18 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
-      "implemented_by": [],
-      "validated_by": [
-        "legacy:V-233601"
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
       ],
-      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+      "validated_by": [
+        "legacy:V-233601",
+        "overlay:timescaledb-ha-pg16-audit-settings"
+      ],
+      "notes": "Reassessed manual-only control; repository pgaudit role event coverage can support overlay validation for unsuccessful permission modifications."
     },
     {
       "control_id": "V-261946",
@@ -1546,13 +1614,13 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "secrets",
       "implemented_by": [],
       "validated_by": [],
-      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
+      "notes": "Reviewed severity-mismatch candidate; TLS key material placement and permissions depend on deployment-provided TLS assets, with only partial validation possible when those inputs are supplied."
     },
     {
       "control_id": "V-261947",
@@ -1568,9 +1636,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233603"
+        "legacy:V-233603"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261948",
@@ -1586,9 +1654,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233604"
+        "legacy:V-233604"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261949",
@@ -1604,9 +1672,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233605"
+        "legacy:V-233605"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261950",
@@ -1622,9 +1690,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233606"
+        "legacy:V-233606"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261951",
@@ -1640,9 +1708,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233607"
+        "legacy:V-233607"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261952",
@@ -1652,13 +1720,17 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
-      "implemented_by": [],
-      "validated_by": [],
-      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
+      ],
+      "validated_by": [
+        "overlay:timescaledb-ha-pg16-audit-settings"
+      ],
+      "notes": "Reviewed no-candidate control; repository audit settings include event classes used for security-object deletion audit coverage."
     },
     {
       "control_id": "V-261953",
@@ -1668,13 +1740,17 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
-      "implemented_by": [],
-      "validated_by": [],
-      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
+      ],
+      "validated_by": [
+        "overlay:timescaledb-ha-pg16-audit-settings"
+      ],
+      "notes": "Reviewed no-candidate control; repository audit settings and log configuration can support overlay validation for unsuccessful security-object deletion attempts."
     },
     {
       "control_id": "V-261954",
@@ -1690,7 +1766,7 @@
       "deployment_responsibility": "manual",
       "implemented_by": [],
       "validated_by": [],
-      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
+      "notes": "Reviewed no-candidate control; information category deletion is application- and data-model-specific and cannot be inferred from the generic database image."
     },
     {
       "control_id": "V-261955",
@@ -1706,9 +1782,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233608"
+        "legacy:V-233608"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261956",
@@ -1724,9 +1800,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233609"
+        "legacy:V-233609"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261957",
@@ -1742,9 +1818,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233610"
+        "legacy:V-233610"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261958",
@@ -1760,9 +1836,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233611"
+        "legacy:V-233611"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261959",
@@ -1778,9 +1854,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233612"
+        "legacy:V-233612"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261960",
@@ -1790,15 +1866,18 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
-      "implemented_by": [],
-      "validated_by": [
-        "legacy:V-233613"
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
       ],
-      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+      "validated_by": [
+        "legacy:V-233613",
+        "overlay:timescaledb-ha-pg16-connection-audit-settings"
+      ],
+      "notes": "Reassessed manual-only control; repository STIG configuration enables connection and disconnection logging that can be validated from PostgreSQL settings."
     },
     {
       "control_id": "V-261961",
@@ -1808,13 +1887,15 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
       "implemented_by": [],
-      "validated_by": [],
-      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
+      "validated_by": [
+        "legacy:V-233614"
+      ],
+      "notes": "Reassessed manual-only control; concurrent session correlation requires deployment monitoring and user activity policy beyond static image validation."
     },
     {
       "control_id": "V-261962",
@@ -1824,15 +1905,18 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
-      "implemented_by": [],
-      "validated_by": [
-        "legacy:V-233615"
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
       ],
-      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+      "validated_by": [
+        "legacy:V-233615",
+        "overlay:timescaledb-ha-pg16-audit-settings"
+      ],
+      "notes": "Reassessed manual-only control; repository pgaudit read and write settings can support overlay validation for successful object access auditing."
     },
     {
       "control_id": "V-261963",
@@ -1842,15 +1926,18 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
-      "implemented_by": [],
-      "validated_by": [
-        "legacy:V-233616"
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
       ],
-      "notes": "Manual-only classification based on matching normalized STIG ID suffix, same severity, and no executable assertions in the legacy candidate."
+      "validated_by": [
+        "legacy:V-233616",
+        "overlay:timescaledb-ha-pg16-audit-settings"
+      ],
+      "notes": "Reassessed manual-only control; repository pgaudit and log settings can support overlay validation for unsuccessful object access auditing."
     },
     {
       "control_id": "V-261964",
@@ -1866,9 +1953,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233617"
+        "legacy:V-233617"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261965",
@@ -1884,9 +1971,9 @@
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
-        "forked-profile:V-233618"
+        "legacy:V-233618"
       ],
-      "notes": "Final classification: validation-profile mapping candidate; not image-enforced by this repository. Treat as partial until PostgreSQL 16 control logic is reviewed and run."
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage."
     },
     {
       "control_id": "V-261966",
@@ -1896,13 +1983,13 @@
       "cci_refs": [
         "CCI-002450"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
       "implemented_by": [],
       "validated_by": [],
-      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
+      "notes": "Reviewed severity-mismatch candidate; FIPS-validated cryptographic operation requirements depend on base platform and OpenSSL FIPS configuration outside the database image."
     },
     {
       "control_id": "V-261967",
@@ -1912,13 +1999,13 @@
       "cci_refs": [
         "CCI-001851"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
       "implemented_by": [],
       "validated_by": [],
-      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
+      "notes": "Reviewed no-candidate control; continuous audit log offload depends on deployment log forwarding and external storage integration outside the image boundary."
     },
     {
       "control_id": "V-283674",
@@ -1928,13 +2015,13 @@
       "cci_refs": [
         "CCI-003376"
       ],
-      "status": "manual",
-      "implementation_owner": "manual",
-      "validation_owner": "manual",
-      "deployment_responsibility": "manual",
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
       "implemented_by": [],
       "validated_by": [],
-      "notes": "Final classification: manual review required; no reusable PostgreSQL 16 validation mapping or overlay check is currently available."
+      "notes": "Reviewed no-candidate control; runtime version can be checked by validation, but vendor support determination depends on release policy and operational patch management."
     }
   ]
 }

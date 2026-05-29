@@ -29,6 +29,12 @@ Build the opt-in PostgreSQL 16 STIG image variant:
 make build-stig
 ```
 
+On arm64 development hosts, build a native validation image to avoid emulated container behavior:
+
+```console
+PLATFORM=arm64 make build-stig
+```
+
 Start a disposable local validation target and run the repository-owned overlay with a containerized CINC Auditor/InSpec runner:
 
 ```console
@@ -39,6 +45,9 @@ make validate-stig-overlay
 make summarize-stig-validation
 docker rm --force ts-stig-validation
 ```
+
+By default, the validation target lets Docker select the platform for `STIG_IMAGE`. Set `STIG_PLATFORM=linux/amd64` or `STIG_PLATFORM=linux/arm64` only when a specific image platform must be forced.
+The disposable target stays alive for 3600 seconds by default; set `STIG_TARGET_SLEEP` if a longer validation/debugging window is needed.
 
 The runner uses Docker transport, mounts the repository read-only, writes JSON output under `.build/stig-validation/`, and does not require Ruby on the host. Override `CINC_AUDITOR_IMAGE`, `STIG_IMAGE`, `STIG_INPUTS`, or `STIG_PROFILE` to test a pinned runner image, a different local tag, or a forked profile path that has first been made portable.
 

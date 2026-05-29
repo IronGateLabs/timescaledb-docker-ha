@@ -285,7 +285,7 @@ build-stig: DOCKER_TAG_POSTFIX=-all-stig
 build-stig: STIG_ENABLED=true
 build-stig: BUILD_MAKEFLAGS=-j1
 build-stig:
-	$(DOCKER_BUILD_COMMAND)
+	$(DOCKER_BUILD_COMMAND) --tag "$(DOCKER_RELEASE_URL)"
 
 .PHONY: start-stig-validation-target
 start-stig-validation-target: # start a disposable local container for STIG validation
@@ -297,7 +297,7 @@ validate-stig-overlay: # run the repository-owned STIG overlay with a containeri
 
 .PHONY: summarize-stig-validation
 summarize-stig-validation: # summarize the default STIG overlay JSON report
-	scripts/stig/summarize_inspec_results.py .build/stig-validation/timescaledb-ha-pg16-overlay.json
+	scripts/stig/summarize_inspec_results.py .build/stig-validation/timescaledb-ha-pg16-overlay.json --traceability stig/postgres16-v1r2-traceability.json
 
 .PHONY: publish-combined-builder-manifest
 publish-combined-builder-manifest: $(VERSION_INFO) # publish a combined builder image manifest
