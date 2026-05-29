@@ -8,13 +8,18 @@ name: STIG validation
 
 on:
   workflow_dispatch:
-  pull_request:
+  # Trigger only on changes that can affect the validation result (image config,
+  # profiles, inputs, runner, build). Data/doc-only commits (traceability/mapping
+  # JSON, reports) intentionally do not rebuild. push-path filtering evaluates the
+  # pushed commit's files, unlike pull_request which matches the whole PR diff.
+  push:
     paths:
-      - "stig/**"
-      - "scripts/stig/**"
+      - "scripts/stig/apply_stig_config.sh"
+      - "stig/validation-overlay/**"
+      - "stig/validation-legacy/**"
+      - "stig/inputs_timescaledb_ha_pg16_example.yml"
       - "cicd/run-stig-validation"
       - "cicd/start-stig-validation-target"
-      - "cicd/check-stig-workflow"
       - "Dockerfile"
       - "Makefile"
       - ".github/workflows/stig-validation.yaml"
