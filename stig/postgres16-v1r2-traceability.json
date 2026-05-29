@@ -573,17 +573,15 @@
       "cci_refs": [
         "CCI-000381"
       ],
-      "status": "image_enforced",
-      "implementation_owner": "image",
-      "validation_owner": "overlay",
-      "deployment_responsibility": "none",
-      "implemented_by": [
-        "stig:image-stig-mode"
-      ],
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "identity_and_access",
+      "implemented_by": [],
       "validated_by": [
         "overlay:timescaledb-ha-pg16-external-executable-access"
       ],
-      "notes": "Reviewed no-candidate control; PostgreSQL role membership for external program execution can be checked from runtime state, while final role assignment policy remains deployment-owned."
+      "notes": "Reclassified from overlay-replaced to deployment-owned: the hardened image applies no role-membership policy for the external program execution role, so the control is satisfied only by PostgreSQL default state. Role assignment is deployment-owned; the overlay remains an observational check of runtime state."
     },
     {
       "control_id": "V-261889",
@@ -649,17 +647,15 @@
       "cci_refs": [
         "CCI-000197"
       ],
-      "status": "image_enforced",
-      "implementation_owner": "image",
-      "validation_owner": "overlay",
-      "deployment_responsibility": "none",
-      "implemented_by": [
-        "stig:image-stig-mode"
-      ],
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "identity_and_access",
+      "implemented_by": [],
       "validated_by": [
         "overlay:timescaledb-ha-pg16-password-authentication-transport"
       ],
-      "notes": "Reviewed no-candidate control; authentication method configuration can be partially validated from pg_hba state, while transport and identity policy remain deployment-owned."
+      "notes": "Reclassified from overlay-replaced to deployment-owned: the hardened image authors no host-based authentication rules and delegates authentication method and transport encryption to deployment, so the control is not image-enforced. The overlay remains an observational check of runtime authentication state."
     },
     {
       "control_id": "V-261893",

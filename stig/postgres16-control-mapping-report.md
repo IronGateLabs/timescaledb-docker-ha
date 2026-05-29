@@ -10,9 +10,9 @@ This report summarizes identifier-level mapping between the PostgreSQL 16 tracea
 - Candidate links by matching normalized `stig_id` suffix: 94.
 - Candidate links with severity mismatch: 17.
 - PostgreSQL 16 controls with no legacy candidate by `stig_id` suffix: 17.
-- Current confirmed mapping status: 67 `mapped`, 20 `replaced_by_overlay`, 22 `deployment_owned`, 2 `manual_only`, 0 `unmapped`.
-- Current automation status: 87 `partially_automated`, 22 `deployment_owned`, 2 `manual`, 0 `not_yet_assessed`.
-- Traceability status after reviewed classification: 67 `validation_only`, 20 `image_enforced`, 22 `deployment_owned`, 2 `manual`.
+- Current confirmed mapping status: 67 `mapped`, 18 `replaced_by_overlay`, 24 `deployment_owned`, 2 `manual_only`, 0 `unmapped`.
+- Current automation status: 85 `partially_automated`, 24 `deployment_owned`, 2 `manual`, 0 `not_yet_assessed`.
+- Traceability status after reviewed classification: 67 `validation_only`, 18 `image_enforced`, 24 `deployment_owned`, 2 `manual`.
 - Remaining unmapped controls: 0.
 - Remaining manual-only controls: 2.
 
@@ -24,6 +24,7 @@ Reviewed traceability classification is conservative:
 
 - controls with a reviewed legacy profile mapping are `validation_only` and must not be treated as image-enforced by this repository;
 - controls with portable repository-owned PostgreSQL runtime, generated configuration, package, or filesystem evidence are `image_enforced` and linked to overlay checks;
+- a control is `image_enforced` only when the hardened image fragment applies a concrete, observable setting; `V-261888` and `V-261892` were reclassified to `deployment_owned` because the image authors no role grants or host-based authentication rules for them and they passed only from PostgreSQL default state;
 - controls that depend on Kubernetes, identity, networking, secrets, certificates, backup/log retention, patch timing, or organization policy are `deployment_owned`;
 - controls without defensible repository-owned or deployment-owned automation remain `manual`;
 - no controls are marked `exception`.

@@ -13,9 +13,11 @@
 
 ## 3. Correct Enforcement Classification
 
-- [ ] 3.1 Audit all 20 controls currently classified `image_enforced` against `scripts/stig/apply_stig_config.sh` and the hardened image configuration
-- [ ] 3.2 Reclassify controls that pass only from PostgreSQL defaults (including V-261888 and V-261892) to `deployment_owned`, `validation_only`, or `manual` with project-authored rationale
-- [ ] 3.3 Update `stig/postgres16-control-mapping.json` and traceability to record the corrected ownership
+- [x] 3.1 Audit all 20 controls currently classified `image_enforced` against `scripts/stig/apply_stig_config.sh` and the hardened image configuration
+- [x] 3.2 Reclassify controls that pass only from PostgreSQL defaults (including V-261888 and V-261892) to `deployment_owned`, `validation_only`, or `manual` with project-authored rationale
+- [x] 3.3 Update `stig/postgres16-control-mapping.json` and traceability to record the corrected ownership
+
+Notes: the audit (adversarially verified) confirmed only V-261888 and V-261892 were falsely labeled `image_enforced` (no `pg_hba`/role enforcement in the image); both reclassified to `deployment_owned`, leaving 18 `image_enforced` / 24 `deployment_owned`. The audit also flagged 5 "unsuccessful access/privilege" controls (V-261922, V-261943, V-261945, V-261953, V-261963) where image enforcement is genuine but the overlay under-validates — addressed under section 4 (non-zero impact / failed-attempt assertions), not a reclassification.
 
 ## 4. Overlay Enforcement and Mapping
 

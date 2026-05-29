@@ -11,8 +11,8 @@ This review artifact is generated from committed project metadata. It uses contr
 | mapped | 67 |
 | manual_only | 2 |
 | unmapped | 0 |
-| replaced_by_overlay | 20 |
-| deployment_owned | 22 |
+| replaced_by_overlay | 18 |
+| deployment_owned | 24 |
 | exception | 0 |
 
 ### Automation Status
@@ -20,18 +20,18 @@ This review artifact is generated from committed project metadata. It uses contr
 | Status | Count |
 | --- | --- |
 | automated | 0 |
-| partially_automated | 87 |
+| partially_automated | 85 |
 | manual | 2 |
 | not_yet_assessed | 0 |
-| deployment_owned | 22 |
+| deployment_owned | 24 |
 | exception | 0 |
 
 ### Traceability Status
 
 | Status | Count |
 | --- | --- |
-| image_enforced | 20 |
-| deployment_owned | 22 |
+| image_enforced | 18 |
+| deployment_owned | 24 |
 | validation_only | 67 |
 | manual | 2 |
 | exception | 0 |
