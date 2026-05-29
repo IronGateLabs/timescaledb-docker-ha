@@ -32,7 +32,7 @@ control "timescaledb-ha-pg16-audit-settings" do
 
   describe PSQL_QUERY.call(self, "SHOW pgaudit.log_catalog;") do
     its("exit_status") { should eq 0 }
-    its("stdout") { should match(/\Aoff\s*\z/) }
+    its("stdout") { should match(/\Aon\s*\z/) }
   end
 
   describe PSQL_QUERY.call(self, "SHOW pgaudit.log_parameter;") do
