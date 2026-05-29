@@ -8,8 +8,24 @@ summary counts and any direct identifier overlap.
 
 import argparse
 import json
+import os
 import re
 from pathlib import Path
+
+
+_REPO_ROOT = Path(__file__).resolve().parents[2]
+
+
+def _safe_path(path):
+    """Resolve a CLI-supplied path and reject anything outside the repo root.
+
+    Sanitizes an operator-supplied argparse path before filesystem I/O so a
+    traversal value cannot escape the repository tree.
+    """
+    resolved = Path(path).resolve()
+    if os.path.commonpath([str(_REPO_ROOT), str(resolved)]) != str(_REPO_ROOT):
+        raise SystemExit(f"refusing path outside repository root: {path}")
+    return resolved
 
 
 def parse_args():
@@ -49,7 +65,8 @@ def stig_suffix(stig_id):
 
 def main():
     args = parse_args()
-    traceability = json.loads(args.traceability.read_text())
+    traceability_path = _safe_path(args.traceability)
+    traceability = json.loads(traceability_path.read_text())
     controls = traceability["controls"]
     pg16_ids = {control["control_id"] for control in controls}
     legacy_controls = legacy_control_ids(args.legacy_controls_dir)
@@ -114,8 +131,9 @@ def main():
         },
         "mappings": mappings,
     }
-    args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps(output, indent=2) + "\n")
+    output_path = _safe_path(args.output)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text(json.dumps(output, indent=2) + "\n")
     print(f"Wrote {len(mappings)} mappings to {args.output}")
 
 

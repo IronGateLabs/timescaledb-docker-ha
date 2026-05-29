@@ -3,7 +3,23 @@
 
 import argparse
 import json
+import os
 from pathlib import Path
+
+
+_REPO_ROOT = Path(__file__).resolve().parents[2]
+
+
+def _safe_path(path):
+    """Resolve a CLI-supplied path and reject anything outside the repo root.
+
+    Sanitizes an operator-supplied argparse path before filesystem I/O so a
+    traversal value cannot escape the repository tree.
+    """
+    resolved = Path(path).resolve()
+    if os.path.commonpath([str(_REPO_ROOT), str(resolved)]) != str(_REPO_ROOT):
+        raise SystemExit(f"refusing path outside repository root: {path}")
+    return resolved
 
 
 EXECUTABLE_MARKERS = (
@@ -36,7 +52,8 @@ def control_traits(path):
 
 def main():
     args = parse_args()
-    data = json.loads(args.mapping.read_text())
+    mapping_path = _safe_path(args.mapping)
+    data = json.loads(mapping_path.read_text())
     traits = control_traits(args.legacy_controls_dir)
 
     promoted = 0
@@ -66,7 +83,7 @@ def main():
         if any(traits.get(candidate, {}).get("has_skip") for candidate in candidates):
             partial_skip += 1
 
-    args.mapping.write_text(json.dumps(data, indent=2) + "\n")
+    mapping_path.write_text(json.dumps(data, indent=2) + "\n")
     print(f"promoted {promoted} mappings ({partial_skip} include legacy skip paths)")
 
 

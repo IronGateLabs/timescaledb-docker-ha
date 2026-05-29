@@ -3,7 +3,23 @@
 
 import argparse
 import json
+import os
 from pathlib import Path
+
+
+_REPO_ROOT = Path(__file__).resolve().parents[2]
+
+
+def _safe_path(path):
+    """Resolve a CLI-supplied path and reject anything outside the repo root.
+
+    Sanitizes an operator-supplied argparse path before filesystem I/O so a
+    traversal value cannot escape the repository tree.
+    """
+    resolved = Path(path).resolve()
+    if os.path.commonpath([str(_REPO_ROOT), str(resolved)]) != str(_REPO_ROOT):
+        raise SystemExit(f"refusing path outside repository root: {path}")
+    return resolved
 
 
 SYNC_STATUSES = {
@@ -53,8 +69,10 @@ def parse_args():
 
 def main():
     args = parse_args()
-    traceability = json.loads(args.traceability.read_text())
-    mapping = json.loads(args.mapping.read_text())
+    traceability_path = _safe_path(args.traceability)
+    mapping_path = _safe_path(args.mapping)
+    traceability = json.loads(traceability_path.read_text())
+    mapping = json.loads(mapping_path.read_text())
     mapping_by_id = {item["control_id"]: item for item in mapping["mappings"]}
 
     updated = 0
@@ -78,7 +96,7 @@ def main():
         control["notes"] = mapped["notes"]
         updated += 1
 
-    args.traceability.write_text(json.dumps(traceability, indent=2) + "\n")
+    traceability_path.write_text(json.dumps(traceability, indent=2) + "\n")
     print(f"synced {updated} mapping decisions into traceability")
 
 

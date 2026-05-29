@@ -3,7 +3,23 @@
 
 import argparse
 import json
+import os
 from pathlib import Path
+
+
+_REPO_ROOT = Path(__file__).resolve().parents[2]
+
+
+def _safe_path(path):
+    """Resolve a CLI-supplied path and reject anything outside the repo root.
+
+    Sanitizes an operator-supplied argparse path before filesystem I/O so a
+    traversal value cannot escape the repository tree.
+    """
+    resolved = Path(path).resolve()
+    if os.path.commonpath([str(_REPO_ROOT), str(resolved)]) != str(_REPO_ROOT):
+        raise SystemExit(f"refusing path outside repository root: {path}")
+    return resolved
 
 
 ALLOWED_MAPPING_STATUS = {
@@ -79,7 +95,8 @@ def parse_args():
 
 def main():
     args = parse_args()
-    data = json.loads(args.mapping.read_text())
+    mapping_path = _safe_path(args.mapping)
+    data = json.loads(mapping_path.read_text())
     for item in data["mappings"]:
         if item["control_id"] == args.control_id:
             break
@@ -107,7 +124,7 @@ def main():
     if overlay_checks is not None:
         item["overlay_checks"] = overlay_checks
 
-    args.mapping.write_text(json.dumps(data, indent=2) + "\n")
+    mapping_path.write_text(json.dumps(data, indent=2) + "\n")
     print(f"updated {args.control_id}")
 
 
