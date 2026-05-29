@@ -2,6 +2,7 @@ control "timescaledb-ha-pg16-inputs" do
   impact 0.0
   title "TimescaleDB HA PostgreSQL 16 validation inputs are image-compatible"
   desc "Repository-owned preflight checks for runner inputs used with the TimescaleDB HA PostgreSQL 16 image."
+  tag informational: true
 
   describe input("pg_version") do
     it { should match(/^16(\.|$|\.x$)/) }

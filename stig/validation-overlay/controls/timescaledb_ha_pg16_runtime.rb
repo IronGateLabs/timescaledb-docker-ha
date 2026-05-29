@@ -2,6 +2,7 @@ control "timescaledb-ha-pg16-runtime" do
   impact 0.0
   title "TimescaleDB HA PostgreSQL 16 runtime exposes validation targets"
   desc "Repository-owned preflight checks that the target image exposes the expected PostgreSQL 16 files and database connection."
+  tag informational: true
 
   describe directory(input("pg_data_dir")) do
     it { should exist }
