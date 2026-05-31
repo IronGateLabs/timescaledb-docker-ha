@@ -23,7 +23,7 @@ This note tracks compatibility signals for adapting the forked PostgreSQL STIG v
 
 ## Legacy Profile Execution
 
-- The forked profile is referenced as a portable, commit-pinned InSpec dependency by `stig/validation-legacy` (pinned to `IronGateLabs/crunchy-data-postgresql-stig-baseline` commit `f4ff7d74`). It is never copied into this repository.
+- The forked profile is referenced as a portable, commit-pinned InSpec dependency by `stig/validation-legacy` (pinned to `IronGateLabs/crunchy-data-postgresql-stig-baseline` commit `cb21f93`, which adds PostgreSQL 16 / Debian / SCRAM portability fixes to 11 controls). It is never copied into this repository.
 - `make validate-stig-legacy` runs that profile against the hardened target through the same containerized CINC Auditor/InSpec runner, using `stig/inputs_timescaledb_ha_pg16_example.yml` so the legacy controls evaluate against this image's paths and package names. Results are written to `.build/stig-validation/timescaledb-ha-pg16-legacy.json`.
 - The legacy run requires network egress to fetch the pinned dependency; the repository overlay run does not and is unaffected.
 - Executed legacy results are not authoritative until per-control PostgreSQL 16 behavior is verified; until then a result informs, but does not promote, a control's traceability status.

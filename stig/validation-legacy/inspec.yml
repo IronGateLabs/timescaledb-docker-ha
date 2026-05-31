@@ -13,4 +13,4 @@ inspec_version: ">= 4.0"
 depends:
   - name: crunchy-data-postgresql-stig-baseline
     git: https://github.com/IronGateLabs/crunchy-data-postgresql-stig-baseline.git
-    commit: f4ff7d74e79158656bd18cd2c07764caa5ef2b72
+    commit: cb21f9398000a1493bbeef5b53bdfb2d39206052
