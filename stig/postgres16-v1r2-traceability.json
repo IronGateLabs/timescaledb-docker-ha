@@ -456,7 +456,7 @@
         "legacy:V-233533"
       ],
       "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
-      "validation_state": "candidate"
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261881",
@@ -727,7 +727,7 @@
         "legacy:V-233549"
       ],
       "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
-      "validation_state": "candidate"
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261896",
