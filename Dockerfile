@@ -435,6 +435,7 @@ RUN if [ "${ALLOW_ADDING_EXTENSIONS}" != "true" ]; then \
         for pg in ${PG_VERSIONS}; do \
             for dir in /usr/share/doc "$(/usr/lib/postgresql/${pg}/bin/pg_config --sharedir)/extension" "$(/usr/lib/postgresql/${pg}/bin/pg_config --pkglibdir)" "$(/usr/lib/postgresql/${pg}/bin/pg_config --bindir)"; do \
                 chown -R root:root "${dir}"; \
+                chmod 0755 "${dir}"; \
             done; \
         done; \
     fi
