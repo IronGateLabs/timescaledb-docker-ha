@@ -15,7 +15,7 @@ control "timescaledb-ha-pg16-audit-settings" do
   impact 0.5
   title "TimescaleDB HA PostgreSQL 16 audit settings are enabled"
   desc "Repository-owned checks for audit-related PostgreSQL settings applied by opt-in STIG mode."
-  tag stig_controls: %w[V-261866 V-261925 V-261938 V-261942 V-261943 V-261945 V-261952 V-261953 V-261962 V-261963]
+  tag stig_controls: %w[V-261866 V-261913 V-261925 V-261938 V-261942 V-261943 V-261945 V-261952 V-261953 V-261962 V-261963]
 
   describe PSQL_QUERY.call(self, "SHOW shared_preload_libraries;") do
     its("exit_status") { should eq 0 }
@@ -59,8 +59,8 @@ end
 control "timescaledb-ha-pg16-audit-identity-fields" do
   impact 0.5
   title "TimescaleDB HA PostgreSQL 16 audit logs include identity context"
-  desc "Repository-owned checks for log prefix fields applied by opt-in STIG mode."
-  tag stig_controls: %w[V-261871]
+  desc "Repository-owned checks for log prefix fields and hostname logging applied by opt-in STIG mode."
+  tag stig_controls: %w[V-261871 V-261910 V-261932 V-261941]
 
   describe PSQL_QUERY.call(self, "SHOW log_line_prefix;") do
     its("exit_status") { should eq 0 }
@@ -68,6 +68,38 @@ control "timescaledb-ha-pg16-audit-identity-fields" do
     its("stdout") { should match(/%u/) }
     its("stdout") { should match(/%d/) }
     its("stdout") { should match(/%r/) }
+    its("stdout") { should match(/%c/) }
+    its("stdout") { should match(/%a/) }
+    its("stdout") { should match(/%s/) }
+  end
+
+  describe PSQL_QUERY.call(self, "SHOW log_hostname;") do
+    its("exit_status") { should eq 0 }
+    its("stdout") { should match(/\Aon\s*\z/) }
+  end
+end
+
+control "timescaledb-ha-pg16-client-message-settings" do
+  impact 0.5
+  title "TimescaleDB HA PostgreSQL 16 limits client message verbosity"
+  desc "Repository-owned check that client_min_messages is restricted to error in opt-in STIG mode."
+  tag stig_controls: %w[V-261862]
+
+  describe PSQL_QUERY.call(self, "SHOW client_min_messages;") do
+    its("exit_status") { should eq 0 }
+    its("stdout") { should match(/\Aerror\s*\z/i) }
+  end
+end
+
+control "timescaledb-ha-pg16-session-limit-settings" do
+  impact 0.5
+  title "TimescaleDB HA PostgreSQL 16 configures a statement timeout"
+  desc "Repository-owned check that a non-zero statement_timeout guard is configured in opt-in STIG mode."
+  tag stig_controls: %w[V-261950]
+
+  describe PSQL_QUERY.call(self, "SELECT (current_setting('statement_timeout') <> '0')::text;") do
+    its("exit_status") { should eq 0 }
+    its("stdout") { should match(/\Atrue\s*\z/) }
   end
 end
 

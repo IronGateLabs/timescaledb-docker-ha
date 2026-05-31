@@ -102,16 +102,18 @@
       "cci_refs": [
         "CCI-000171"
       ],
-      "status": "validation_only",
-      "implementation_owner": "unassigned",
-      "validation_owner": "validation_profile",
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
       "deployment_responsibility": "none",
-      "implemented_by": [],
-      "validated_by": [
-        "legacy:V-233516"
+      "implemented_by": [
+        "stig:image-stig-mode"
       ],
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
-      "validation_state": "executed"
+      "validated_by": [
+        "legacy:V-233516",
+        "overlay:timescaledb-ha-pg16-client-message-settings"
+      ],
+      "notes": "Image-enforced: the hardened image directly sets this configuration in apply_stig_config.sh and the repository overlay control timescaledb-ha-pg16-client-message-settings validates it; the reusable legacy check is retained as supplementary executed evidence."
     },
     {
       "control_id": "V-261863",
@@ -1001,16 +1003,18 @@
       "cci_refs": [
         "CCI-002361"
       ],
-      "status": "validation_only",
-      "implementation_owner": "unassigned",
-      "validation_owner": "validation_profile",
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
       "deployment_responsibility": "none",
-      "implemented_by": [],
-      "validated_by": [
-        "legacy:V-233569"
+      "implemented_by": [
+        "stig:image-stig-mode"
       ],
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
-      "validation_state": "executed"
+      "validated_by": [
+        "legacy:V-233569",
+        "overlay:timescaledb-ha-pg16-audit-identity-fields"
+      ],
+      "notes": "Image-enforced: the hardened image directly sets this configuration in apply_stig_config.sh and the repository overlay control timescaledb-ha-pg16-audit-identity-fields validates it; the reusable legacy check is retained as supplementary executed evidence."
     },
     {
       "control_id": "V-261911",
@@ -1058,16 +1062,18 @@
       "cci_refs": [
         "CCI-002264"
       ],
-      "status": "validation_only",
-      "implementation_owner": "unassigned",
-      "validation_owner": "validation_profile",
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
       "deployment_responsibility": "none",
-      "implemented_by": [],
-      "validated_by": [
-        "legacy:V-233573"
+      "implemented_by": [
+        "stig:image-stig-mode"
       ],
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
-      "validation_state": "executed"
+      "validated_by": [
+        "legacy:V-233573",
+        "overlay:timescaledb-ha-pg16-audit-settings"
+      ],
+      "notes": "Image-enforced: the hardened image directly sets this configuration in apply_stig_config.sh and the repository overlay control timescaledb-ha-pg16-audit-settings validates it; the reusable legacy check is retained as supplementary executed evidence."
     },
     {
       "control_id": "V-261914",
@@ -1409,16 +1415,18 @@
       "cci_refs": [
         "CCI-002420"
       ],
-      "status": "validation_only",
-      "implementation_owner": "unassigned",
-      "validation_owner": "validation_profile",
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
       "deployment_responsibility": "none",
-      "implemented_by": [],
-      "validated_by": [
-        "legacy:V-233591"
+      "implemented_by": [
+        "stig:image-stig-mode"
       ],
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
-      "validation_state": "executed"
+      "validated_by": [
+        "legacy:V-233591",
+        "overlay:timescaledb-ha-pg16-audit-identity-fields"
+      ],
+      "notes": "Image-enforced: the hardened image directly sets this configuration in apply_stig_config.sh and the repository overlay control timescaledb-ha-pg16-audit-identity-fields validates it; the reusable legacy check is retained as supplementary executed evidence."
     },
     {
       "control_id": "V-261933",
@@ -1559,16 +1567,18 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "validation_only",
-      "implementation_owner": "unassigned",
-      "validation_owner": "validation_profile",
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
       "deployment_responsibility": "none",
-      "implemented_by": [],
-      "validated_by": [
-        "legacy:V-233598"
+      "implemented_by": [
+        "stig:image-stig-mode"
       ],
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
-      "validation_state": "executed"
+      "validated_by": [
+        "legacy:V-233598",
+        "overlay:timescaledb-ha-pg16-audit-identity-fields"
+      ],
+      "notes": "Image-enforced: the hardened image directly sets this configuration in apply_stig_config.sh and the repository overlay control timescaledb-ha-pg16-audit-identity-fields validates it; the reusable legacy check is retained as supplementary executed evidence."
     },
     {
       "control_id": "V-261942",
@@ -1731,16 +1741,18 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "status": "validation_only",
-      "implementation_owner": "unassigned",
-      "validation_owner": "validation_profile",
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
       "deployment_responsibility": "none",
-      "implemented_by": [],
-      "validated_by": [
-        "legacy:V-233606"
+      "implemented_by": [
+        "stig:image-stig-mode"
       ],
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
-      "validation_state": "executed"
+      "validated_by": [
+        "legacy:V-233606",
+        "overlay:timescaledb-ha-pg16-session-limit-settings"
+      ],
+      "notes": "Image-enforced: the hardened image directly sets this configuration in apply_stig_config.sh and the repository overlay control timescaledb-ha-pg16-session-limit-settings validates it; the reusable legacy check is retained as supplementary executed evidence."
     },
     {
       "control_id": "V-261951",

@@ -174,7 +174,7 @@
       "cci_refs": [
         "CCI-000171"
       ],
-      "mapping_status": "mapped",
+      "mapping_status": "replaced_by_overlay",
       "legacy_control_ids": [
         "V-233516"
       ],
@@ -190,14 +190,15 @@
       "candidate_warnings": {
         "severity_mismatch": []
       },
-      "overlay_checks": [],
+      "overlay_checks": [
+        "timescaledb-ha-pg16-client-message-settings"
+      ],
       "automation_status": "partially_automated",
       "container_validation": "partial",
-      "implementation_owner": "unassigned",
-      "validation_owner": "validation_profile",
-      "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
-      "validation_state": "executed"
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "notes": "Image-enforced: the hardened image directly sets this configuration in apply_stig_config.sh and the repository overlay control timescaledb-ha-pg16-client-message-settings validates it; the reusable legacy check is retained as supplementary executed evidence."
     },
     {
       "control_id": "V-261863",
@@ -1668,7 +1669,7 @@
       "cci_refs": [
         "CCI-002361"
       ],
-      "mapping_status": "mapped",
+      "mapping_status": "replaced_by_overlay",
       "legacy_control_ids": [
         "V-233569"
       ],
@@ -1684,14 +1685,15 @@
       "candidate_warnings": {
         "severity_mismatch": []
       },
-      "overlay_checks": [],
+      "overlay_checks": [
+        "timescaledb-ha-pg16-audit-identity-fields"
+      ],
       "automation_status": "partially_automated",
       "container_validation": "partial",
-      "implementation_owner": "unassigned",
-      "validation_owner": "validation_profile",
-      "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
-      "validation_state": "executed"
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "notes": "Image-enforced: the hardened image directly sets this configuration in apply_stig_config.sh and the repository overlay control timescaledb-ha-pg16-audit-identity-fields validates it; the reusable legacy check is retained as supplementary executed evidence."
     },
     {
       "control_id": "V-261911",
@@ -1764,7 +1766,7 @@
       "cci_refs": [
         "CCI-002264"
       ],
-      "mapping_status": "mapped",
+      "mapping_status": "replaced_by_overlay",
       "legacy_control_ids": [
         "V-233573"
       ],
@@ -1780,14 +1782,15 @@
       "candidate_warnings": {
         "severity_mismatch": []
       },
-      "overlay_checks": [],
+      "overlay_checks": [
+        "timescaledb-ha-pg16-audit-settings"
+      ],
       "automation_status": "partially_automated",
       "container_validation": "partial",
-      "implementation_owner": "unassigned",
-      "validation_owner": "validation_profile",
-      "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
-      "validation_state": "executed"
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "notes": "Image-enforced: the hardened image directly sets this configuration in apply_stig_config.sh and the repository overlay control timescaledb-ha-pg16-audit-settings validates it; the reusable legacy check is retained as supplementary executed evidence."
     },
     {
       "control_id": "V-261914",
@@ -2336,7 +2339,7 @@
       "cci_refs": [
         "CCI-002420"
       ],
-      "mapping_status": "mapped",
+      "mapping_status": "replaced_by_overlay",
       "legacy_control_ids": [
         "V-233591"
       ],
@@ -2352,14 +2355,15 @@
       "candidate_warnings": {
         "severity_mismatch": []
       },
-      "overlay_checks": [],
+      "overlay_checks": [
+        "timescaledb-ha-pg16-audit-identity-fields"
+      ],
       "automation_status": "partially_automated",
       "container_validation": "partial",
-      "implementation_owner": "unassigned",
-      "validation_owner": "validation_profile",
-      "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
-      "validation_state": "executed"
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "notes": "Image-enforced: the hardened image directly sets this configuration in apply_stig_config.sh and the repository overlay control timescaledb-ha-pg16-audit-identity-fields validates it; the reusable legacy check is retained as supplementary executed evidence."
     },
     {
       "control_id": "V-261933",
@@ -2585,7 +2589,7 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "mapping_status": "mapped",
+      "mapping_status": "replaced_by_overlay",
       "legacy_control_ids": [
         "V-233598"
       ],
@@ -2601,14 +2605,15 @@
       "candidate_warnings": {
         "severity_mismatch": []
       },
-      "overlay_checks": [],
+      "overlay_checks": [
+        "timescaledb-ha-pg16-audit-identity-fields"
+      ],
       "automation_status": "partially_automated",
       "container_validation": "partial",
-      "implementation_owner": "unassigned",
-      "validation_owner": "validation_profile",
-      "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
-      "validation_state": "executed"
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "notes": "Image-enforced: the hardened image directly sets this configuration in apply_stig_config.sh and the repository overlay control timescaledb-ha-pg16-audit-identity-fields validates it; the reusable legacy check is retained as supplementary executed evidence."
     },
     {
       "control_id": "V-261942",
@@ -2866,7 +2871,7 @@
       "cci_refs": [
         "CCI-000172"
       ],
-      "mapping_status": "mapped",
+      "mapping_status": "replaced_by_overlay",
       "legacy_control_ids": [
         "V-233606"
       ],
@@ -2882,14 +2887,15 @@
       "candidate_warnings": {
         "severity_mismatch": []
       },
-      "overlay_checks": [],
+      "overlay_checks": [
+        "timescaledb-ha-pg16-session-limit-settings"
+      ],
       "automation_status": "partially_automated",
       "container_validation": "partial",
-      "implementation_owner": "unassigned",
-      "validation_owner": "validation_profile",
-      "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
-      "validation_state": "executed"
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "notes": "Image-enforced: the hardened image directly sets this configuration in apply_stig_config.sh and the repository overlay control timescaledb-ha-pg16-session-limit-settings validates it; the reusable legacy check is retained as supplementary executed evidence."
     },
     {
       "control_id": "V-261951",
