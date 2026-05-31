@@ -8,6 +8,15 @@ Do not copy benchmark prose into this repository. Avoid titles, descriptions, di
 
 The STIG image path is opt-in. `make build-stig` sets `PG_MAJOR=16`, includes the same PostgreSQL major-version scope as a `pg16-all` image, enables `STIG_ENABLED=true`, and tags the local image with the `pg16-all-stig` suffix. Existing non-STIG build targets remain unchanged.
 
+## Hardened Image Artifact
+
+The default published image is **not** hardened. The validated STIG-hardened artifact is the distinct `pg16-all-stig`-tagged image produced by `make build-stig`. It differs from the default image in that it:
+
+- enables the STIG configuration fragment at initialization (`STIG_ENABLED=true`): SCRAM password storage, pgaudit auditing, connection/disconnection and DDL logging, UTC time, a full audit log-line prefix, restrictive (`0700`/`0600`) log permissions, `client_min_messages=error`, and a `statement_timeout` runaway guard;
+- builds with `ALLOW_ADDING_EXTENSIONS=false`, so the PostgreSQL `bin`/`lib` directories ship `root:root 0755` (immutable) — the hardened image **cannot install extensions at runtime**; all required extensions are present at build time.
+
+The hardened artifact is validated by the `stig-validation` CI workflow, which builds the image and runs both the repository overlay and the commit-pinned forked profile against it. Controls validated by an executed run are recorded with `validation_state: executed` in traceability. Controls the image cannot own remain `deployment_owned`; documented deviations are `exception`.
+
 The image-owned hardening is limited to files and settings the container can enforce directly: PostgreSQL configuration fragments, audit/logging defaults, preload libraries, and file permissions created during initialization. Kubernetes policy, network access, users beyond the local test role, secrets, certificate issuance, backup policy, and organization-specific audit retention remain deployment-owned and must be tracked as such in traceability.
 
 Generate the initial inventory from a local XCCDF file:

@@ -284,6 +284,11 @@ build-stig: PG_VERSIONS=16 15
 build-stig: DOCKER_TAG_POSTFIX=-all-stig
 build-stig: STIG_ENABLED=true
 build-stig: BUILD_MAKEFLAGS=-j1
+# Disable runtime extension installation so the PostgreSQL bin/lib directories
+# ship root:root 0755 (immutable) instead of group-writable 1775, satisfying the
+# binary/library protection STIG controls. The hardened image therefore cannot
+# add extensions at runtime; all required extensions are present at build time.
+build-stig: ALLOW_ADDING_EXTENSIONS=false
 build-stig:
 	$(DOCKER_BUILD_COMMAND) --tag "$(DOCKER_RELEASE_URL)"
 
