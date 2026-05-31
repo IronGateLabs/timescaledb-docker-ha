@@ -13,4 +13,6 @@ inspec_version: ">= 4.0"
 depends:
   - name: crunchy-data-postgresql-stig-baseline
     git: https://github.com/IronGateLabs/crunchy-data-postgresql-stig-baseline.git
-    commit: cb21f9398000a1493bbeef5b53bdfb2d39206052
+    # InSpec's git fetcher honors ref/branch/tag (not commit); an immutable tag
+    # pins the PostgreSQL 16 portability fixes (commit cb21f93) reproducibly.
+    tag: pg16-portability-1
