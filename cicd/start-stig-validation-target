@@ -63,6 +63,10 @@ docker exec \
 	"${STIG_TARGET_CONTAINER}" \
 	/scripts/stig/apply_stig_config.sh
 
+# Remove any stale build-time log files so validation exercises only the STIG
+# logging collector's output (log_file_mode 0600), not pre-existing artifacts.
+docker exec "${STIG_TARGET_CONTAINER}" sh -c 'rm -f /home/postgres/pg_log/* 2>/dev/null || true'
+
 docker exec "${STIG_TARGET_CONTAINER}" pg_ctl start -l /tmp/postgresql.log >/dev/null
 
 until docker exec "${STIG_TARGET_CONTAINER}" pg_isready >/dev/null 2>&1; do

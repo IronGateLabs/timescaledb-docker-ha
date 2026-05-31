@@ -535,16 +535,15 @@
       "cci_refs": [
         "CCI-001499"
       ],
-      "status": "validation_only",
-      "implementation_owner": "unassigned",
-      "validation_owner": "validation_profile",
-      "deployment_responsibility": "none",
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "secrets",
       "implemented_by": [],
       "validated_by": [
         "legacy:V-233538"
       ],
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
-      "validation_state": "candidate"
+      "notes": "Reclassified to deployment-owned: TLS enablement (ssl=on) requires deployment-provided server certificates; the Spilo runtime path enables ssl when certs are mounted, consistent with the other transport-security controls (V-261917/918/947/958)."
     },
     {
       "control_id": "V-261886",
