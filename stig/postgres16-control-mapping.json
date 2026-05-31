@@ -47,7 +47,7 @@
       "cci_refs": [
         "CCI-000015"
       ],
-      "mapping_status": "mapped",
+      "mapping_status": "exception",
       "legacy_control_ids": [
         "V-233512"
       ],
@@ -66,13 +66,12 @@
         ]
       },
       "overlay_checks": [],
-      "automation_status": "partially_automated",
-      "container_validation": "partial",
-      "implementation_owner": "unassigned",
-      "validation_owner": "validation_profile",
-      "deployment_responsibility": "undetermined",
-      "notes": "Reviewed severity-mismatch candidate; reusable audit configuration and log validation logic remains applicable to PostgreSQL 16 with repository inputs. Treat as validation-only until implementation ownership is separately confirmed.",
-      "validation_state": "candidate"
+      "automation_status": "exception",
+      "container_validation": "not_supported",
+      "implementation_owner": "exception",
+      "validation_owner": "exception",
+      "deployment_responsibility": "none",
+      "notes": "Documented exception: the hardened image applies the approved pgaudit class subset (ddl,role,read,write), validated by the repository overlay; the broader legacy class list is a deliberate, reviewed audit-policy choice rather than a deviation that reduces required event coverage."
     },
     {
       "control_id": "V-261859",
@@ -364,7 +363,7 @@
       "cci_refs": [
         "CCI-000132"
       ],
-      "mapping_status": "mapped",
+      "mapping_status": "exception",
       "legacy_control_ids": [
         "V-233522"
       ],
@@ -381,13 +380,12 @@
         "severity_mismatch": []
       },
       "overlay_checks": [],
-      "automation_status": "partially_automated",
-      "container_validation": "partial",
-      "implementation_owner": "unassigned",
-      "validation_owner": "validation_profile",
-      "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
-      "validation_state": "candidate"
+      "automation_status": "exception",
+      "container_validation": "not_supported",
+      "implementation_owner": "exception",
+      "validation_owner": "exception",
+      "deployment_responsibility": "none",
+      "notes": "Documented exception: the bootstrap superuser (postgres) carries PostgreSQL's inherent unlimited connection limit, and PostgreSQL does not enforce connection limits against superusers; non-superuser login roles are unaffected. Accepted operational exception for the DBA account."
     },
     {
       "control_id": "V-261869",
@@ -1040,7 +1038,7 @@
       "cci_refs": [
         "CCI-000764"
       ],
-      "mapping_status": "mapped",
+      "mapping_status": "exception",
       "legacy_control_ids": [
         "V-233543"
       ],
@@ -1057,13 +1055,12 @@
         "severity_mismatch": []
       },
       "overlay_checks": [],
-      "automation_status": "partially_automated",
-      "container_validation": "partial",
-      "implementation_owner": "unassigned",
-      "validation_owner": "validation_profile",
-      "deployment_responsibility": "undetermined",
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
-      "validation_state": "candidate"
+      "automation_status": "exception",
+      "container_validation": "not_supported",
+      "implementation_owner": "exception",
+      "validation_owner": "exception",
+      "deployment_responsibility": "none",
+      "notes": "Documented exception: the SECURITY DEFINER functions present are pgaudit's own event-trigger functions, inherent to the required audit extension; no operator-introduced privilege-elevation functions exist."
     },
     {
       "control_id": "V-261891",

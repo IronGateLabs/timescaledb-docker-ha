@@ -58,9 +58,11 @@ Notes: `.github/workflows/stig-validation.yaml` builds `pg16-all-stig` with `mak
 
 ## 8. Default-Hardening Posture
 
-- [ ] 8.1 Decide whether to publish a distinct validated hardened artifact (for example a STIG tag) or document the default image as unhardened
-- [ ] 8.2 Document the chosen posture, how to obtain the hardened artifact, and how it differs from the default image
-- [ ] 8.3 Confirm the default non-STIG image behavior is unchanged
+- [x] 8.1 Decide whether to publish a distinct validated hardened artifact (for example a STIG tag) or document the default image as unhardened
+- [x] 8.2 Document the chosen posture, how to obtain the hardened artifact, and how it differs from the default image
+- [x] 8.3 Confirm the default non-STIG image behavior is unchanged
+
+Notes: chosen posture — the distinct `pg16-all-stig` image (built by `make build-stig`) is THE validated hardened artifact; the default published image is documented as unhardened (stig/README.md "Hardened Image Artifact"). The STIG build additionally sets `ALLOW_ADDING_EXTENSIONS=false` so the bin/lib dirs are immutable `root:root 0755`. Default behavior is unchanged because every hardening is gated behind `STIG_ENABLED=true` (the apply_stig_config init fragment) or the build-stig-only `ALLOW_ADDING_EXTENSIONS`/`DOCKER_TAG_POSTFIX` target variables. Three controls (V-261858 pgaudit class subset, V-261868 superuser connection limit, V-261890 pgaudit SECURITY DEFINER functions) were recorded as documented `exception`. Status now: validation_only 57 (50 executed / 7 candidate), deployment_owned 31, image_enforced 18, exception 3, manual 2.
 
 ## 9. Final Verification
 

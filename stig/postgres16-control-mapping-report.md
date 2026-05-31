@@ -10,10 +10,10 @@ This report summarizes identifier-level mapping between the PostgreSQL 16 tracea
 - Candidate links by matching normalized `stig_id` suffix: 94.
 - Candidate links with severity mismatch: 17.
 - PostgreSQL 16 controls with no legacy candidate by `stig_id` suffix: 17.
-- Current confirmed mapping status: 60 `mapped`, 18 `replaced_by_overlay`, 31 `deployment_owned`, 2 `manual_only`, 0 `unmapped`.
-- Current automation status: 78 `partially_automated`, 31 `deployment_owned`, 2 `manual`, 0 `not_yet_assessed`.
-- Traceability status after reviewed classification: 60 `validation_only`, 18 `image_enforced`, 31 `deployment_owned`, 2 `manual`.
-- Of the 60 `validation_only` controls, 50 are `validation_state: executed` (their mapped legacy profile checks passed against the hardened image in the CI validation run) and 10 are `validation_state: candidate`. The forked Crunchy profile was given PostgreSQL 16 / Debian / SCRAM portability fixes (14 controls across two rounds, pinned via the `pg16-portability-2` tag) and the image added a `statement_timeout` guard, together promoting 11 more controls. The 10 remaining candidates are all judgment calls or harness artifacts, not clean fixes: PGDG `bin`/`lib` group-write layout (resolved by building with `ALLOW_ADDING_EXTENSIONS=false`), bootstrap-superuser connection limit, the pgaudit class subset and SECURITY DEFINER functions (documented exceptions), and audit-log file-mode (a stray-file artifact in the disposable validation target, not the STIG collector path).
+- Current confirmed mapping status: 57 `mapped`, 18 `replaced_by_overlay`, 31 `deployment_owned`, 3 `exception`, 2 `manual_only`, 0 `unmapped`.
+- Current automation status: 75 `partially_automated`, 31 `deployment_owned`, 3 `exception`, 2 `manual`, 0 `not_yet_assessed`.
+- Traceability status after reviewed classification: 57 `validation_only` (50 executed / 7 candidate), 18 `image_enforced`, 31 `deployment_owned`, 3 `exception`, 2 `manual`.
+- Of the 57 `validation_only` controls, 50 are `validation_state: executed` (their mapped legacy profile checks passed against the hardened image in the CI validation run) and 7 are `validation_state: candidate`. The forked Crunchy profile was given PostgreSQL 16 / Debian / SCRAM portability fixes (14 controls across two rounds, pinned via the `pg16-portability-2` tag) and the image added a `statement_timeout` guard, together promoting 11 controls; three controls were recorded as documented `exception`. The 7 remaining candidates are the PGDG `bin`/`lib` group-write layout controls (resolved by building the STIG image with `ALLOW_ADDING_EXTENSIONS=false`, immutable `root:root 0755`) and an audit-log file-mode artifact in the disposable validation target (the Spilo logging template sets `log_file_mode 0644`; the STIG collector path itself writes `0600`).
 - Remaining unmapped controls: 0.
 - Remaining manual-only controls: 2.
 

@@ -8,23 +8,23 @@ This review artifact is generated from committed project metadata. It uses contr
 
 | Status | Count |
 | --- | --- |
-| mapped | 60 |
+| mapped | 57 |
 | manual_only | 2 |
 | unmapped | 0 |
 | replaced_by_overlay | 18 |
 | deployment_owned | 31 |
-| exception | 0 |
+| exception | 3 |
 
 ### Automation Status
 
 | Status | Count |
 | --- | --- |
 | automated | 0 |
-| partially_automated | 78 |
+| partially_automated | 75 |
 | manual | 2 |
 | not_yet_assessed | 0 |
 | deployment_owned | 31 |
-| exception | 0 |
+| exception | 3 |
 
 ### Traceability Status
 
@@ -32,9 +32,9 @@ This review artifact is generated from committed project metadata. It uses contr
 | --- | --- |
 | image_enforced | 18 |
 | deployment_owned | 31 |
-| validation_only | 60 |
+| validation_only | 57 |
 | manual | 2 |
-| exception | 0 |
+| exception | 3 |
 | not_yet_reviewed | 0 |
 
 ## Severity-Mismatch Unmapped Controls
@@ -46,7 +46,7 @@ This review artifact is generated from committed project metadata. It uses contr
 
 | Control ID | STIG ID | Mapping Status | Automation Status | Container Validation | Deployment Responsibility | Project Rationale |
 | --- | --- | --- | --- | --- | --- | --- |
-| V-261858 | CD16-00-000200 | mapped | partially_automated | partial | undetermined | Reviewed severity-mismatch candidate; reusable audit configuration and log validation logic remains applicable to PostgreSQL 16 with repository inputs. Treat as validation-only until implementation ownership is separately confirmed. |
+| V-261858 | CD16-00-000200 | exception | exception | not_supported | none | Documented exception: the hardened image applies the approved pgaudit class subset (ddl,role,read,write), validated by the repository overlay; the broader legacy class list is a deliberate, reviewed audit-policy choice rather than a deviation that reduces required event coverage. |
 | V-261859 | CD16-00-000300 | deployment_owned | deployment_owned | not_supported | organization_policy | Reviewed severity-mismatch candidate; security update timing depends on image rebuild, release, and deployment patch policy rather than a stable container runtime assertion. |
 | V-261861 | CD16-00-000500 | deployment_owned | deployment_owned | partial | identity_and_access | Reviewed severity-mismatch candidate; authentication integration depends on deployment identity architecture, with only partial pg_hba method validation possible from the container. |
 | V-261864 | CD16-00-000800 | mapped | partially_automated | partial | identity_and_access | Reviewed severity-mismatch candidate; reusable pg_hba authentication-method validation applies to PostgreSQL 16, while final approved method selection remains deployment-owned. |

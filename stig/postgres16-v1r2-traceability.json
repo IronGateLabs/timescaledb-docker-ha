@@ -33,16 +33,15 @@
       "cci_refs": [
         "CCI-000015"
       ],
-      "status": "validation_only",
-      "implementation_owner": "unassigned",
-      "validation_owner": "validation_profile",
+      "status": "exception",
+      "implementation_owner": "exception",
+      "validation_owner": "exception",
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
         "legacy:V-233512"
       ],
-      "notes": "Reviewed severity-mismatch candidate; reusable audit configuration and log validation logic remains applicable to PostgreSQL 16 with repository inputs. Treat as validation-only until implementation ownership is separately confirmed.",
-      "validation_state": "candidate"
+      "notes": "Documented exception: the hardened image applies the approved pgaudit class subset (ddl,role,read,write), validated by the repository overlay; the broader legacy class list is a deliberate, reviewed audit-policy choice rather than a deviation that reduces required event coverage."
     },
     {
       "control_id": "V-261859",
@@ -219,16 +218,15 @@
       "cci_refs": [
         "CCI-000132"
       ],
-      "status": "validation_only",
-      "implementation_owner": "unassigned",
-      "validation_owner": "validation_profile",
+      "status": "exception",
+      "implementation_owner": "exception",
+      "validation_owner": "exception",
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
         "legacy:V-233522"
       ],
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
-      "validation_state": "candidate"
+      "notes": "Documented exception: the bootstrap superuser (postgres) carries PostgreSQL's inherent unlimited connection limit, and PostgreSQL does not enforce connection limits against superusers; non-superuser login roles are unaffected. Accepted operational exception for the DBA account."
     },
     {
       "control_id": "V-261869",
@@ -625,16 +623,15 @@
       "cci_refs": [
         "CCI-000764"
       ],
-      "status": "validation_only",
-      "implementation_owner": "unassigned",
-      "validation_owner": "validation_profile",
+      "status": "exception",
+      "implementation_owner": "exception",
+      "validation_owner": "exception",
       "deployment_responsibility": "none",
       "implemented_by": [],
       "validated_by": [
         "legacy:V-233543"
       ],
-      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
-      "validation_state": "candidate"
+      "notes": "Documented exception: the SECURITY DEFINER functions present are pgaudit's own event-trigger functions, inherent to the required audit extension; no operator-introduced privilege-elevation functions exist."
     },
     {
       "control_id": "V-261891",
