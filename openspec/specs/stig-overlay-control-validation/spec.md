@@ -1,9 +1,7 @@
 ## Purpose
 
 Define repository-owned STIG overlay validation for portable PostgreSQL 16 image and runtime evidence.
-
 ## Requirements
-
 ### Requirement: Overlay checks validate portable repository evidence
 The project SHALL use repository-owned validation overlay checks only when the check can verify concrete, portable evidence from the hardened target image or PostgreSQL runtime.
 
@@ -43,3 +41,15 @@ The project MUST run overlay validation through the existing containerized CINC 
 #### Scenario: Overlay behavior changes
 - **WHEN** a repository-owned overlay check is added or modified
 - **THEN** the documented STIG validation workflow can run the check without requiring local Ruby tooling or audit tooling inside the database image
+
+### Requirement: Asserting overlay controls enforce and map to STIG identifiers
+An overlay control that asserts a STIG requirement SHALL carry a non-zero InSpec impact and reference the corresponding PostgreSQL 16 STIG control identifier, so that a failing check fails the validation run and maps back to traceability. Informational preflight checks MAY remain at `impact 0.0` but SHALL be labeled informational and SHALL NOT be counted as control coverage.
+
+#### Scenario: Overlay control asserts a requirement
+- **WHEN** an overlay control provides the validation path for a PostgreSQL 16 STIG control
+- **THEN** the control declares a non-zero impact and tags the V-26xxxx control identifier so a failure fails the run and updates traceability
+
+#### Scenario: Overlay check is informational
+- **WHEN** an overlay control performs an input-shape or preflight check rather than asserting a STIG requirement
+- **THEN** it is labeled informational, may remain `impact 0.0`, and is excluded from control coverage counts
+
