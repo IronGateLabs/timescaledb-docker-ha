@@ -842,7 +842,7 @@
         "legacy:V-233559"
       ],
       "notes": "Reviewed severity-mismatch candidate; reusable pgaudit event validation remains applicable to PostgreSQL 16 with repository audit log inputs.",
-      "validation_state": "candidate"
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261902",
@@ -880,7 +880,7 @@
         "legacy:V-233561"
       ],
       "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
-      "validation_state": "candidate"
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261904",
@@ -1552,7 +1552,7 @@
         "legacy:V-233597"
       ],
       "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
-      "validation_state": "candidate"
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261941",
@@ -1743,7 +1743,7 @@
         "legacy:V-233606"
       ],
       "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
-      "validation_state": "candidate"
+      "validation_state": "executed"
     },
     {
       "control_id": "V-261951",
