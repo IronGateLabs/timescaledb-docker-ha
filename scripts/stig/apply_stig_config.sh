@@ -33,6 +33,12 @@ log_statement = 'ddl'
 log_hostname = 'on'
 log_line_prefix = '%m [%p] %u@%d %a %r %c %s '
 client_min_messages = 'error'
+# A non-zero statement timeout must be configured (STIG runaway-statement guard).
+# This is a generous 24h safety net to terminate genuinely stuck statements
+# without affecting normal analytical workloads; deployments with rare longer
+# maintenance statements (large continuous-aggregate refreshes, backfills) can
+# override it per-session (SET statement_timeout = 0) or per-role.
+statement_timeout = '86400000'
 timezone = 'UTC'
 log_timezone = 'UTC'
 shared_preload_libraries = 'timescaledb,pgaudit'
