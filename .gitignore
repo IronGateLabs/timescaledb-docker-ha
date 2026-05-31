@@ -1,2 +1,7 @@
 .build*
 .idea/
+
+# Local logs and agent tooling — keep out of the repo
+*.log
+.claude/
+.codex/

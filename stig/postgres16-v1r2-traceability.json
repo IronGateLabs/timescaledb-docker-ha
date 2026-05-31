@@ -1,0 +1,2091 @@
+{
+  "schema_version": 1,
+  "benchmark": {
+    "id": "CD_Postgres_16_STIG",
+    "source": "PostgreSQL 16 STIG V1R2 XCCDF",
+    "content_policy": "Control identifiers and metadata only; do not copy benchmark prose."
+  },
+  "controls": [
+    {
+      "control_id": "V-261857",
+      "rule_id": "SV-261857r1000976_rule",
+      "stig_id": "CD16-00-000100",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000054"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233511"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261858",
+      "rule_id": "SV-261858r1043176_rule",
+      "stig_id": "CD16-00-000200",
+      "severity": "high",
+      "cci_refs": [
+        "CCI-000015"
+      ],
+      "status": "exception",
+      "implementation_owner": "exception",
+      "validation_owner": "exception",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233512"
+      ],
+      "notes": "Documented exception: the hardened image applies the approved pgaudit class subset (ddl,role,read,write), validated by the repository overlay; the broader legacy class list is a deliberate, reviewed audit-policy choice rather than a deviation that reduces required event coverage."
+    },
+    {
+      "control_id": "V-261859",
+      "rule_id": "SV-261859r1137654_rule",
+      "stig_id": "CD16-00-000300",
+      "severity": "high",
+      "cci_refs": [
+        "CCI-000213"
+      ],
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": "Reviewed severity-mismatch candidate; security update timing depends on image rebuild, release, and deployment patch policy rather than a stable container runtime assertion."
+    },
+    {
+      "control_id": "V-261860",
+      "rule_id": "SV-261860r1000977_rule",
+      "stig_id": "CD16-00-000400",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000166"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233514"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261861",
+      "rule_id": "SV-261861r1000588_rule",
+      "stig_id": "CD16-00-000500",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000169"
+      ],
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "identity_and_access",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": "Reviewed severity-mismatch candidate; authentication integration depends on deployment identity architecture, with only partial pg_hba method validation possible from the container."
+    },
+    {
+      "control_id": "V-261862",
+      "rule_id": "SV-261862r1000591_rule",
+      "stig_id": "CD16-00-000600",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000171"
+      ],
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
+      ],
+      "validated_by": [
+        "legacy:V-233516",
+        "overlay:timescaledb-ha-pg16-client-message-settings"
+      ],
+      "notes": "Image-enforced: the hardened image directly sets this configuration in apply_stig_config.sh and the repository overlay control timescaledb-ha-pg16-client-message-settings validates it; the reusable legacy check is retained as supplementary executed evidence."
+    },
+    {
+      "control_id": "V-261863",
+      "rule_id": "SV-261863r1000954_rule",
+      "stig_id": "CD16-00-000700",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233517"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261864",
+      "rule_id": "SV-261864r1000597_rule",
+      "stig_id": "CD16-00-000800",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233519"
+      ],
+      "notes": "Reviewed severity-mismatch candidate; reusable pg_hba authentication-method validation applies to PostgreSQL 16, while final approved method selection remains deployment-owned.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261865",
+      "rule_id": "SV-261865r1000600_rule",
+      "stig_id": "CD16-00-000900",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001464"
+      ],
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "identity_and_access",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233520"
+      ],
+      "notes": "Reclassified to deployment-owned after executed validation: host-based authentication topology (pg_hba local and replication rules) is rendered by Patroni and provided at deployment, not by the image."
+    },
+    {
+      "control_id": "V-261866",
+      "rule_id": "SV-261866r1000603_rule",
+      "stig_id": "CD16-00-001000",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000130"
+      ],
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
+      ],
+      "validated_by": [
+        "overlay:timescaledb-ha-pg16-audit-settings"
+      ],
+      "notes": "Reviewed no-candidate control; repository STIG configuration enables pgaudit event coverage that can be validated with an overlay check against PostgreSQL settings."
+    },
+    {
+      "control_id": "V-261867",
+      "rule_id": "SV-261867r1000955_rule",
+      "stig_id": "CD16-00-001100",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000131"
+      ],
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
+      ],
+      "validated_by": [
+        "legacy:V-233521",
+        "overlay:timescaledb-ha-pg16-time-settings"
+      ],
+      "notes": "Reassessed manual-only control; audit timestamp behavior can be validated from PostgreSQL log prefix and runtime timestamp settings."
+    },
+    {
+      "control_id": "V-261868",
+      "rule_id": "SV-261868r1000609_rule",
+      "stig_id": "CD16-00-001200",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000132"
+      ],
+      "status": "exception",
+      "implementation_owner": "exception",
+      "validation_owner": "exception",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233522"
+      ],
+      "notes": "Documented exception: the bootstrap superuser (postgres) carries PostgreSQL's inherent unlimited connection limit, and PostgreSQL does not enforce connection limits against superusers; non-superuser login roles are unaffected. Accepted operational exception for the DBA account."
+    },
+    {
+      "control_id": "V-261869",
+      "rule_id": "SV-261869r1000956_rule",
+      "stig_id": "CD16-00-001300",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000133"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233523"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261870",
+      "rule_id": "SV-261870r1000615_rule",
+      "stig_id": "CD16-00-001400",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000134"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233524"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261871",
+      "rule_id": "SV-261871r1000618_rule",
+      "stig_id": "CD16-00-001500",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001487"
+      ],
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
+      ],
+      "validated_by": [
+        "overlay:timescaledb-ha-pg16-audit-identity-fields"
+      ],
+      "notes": "Reviewed no-candidate control; repository log prefix and audit settings provide observable user, database, and remote address fields for overlay validation."
+    },
+    {
+      "control_id": "V-261872",
+      "rule_id": "SV-261872r1000621_rule",
+      "stig_id": "CD16-00-001600",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000135"
+      ],
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": "Reviewed no-candidate control; additional audit fields are organization-defined and depend on deployment policy beyond the image defaults."
+    },
+    {
+      "control_id": "V-261873",
+      "rule_id": "SV-261873r1043188_rule",
+      "stig_id": "CD16-00-001700",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000140"
+      ],
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233525"
+      ],
+      "notes": "Reassessed manual-only control; audit-failure shutdown behavior depends on deployment storage and availability policy outside the image boundary."
+    },
+    {
+      "control_id": "V-261874",
+      "rule_id": "SV-261874r1043188_rule",
+      "stig_id": "CD16-00-001800",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000140"
+      ],
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233526"
+      ],
+      "notes": "Reassessed manual-only control; audit log overwrite and rotation behavior depends on deployment log storage policy outside the image boundary."
+    },
+    {
+      "control_id": "V-261875",
+      "rule_id": "SV-261875r1000630_rule",
+      "stig_id": "CD16-00-002000",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000162"
+      ],
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
+      ],
+      "validated_by": [
+        "legacy:V-233528",
+        "overlay:timescaledb-ha-pg16-audit-log-permissions"
+      ],
+      "notes": "Reassessed manual-only control; repository STIG setup creates audit log locations and file modes that can be validated from container filesystem state."
+    },
+    {
+      "control_id": "V-261876",
+      "rule_id": "SV-261876r1000978_rule",
+      "stig_id": "CD16-00-002100",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000163"
+      ],
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
+      ],
+      "validated_by": [
+        "legacy:V-233529",
+        "overlay:timescaledb-ha-pg16-audit-log-permissions"
+      ],
+      "notes": "Reassessed manual-only control; repository STIG setup restricts audit log directory and file permissions that can be validated from container filesystem state."
+    },
+    {
+      "control_id": "V-261877",
+      "rule_id": "SV-261877r1000968_rule",
+      "stig_id": "CD16-00-002200",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000164"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233530"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261878",
+      "rule_id": "SV-261878r1000958_rule",
+      "stig_id": "CD16-00-002300",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001493"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233531"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261879",
+      "rule_id": "SV-261879r1000960_rule",
+      "stig_id": "CD16-00-002400",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001494"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233532"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261880",
+      "rule_id": "SV-261880r1000959_rule",
+      "stig_id": "CD16-00-002500",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001495"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233533"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261881",
+      "rule_id": "SV-261881r1000648_rule",
+      "stig_id": "CD16-00-002600",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001499"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233534"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261882",
+      "rule_id": "SV-261882r1000651_rule",
+      "stig_id": "CD16-00-002700",
+      "severity": "high",
+      "cci_refs": [
+        "CCI-001499"
+      ],
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": "Reviewed severity-mismatch candidate; real-time audit failure alerting depends on deployment logging and monitoring integration outside the image boundary."
+    },
+    {
+      "control_id": "V-261883",
+      "rule_id": "SV-261883r1000654_rule",
+      "stig_id": "CD16-00-002800",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001499"
+      ],
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": "Reviewed severity-mismatch candidate; audit storage exhaustion behavior and retention policy depend on deployment log management outside the image boundary."
+    },
+    {
+      "control_id": "V-261884",
+      "rule_id": "SV-261884r1000657_rule",
+      "stig_id": "CD16-00-002900",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001499"
+      ],
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233537"
+      ],
+      "notes": "Reassessed manual-only control; data object ownership is application and deployment policy, not a generic image-level decision."
+    },
+    {
+      "control_id": "V-261885",
+      "rule_id": "SV-261885r1000949_rule",
+      "stig_id": "CD16-00-003000",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001499"
+      ],
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "secrets",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233538"
+      ],
+      "notes": "Reclassified to deployment-owned: TLS enablement (ssl=on) requires deployment-provided server certificates; the Spilo runtime path enables ssl when certs are mounted, consistent with the other transport-security controls (V-261917/918/947/958)."
+    },
+    {
+      "control_id": "V-261886",
+      "rule_id": "SV-261886r1000951_rule",
+      "stig_id": "CD16-00-003200",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000381"
+      ],
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "identity_and_access",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": "Reviewed severity-mismatch candidate; authorization and tracking of software installation account access is an operational access-control responsibility outside this image."
+    },
+    {
+      "control_id": "V-261887",
+      "rule_id": "SV-261887r1000666_rule",
+      "stig_id": "CD16-00-003300",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000381"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233541"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261888",
+      "rule_id": "SV-261888r1000669_rule",
+      "stig_id": "CD16-00-003400",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000381"
+      ],
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "identity_and_access",
+      "implemented_by": [],
+      "validated_by": [
+        "overlay:timescaledb-ha-pg16-external-executable-access"
+      ],
+      "notes": "Reclassified from overlay-replaced to deployment-owned: the hardened image applies no role-membership policy for the external program execution role, so the control is satisfied only by PostgreSQL default state. Role assignment is deployment-owned; the overlay remains an observational check of runtime state."
+    },
+    {
+      "control_id": "V-261889",
+      "rule_id": "SV-261889r1043177_rule",
+      "stig_id": "CD16-00-003500",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000382"
+      ],
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "networking",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233542"
+      ],
+      "notes": "Reassessed manual-only control; allowed services, ports, and protocol exposure depend on deployment network policy and service configuration."
+    },
+    {
+      "control_id": "V-261890",
+      "rule_id": "SV-261890r1051115_rule",
+      "stig_id": "CD16-00-003600",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000764"
+      ],
+      "status": "exception",
+      "implementation_owner": "exception",
+      "validation_owner": "exception",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233543"
+      ],
+      "notes": "Documented exception: the SECURITY DEFINER functions present are pgaudit's own event-trigger functions, inherent to the required audit extension; no operator-introduced privilege-elevation functions exist."
+    },
+    {
+      "control_id": "V-261891",
+      "rule_id": "SV-261891r1000970_rule",
+      "stig_id": "CD16-00-003800",
+      "severity": "high",
+      "cci_refs": [
+        "CCI-000196"
+      ],
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
+      ],
+      "validated_by": [
+        "overlay:timescaledb-ha-pg16-password-storage"
+      ],
+      "notes": "Reviewed no-candidate control; repository STIG configuration sets SCRAM password hashing and runtime role metadata can be checked by overlay validation."
+    },
+    {
+      "control_id": "V-261892",
+      "rule_id": "SV-261892r1000681_rule",
+      "stig_id": "CD16-00-003900",
+      "severity": "high",
+      "cci_refs": [
+        "CCI-000197"
+      ],
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "identity_and_access",
+      "implemented_by": [],
+      "validated_by": [
+        "overlay:timescaledb-ha-pg16-password-authentication-transport"
+      ],
+      "notes": "Reclassified from overlay-replaced to deployment-owned: the hardened image authors no host-based authentication rules and delegates authentication method and transport encryption to deployment, so the control is not image-enforced. The overlay remains an observational check of runtime authentication state."
+    },
+    {
+      "control_id": "V-261893",
+      "rule_id": "SV-261893r1000684_rule",
+      "stig_id": "CD16-00-004000",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000185"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233546"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261894",
+      "rule_id": "SV-261894r1000687_rule",
+      "stig_id": "CD16-00-004100",
+      "severity": "high",
+      "cci_refs": [
+        "CCI-000186"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233547"
+      ],
+      "notes": "Reviewed severity-mismatch candidate; reusable audit logging validation for configuration and access-restriction events remains applicable to PostgreSQL 16 with repository log inputs.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261895",
+      "rule_id": "SV-261895r1000690_rule",
+      "stig_id": "CD16-00-004200",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000187"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233549"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261896",
+      "rule_id": "SV-261896r1193213_rule",
+      "stig_id": "CD16-00-004400",
+      "severity": "high",
+      "cci_refs": [
+        "CCI-000803"
+      ],
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233551"
+      ],
+      "notes": "Reassessed manual-only control; FIPS-validated cryptographic module use depends on base platform and runtime cryptographic configuration outside the database image."
+    },
+    {
+      "control_id": "V-261897",
+      "rule_id": "SV-261897r1000696_rule",
+      "stig_id": "CD16-00-004500",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000804"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233552"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261898",
+      "rule_id": "SV-261898r1137655_rule",
+      "stig_id": "CD16-00-004600",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001082"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233553"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261899",
+      "rule_id": "SV-261899r1043179_rule",
+      "stig_id": "CD16-00-004700",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001185"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233554"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261900",
+      "rule_id": "SV-261900r1043181_rule",
+      "stig_id": "CD16-00-004900",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001188"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233556"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261901",
+      "rule_id": "SV-261901r1000708_rule",
+      "stig_id": "CD16-00-005200",
+      "severity": "high",
+      "cci_refs": [
+        "CCI-001199"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233559"
+      ],
+      "notes": "Reviewed severity-mismatch candidate; reusable pgaudit event validation remains applicable to PostgreSQL 16 with repository audit log inputs.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261902",
+      "rule_id": "SV-261902r1000711_rule",
+      "stig_id": "CD16-00-005300",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001084"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233560"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261903",
+      "rule_id": "SV-261903r1137656_rule",
+      "stig_id": "CD16-00-005400",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001090"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233561"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261904",
+      "rule_id": "SV-261904r1137658_rule",
+      "stig_id": "CD16-00-005600",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001090"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233563"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261905",
+      "rule_id": "SV-261905r1000720_rule",
+      "stig_id": "CD16-00-005700",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001310"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233564"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261906",
+      "rule_id": "SV-261906r1000979_rule",
+      "stig_id": "CD16-00-005800",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001310"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233565"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261907",
+      "rule_id": "SV-261907r1000726_rule",
+      "stig_id": "CD16-00-005900",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001310"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233566"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261908",
+      "rule_id": "SV-261908r1000729_rule",
+      "stig_id": "CD16-00-006000",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001312"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233567"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261909",
+      "rule_id": "SV-261909r1000980_rule",
+      "stig_id": "CD16-00-006100",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001314"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233568"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261910",
+      "rule_id": "SV-261910r1043182_rule",
+      "stig_id": "CD16-00-006200",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002361"
+      ],
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
+      ],
+      "validated_by": [
+        "legacy:V-233569",
+        "overlay:timescaledb-ha-pg16-audit-identity-fields"
+      ],
+      "notes": "Image-enforced: the hardened image directly sets this configuration in apply_stig_config.sh and the repository overlay control timescaledb-ha-pg16-audit-identity-fields validates it; the reusable legacy check is retained as supplementary executed evidence."
+    },
+    {
+      "control_id": "V-261911",
+      "rule_id": "SV-261911r1138540_rule",
+      "stig_id": "CD16-00-006400",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002262"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233571"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261912",
+      "rule_id": "SV-261912r1138541_rule",
+      "stig_id": "CD16-00-006500",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002263"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233572"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261913",
+      "rule_id": "SV-261913r1138542_rule",
+      "stig_id": "CD16-00-006600",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002264"
+      ],
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
+      ],
+      "validated_by": [
+        "legacy:V-233573",
+        "overlay:timescaledb-ha-pg16-audit-settings"
+      ],
+      "notes": "Image-enforced: the hardened image directly sets this configuration in apply_stig_config.sh and the repository overlay control timescaledb-ha-pg16-audit-settings validates it; the reusable legacy check is retained as supplementary executed evidence."
+    },
+    {
+      "control_id": "V-261914",
+      "rule_id": "SV-261914r1000747_rule",
+      "stig_id": "CD16-00-006700",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002165"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233574"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261915",
+      "rule_id": "SV-261915r1000750_rule",
+      "stig_id": "CD16-00-006800",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002235"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233575"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261916",
+      "rule_id": "SV-261916r1000981_rule",
+      "stig_id": "CD16-00-006900",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002233"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233576"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261917",
+      "rule_id": "SV-261917r1000962_rule",
+      "stig_id": "CD16-00-007000",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001844"
+      ],
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "secrets",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233577"
+      ],
+      "notes": "Reclassified to deployment-owned after executed validation: certificate revocation and client-certificate authentication depend on deployment-provided PKI material."
+    },
+    {
+      "control_id": "V-261918",
+      "rule_id": "SV-261918r1000759_rule",
+      "stig_id": "CD16-00-007200",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001849"
+      ],
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "secrets",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233579"
+      ],
+      "notes": "Reclassified to deployment-owned after executed validation: TLS enablement and server certificates are deployment-provided; the image ships no certificates."
+    },
+    {
+      "control_id": "V-261919",
+      "rule_id": "SV-261919r1000762_rule",
+      "stig_id": "CD16-00-007300",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001855"
+      ],
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": "Reviewed no-candidate control; audit storage capacity warning depends on deployment log storage and monitoring integration outside the image boundary."
+    },
+    {
+      "control_id": "V-261920",
+      "rule_id": "SV-261920r1000973_rule",
+      "stig_id": "CD16-00-007400",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001858"
+      ],
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233580"
+      ],
+      "notes": "Reassessed manual-only control; real-time audit failure alerting depends on deployment monitoring and alert routing outside the image boundary."
+    },
+    {
+      "control_id": "V-261921",
+      "rule_id": "SV-261921r1000994_rule",
+      "stig_id": "CD16-00-007500",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001890"
+      ],
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
+      ],
+      "validated_by": [
+        "overlay:timescaledb-ha-pg16-time-settings"
+      ],
+      "notes": "Reviewed no-candidate control; PostgreSQL timezone and log timestamp behavior can be validated from runtime settings and repository STIG configuration."
+    },
+    {
+      "control_id": "V-261922",
+      "rule_id": "SV-261922r1000771_rule",
+      "stig_id": "CD16-00-007600",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001889"
+      ],
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
+      ],
+      "validated_by": [
+        "overlay:timescaledb-ha-pg16-time-settings"
+      ],
+      "notes": "Reviewed no-candidate control; PostgreSQL timestamp precision can be validated from runtime query output in the overlay."
+    },
+    {
+      "control_id": "V-261923",
+      "rule_id": "SV-261923r1000993_rule",
+      "stig_id": "CD16-00-007700",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001812"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233581"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261924",
+      "rule_id": "SV-261924r1000777_rule",
+      "stig_id": "CD16-00-007800",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001813"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233582"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261925",
+      "rule_id": "SV-261925r1000780_rule",
+      "stig_id": "CD16-00-007900",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001814"
+      ],
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
+      ],
+      "validated_by": [
+        "overlay:timescaledb-ha-pg16-audit-settings"
+      ],
+      "notes": "Reviewed no-candidate control; repository audit settings cover configuration-change event classes that can be validated from PostgreSQL settings."
+    },
+    {
+      "control_id": "V-261926",
+      "rule_id": "SV-261926r1000783_rule",
+      "stig_id": "CD16-00-008000",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001762"
+      ],
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": "Reviewed severity-mismatch candidate; FIPS mode for cryptographic hash validation depends on host and base platform configuration outside the database image."
+    },
+    {
+      "control_id": "V-261927",
+      "rule_id": "SV-261927r1050788_rule",
+      "stig_id": "CD16-00-008100",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002038"
+      ],
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": "Reviewed severity-mismatch candidate; classified-data cryptography requirements depend on deployment classification, TLS policy, and platform cryptographic configuration outside the image."
+    },
+    {
+      "control_id": "V-261928",
+      "rule_id": "SV-261928r1117186_rule",
+      "stig_id": "CD16-00-008300",
+      "severity": "high",
+      "cci_refs": [
+        "CCI-002450"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233586"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261929",
+      "rule_id": "SV-261929r1193220_rule",
+      "stig_id": "CD16-00-008400",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002470"
+      ],
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "secrets",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233587"
+      ],
+      "notes": "Reassessed manual-only control; certificate authority selection and certificate lifecycle are deployment-provided TLS responsibilities outside the image."
+    },
+    {
+      "control_id": "V-261930",
+      "rule_id": "SV-261930r1018552_rule",
+      "stig_id": "CD16-00-008500",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002475"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233588"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261931",
+      "rule_id": "SV-261931r1018553_rule",
+      "stig_id": "CD16-00-008600",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002476"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233589"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261932",
+      "rule_id": "SV-261932r1000801_rule",
+      "stig_id": "CD16-00-008800",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002420"
+      ],
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
+      ],
+      "validated_by": [
+        "legacy:V-233591",
+        "overlay:timescaledb-ha-pg16-audit-identity-fields"
+      ],
+      "notes": "Image-enforced: the hardened image directly sets this configuration in apply_stig_config.sh and the repository overlay control timescaledb-ha-pg16-audit-identity-fields validates it; the reusable legacy check is retained as supplementary executed evidence."
+    },
+    {
+      "control_id": "V-261933",
+      "rule_id": "SV-261933r1000804_rule",
+      "stig_id": "CD16-00-008900",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002422"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233592"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261934",
+      "rule_id": "SV-261934r1000807_rule",
+      "stig_id": "CD16-00-009000",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002754"
+      ],
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": "Reviewed no-candidate control; predictable handling of invalid inputs requires system-specific behavioral evidence and documentation beyond a generic image assertion."
+    },
+    {
+      "control_id": "V-261935",
+      "rule_id": "SV-261935r1000810_rule",
+      "stig_id": "CD16-00-009100",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002617"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233593"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261936",
+      "rule_id": "SV-261936r1137667_rule",
+      "stig_id": "CD16-00-009200",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002605"
+      ],
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233594"
+      ],
+      "notes": "Reassessed manual-only control; security update timing depends on release, rebuild, and deployment patch policy rather than a stable runtime assertion."
+    },
+    {
+      "control_id": "V-261938",
+      "rule_id": "SV-261938r1000819_rule",
+      "stig_id": "CD16-00-009400",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
+      ],
+      "validated_by": [
+        "legacy:V-233595",
+        "overlay:timescaledb-ha-pg16-audit-settings"
+      ],
+      "notes": "Reassessed manual-only control; repository pgaudit settings include object access event coverage that can be validated from PostgreSQL settings."
+    },
+    {
+      "control_id": "V-261939",
+      "rule_id": "SV-261939r1000822_rule",
+      "stig_id": "CD16-00-009500",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233596"
+      ],
+      "notes": "Reviewed severity-mismatch candidate; reusable password encryption and role password validation applies to PostgreSQL 16, and the STIG image fragment sets SCRAM password encryption.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261940",
+      "rule_id": "SV-261940r1000825_rule",
+      "stig_id": "CD16-00-009600",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233597"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261941",
+      "rule_id": "SV-261941r1000828_rule",
+      "stig_id": "CD16-00-009700",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
+      ],
+      "validated_by": [
+        "legacy:V-233598",
+        "overlay:timescaledb-ha-pg16-audit-identity-fields"
+      ],
+      "notes": "Image-enforced: the hardened image directly sets this configuration in apply_stig_config.sh and the repository overlay control timescaledb-ha-pg16-audit-identity-fields validates it; the reusable legacy check is retained as supplementary executed evidence."
+    },
+    {
+      "control_id": "V-261942",
+      "rule_id": "SV-261942r1000831_rule",
+      "stig_id": "CD16-00-009800",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
+      ],
+      "validated_by": [
+        "overlay:timescaledb-ha-pg16-audit-settings"
+      ],
+      "notes": "Reviewed no-candidate control; repository audit settings include role and DDL events that can be validated as privilege-change audit coverage."
+    },
+    {
+      "control_id": "V-261943",
+      "rule_id": "SV-261943r1000834_rule",
+      "stig_id": "CD16-00-009900",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
+      ],
+      "validated_by": [
+        "legacy:V-233599",
+        "overlay:timescaledb-ha-pg16-audit-settings"
+      ],
+      "notes": "Reassessed manual-only control; repository pgaudit role event coverage can support overlay validation for unsuccessful privilege changes."
+    },
+    {
+      "control_id": "V-261944",
+      "rule_id": "SV-261944r1000837_rule",
+      "stig_id": "CD16-00-010000",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233600"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261945",
+      "rule_id": "SV-261945r1000840_rule",
+      "stig_id": "CD16-00-010100",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
+      ],
+      "validated_by": [
+        "legacy:V-233601",
+        "overlay:timescaledb-ha-pg16-audit-settings"
+      ],
+      "notes": "Reassessed manual-only control; repository pgaudit role event coverage can support overlay validation for unsuccessful permission modifications."
+    },
+    {
+      "control_id": "V-261946",
+      "rule_id": "SV-261946r1000843_rule",
+      "stig_id": "CD16-00-010200",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "secrets",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": "Reviewed severity-mismatch candidate; TLS key material placement and permissions depend on deployment-provided TLS assets, with only partial validation possible when those inputs are supplied."
+    },
+    {
+      "control_id": "V-261947",
+      "rule_id": "SV-261947r1000846_rule",
+      "stig_id": "CD16-00-010300",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "secrets",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233603"
+      ],
+      "notes": "Reclassified to deployment-owned after executed validation: trusted certificate-authority configuration depends on deployment-provided PKI trust policy."
+    },
+    {
+      "control_id": "V-261948",
+      "rule_id": "SV-261948r1000849_rule",
+      "stig_id": "CD16-00-010400",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233604"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261949",
+      "rule_id": "SV-261949r1000852_rule",
+      "stig_id": "CD16-00-010500",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233605"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261950",
+      "rule_id": "SV-261950r1000855_rule",
+      "stig_id": "CD16-00-010600",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
+      ],
+      "validated_by": [
+        "legacy:V-233606",
+        "overlay:timescaledb-ha-pg16-session-limit-settings"
+      ],
+      "notes": "Image-enforced: the hardened image directly sets this configuration in apply_stig_config.sh and the repository overlay control timescaledb-ha-pg16-session-limit-settings validates it; the reusable legacy check is retained as supplementary executed evidence."
+    },
+    {
+      "control_id": "V-261951",
+      "rule_id": "SV-261951r1000858_rule",
+      "stig_id": "CD16-00-010700",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233607"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261952",
+      "rule_id": "SV-261952r1000861_rule",
+      "stig_id": "CD16-00-010800",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
+      ],
+      "validated_by": [
+        "overlay:timescaledb-ha-pg16-audit-settings"
+      ],
+      "notes": "Reviewed no-candidate control; repository audit settings include event classes used for security-object deletion audit coverage."
+    },
+    {
+      "control_id": "V-261953",
+      "rule_id": "SV-261953r1000864_rule",
+      "stig_id": "CD16-00-010900",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
+      ],
+      "validated_by": [
+        "overlay:timescaledb-ha-pg16-audit-settings"
+      ],
+      "notes": "Reviewed no-candidate control; repository audit settings and log configuration can support overlay validation for unsuccessful security-object deletion attempts."
+    },
+    {
+      "control_id": "V-261954",
+      "rule_id": "SV-261954r1000867_rule",
+      "stig_id": "CD16-00-011000",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "manual",
+      "implementation_owner": "manual",
+      "validation_owner": "manual",
+      "deployment_responsibility": "manual",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": "Reviewed no-candidate control; information category deletion is application- and data-model-specific and cannot be inferred from the generic database image."
+    },
+    {
+      "control_id": "V-261955",
+      "rule_id": "SV-261955r1000870_rule",
+      "stig_id": "CD16-00-011100",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233608"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261956",
+      "rule_id": "SV-261956r1000975_rule",
+      "stig_id": "CD16-00-011200",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233609"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261957",
+      "rule_id": "SV-261957r1000876_rule",
+      "stig_id": "CD16-00-011300",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "operator",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233610"
+      ],
+      "notes": "Reclassified to deployment-owned after executed validation: audit log off-load to a central facility depends on deployment logging infrastructure outside the image."
+    },
+    {
+      "control_id": "V-261958",
+      "rule_id": "SV-261958r1000879_rule",
+      "stig_id": "CD16-00-011400",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "secrets",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233611"
+      ],
+      "notes": "Reclassified to deployment-owned after executed validation: TLS enablement for encrypted transport is deployment-provided; the image does not enable SSL by default."
+    },
+    {
+      "control_id": "V-261959",
+      "rule_id": "SV-261959r1000882_rule",
+      "stig_id": "CD16-00-011500",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "identity_and_access",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233612"
+      ],
+      "notes": "Reclassified to deployment-owned after executed validation: host-based authentication and identity topology are deployment-provided; a portable PostgreSQL 16 overlay check remains a follow-up."
+    },
+    {
+      "control_id": "V-261960",
+      "rule_id": "SV-261960r1000885_rule",
+      "stig_id": "CD16-00-011600",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
+      ],
+      "validated_by": [
+        "legacy:V-233613",
+        "overlay:timescaledb-ha-pg16-connection-audit-settings"
+      ],
+      "notes": "Reassessed manual-only control; repository STIG configuration enables connection and disconnection logging that can be validated from PostgreSQL settings."
+    },
+    {
+      "control_id": "V-261961",
+      "rule_id": "SV-261961r1000888_rule",
+      "stig_id": "CD16-00-011700",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233614"
+      ],
+      "notes": "Reassessed manual-only control; concurrent session correlation requires deployment monitoring and user activity policy beyond static image validation."
+    },
+    {
+      "control_id": "V-261962",
+      "rule_id": "SV-261962r1000891_rule",
+      "stig_id": "CD16-00-011800",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
+      ],
+      "validated_by": [
+        "legacy:V-233615",
+        "overlay:timescaledb-ha-pg16-audit-settings"
+      ],
+      "notes": "Reassessed manual-only control; repository pgaudit read and write settings can support overlay validation for successful object access auditing."
+    },
+    {
+      "control_id": "V-261963",
+      "rule_id": "SV-261963r1000894_rule",
+      "stig_id": "CD16-00-011900",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "image_enforced",
+      "implementation_owner": "image",
+      "validation_owner": "overlay",
+      "deployment_responsibility": "none",
+      "implemented_by": [
+        "stig:image-stig-mode"
+      ],
+      "validated_by": [
+        "legacy:V-233616",
+        "overlay:timescaledb-ha-pg16-audit-settings"
+      ],
+      "notes": "Reassessed manual-only control; repository pgaudit and log settings can support overlay validation for unsuccessful object access auditing."
+    },
+    {
+      "control_id": "V-261964",
+      "rule_id": "SV-261964r1000897_rule",
+      "stig_id": "CD16-00-012000",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-000172"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233617"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261965",
+      "rule_id": "SV-261965r1137661_rule",
+      "stig_id": "CD16-00-012200",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002450"
+      ],
+      "status": "validation_only",
+      "implementation_owner": "unassigned",
+      "validation_owner": "validation_profile",
+      "deployment_responsibility": "none",
+      "implemented_by": [],
+      "validated_by": [
+        "legacy:V-233618"
+      ],
+      "notes": "Initial reusable validation link based on matching normalized STIG ID suffix, same severity, and executable legacy control; verify PostgreSQL 16 logic before treating as authoritative coverage.",
+      "validation_state": "executed"
+    },
+    {
+      "control_id": "V-261966",
+      "rule_id": "SV-261966r1137664_rule",
+      "stig_id": "CD16-00-012300",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-002450"
+      ],
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": "Reviewed severity-mismatch candidate; FIPS-validated cryptographic operation requirements depend on base platform and OpenSSL FIPS configuration outside the database image."
+    },
+    {
+      "control_id": "V-261967",
+      "rule_id": "SV-261967r1000906_rule",
+      "stig_id": "CD16-00-012400",
+      "severity": "medium",
+      "cci_refs": [
+        "CCI-001851"
+      ],
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": "Reviewed no-candidate control; continuous audit log offload depends on deployment log forwarding and external storage integration outside the image boundary."
+    },
+    {
+      "control_id": "V-283674",
+      "rule_id": "SV-283674r1193281_rule",
+      "stig_id": "CD16-00-009300",
+      "severity": "high",
+      "cci_refs": [
+        "CCI-003376"
+      ],
+      "status": "deployment_owned",
+      "implementation_owner": "deployment",
+      "validation_owner": "documentation",
+      "deployment_responsibility": "organization_policy",
+      "implemented_by": [],
+      "validated_by": [],
+      "notes": "Reviewed no-candidate control; runtime version can be checked by validation, but vendor support determination depends on release policy and operational patch management."
+    }
+  ]
+}

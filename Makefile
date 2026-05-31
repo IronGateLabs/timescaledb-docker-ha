@@ -31,6 +31,7 @@ PLATFORM?=amd64
 DOCKER_TAG_POSTFIX?=
 ALL_VERSIONS?=false
 OSS_ONLY?=false
+STIG_ENABLED?=false
 
 # If you're using ephemeral runners, then we want to use the cache, otherwise we don't want caching so that
 # we always get updated upstream packages
@@ -89,6 +90,7 @@ GITHUB_DOCKERLIB_POSTGRES_REF=master
 GITHUB_TIMESCALEDB_DOCKER_REF=main
 
 ALLOW_ADDING_EXTENSIONS?=true
+BUILD_MAKEFLAGS?=-j4
 
 # These variables have to do with this Docker repository
 GIT_REMOTE=$(shell git config --get remote.origin.url | sed 's/.*@//g')
@@ -152,6 +154,7 @@ DOCKER_BUILD_COMMAND=docker buildx build \
 					 --progress=plain \
 					 --build-arg DOCKER_FROM="$(DOCKER_FROM)" \
 					 --build-arg ALLOW_ADDING_EXTENSIONS="$(ALLOW_ADDING_EXTENSIONS)" \
+					 --build-arg BUILD_MAKEFLAGS="$(BUILD_MAKEFLAGS)" \
 					 --build-arg GITHUB_DOCKERLIB_POSTGRES_REF="$(GITHUB_DOCKERLIB_POSTGRES_REF)" \
 					 --build-arg GITHUB_REPO="$(GITHUB_REPO)" \
 					 --build-arg GITHUB_TIMESCALEDB_DOCKER_REF="$(GITHUB_TIMESCALEDB_DOCKER_REF)" \
@@ -165,6 +168,7 @@ DOCKER_BUILD_COMMAND=docker buildx build \
 					 --build-arg PG_VERSIONS="$(PG_VERSIONS)" \
 					 --build-arg POSTGIS_VERSIONS=$(POSTGIS_VERSIONS) \
 					 --build-arg OSS_ONLY="$(OSS_ONLY)" \
+					 --build-arg STIG_ENABLED="$(STIG_ENABLED)" \
 					 --build-arg TIMESCALEDB_VERSIONS="$(TIMESCALEDB_VERSIONS)" \
 					 --build-arg TOOLKIT_VERSIONS="$(TOOLKIT_VERSIONS)" \
 					 --build-arg PG_TEXTSEARCH_VERSION="$(PG_TEXTSEARCH_VERSION)" \
@@ -175,6 +179,7 @@ DOCKER_BUILD_COMMAND=docker buildx build \
 					 --build-arg PGBOUNCER_EXPORTER_VERSION=$(PGBOUNCER_EXPORTER_VERSION) \
 					 --build-arg PGBACKREST_EXPORTER_VERSION=$(PGBACKREST_EXPORTER_VERSION) \
 					 --label com.timescaledb.image.install_method=$(INSTALL_METHOD) \
+					 --label com.timescaledb.image.stig_enabled=$(STIG_ENABLED) \
 					 --label org.opencontainers.image.created="$$(date -Iseconds -u)" \
 					 --label org.opencontainers.image.revision="$(GIT_REV)" \
 					 --label org.opencontainers.image.source="$(GIT_REMOTE)" \
@@ -271,6 +276,37 @@ build: # build a local docker image
 build: DOCKER_TAG_POSTFIX=-local
 build:
 	$(DOCKER_BUILD_COMMAND)
+
+.PHONY: build-stig
+build-stig: # build an opt-in PostgreSQL 16 STIG image variant with pg16-all scope
+build-stig: PG_MAJOR=16
+build-stig: PG_VERSIONS=16 15
+build-stig: DOCKER_TAG_POSTFIX=-all-stig
+build-stig: STIG_ENABLED=true
+build-stig: BUILD_MAKEFLAGS=-j1
+# Disable runtime extension installation so the PostgreSQL bin/lib directories
+# ship root:root 0755 (immutable) instead of group-writable 1775, satisfying the
+# binary/library protection STIG controls. The hardened image therefore cannot
+# add extensions at runtime; all required extensions are present at build time.
+build-stig: ALLOW_ADDING_EXTENSIONS=false
+build-stig:
+	$(DOCKER_BUILD_COMMAND) --tag "$(DOCKER_RELEASE_URL)"
+
+.PHONY: start-stig-validation-target
+start-stig-validation-target: # start a disposable local container for STIG validation
+	cicd/start-stig-validation-target
+
+.PHONY: validate-stig-overlay
+validate-stig-overlay: # run the repository-owned STIG overlay with a containerized CINC/InSpec runner
+	cicd/run-stig-validation
+
+.PHONY: validate-stig-legacy
+validate-stig-legacy: # run the forked, commit-pinned Crunchy PostgreSQL STIG profile against the hardened target (requires network)
+	STIG_PROFILE=stig/validation-legacy STIG_RESULTS_FILE=timescaledb-ha-pg16-legacy.json cicd/run-stig-validation
+
+.PHONY: summarize-stig-validation
+summarize-stig-validation: # summarize the default STIG overlay JSON report
+	scripts/stig/summarize_inspec_results.py .build/stig-validation/timescaledb-ha-pg16-overlay.json --traceability stig/postgres16-v1r2-traceability.json
 
 .PHONY: publish-combined-builder-manifest
 publish-combined-builder-manifest: $(VERSION_INFO) # publish a combined builder image manifest

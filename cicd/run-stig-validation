@@ -1,0 +1,121 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+usage() {
+	cat <<'USAGE'
+Usage: cicd/run-stig-validation
+
+Runs the repository-owned PostgreSQL 16 STIG validation overlay from a CINC
+Auditor/InSpec container against an already-running Docker target container.
+
+Required environment:
+  STIG_TARGET_CONTAINER  Target database container name.
+  STIG_PG_PASSWORD       Password for the configured PostgreSQL DBA user.
+
+Optional environment:
+  CINC_AUDITOR_IMAGE     Runner image. Default: cincproject/auditor:latest
+  STIG_PROFILE           Profile path under this repo. Default: stig/validation-overlay
+  STIG_INPUTS            Input file under this repo. Default: stig/inputs_timescaledb_ha_pg16_example.yml
+  STIG_RESULTS_DIR       Results directory. Default: .build/stig-validation
+  STIG_RESULTS_FILE      JSON report filename. Default: timescaledb-ha-pg16-overlay.json
+USAGE
+}
+
+if [ "${1:-}" = "-h" ] || [ "${1:-}" = "--help" ]; then
+	usage
+	exit 0
+fi
+
+if [ -z "${STIG_TARGET_CONTAINER:-}" ]; then
+	echo "STIG_TARGET_CONTAINER is required" >&2
+	exit 2
+fi
+
+if [ -z "${STIG_PG_PASSWORD:-}" ]; then
+	echo "STIG_PG_PASSWORD is required" >&2
+	exit 2
+fi
+
+if [ ! -S /var/run/docker.sock ]; then
+	echo "/var/run/docker.sock is required for docker transport validation" >&2
+	exit 2
+fi
+
+REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+CINC_AUDITOR_IMAGE="${CINC_AUDITOR_IMAGE:-cincproject/auditor:latest}"
+STIG_PROFILE="${STIG_PROFILE:-stig/validation-overlay}"
+STIG_INPUTS="${STIG_INPUTS:-stig/inputs_timescaledb_ha_pg16_example.yml}"
+STIG_RESULTS_DIR="${STIG_RESULTS_DIR:-.build/stig-validation}"
+STIG_RESULTS_FILE="${STIG_RESULTS_FILE:-timescaledb-ha-pg16-overlay.json}"
+
+case "${STIG_PROFILE}" in
+/*)
+	echo "STIG_PROFILE must be relative to the repository root" >&2
+	exit 2
+	;;
+esac
+
+case "${STIG_INPUTS}" in
+/*)
+	echo "STIG_INPUTS must be relative to the repository root" >&2
+	exit 2
+	;;
+esac
+
+if [ ! -d "${REPO_ROOT}/${STIG_PROFILE}" ]; then
+	echo "profile not found: ${STIG_PROFILE}" >&2
+	exit 2
+fi
+
+if [ ! -f "${REPO_ROOT}/${STIG_INPUTS}" ]; then
+	echo "input file not found: ${STIG_INPUTS}" >&2
+	exit 2
+fi
+
+mkdir -p "${REPO_ROOT}/${STIG_RESULTS_DIR}"
+rm -f "${REPO_ROOT}/${STIG_RESULTS_DIR}/${STIG_RESULTS_FILE}"
+tmpdir="$(mktemp -d "${TMPDIR:-/tmp}/stig-validation.XXXXXX")"
+trap 'rm -rf "${tmpdir}"' EXIT
+
+tmp_profile="${tmpdir}/profile"
+cp -R "${REPO_ROOT}/${STIG_PROFILE}" "${tmp_profile}"
+
+tmp_inputs="${tmpdir}/inputs.yml"
+{
+	cat "${REPO_ROOT}/${STIG_INPUTS}"
+	printf '\npg_dba_password: |-\n'
+	printf '%s\n' "${STIG_PG_PASSWORD}" | sed 's/^/  /'
+} >"${tmp_inputs}"
+chmod 0600 "${tmp_inputs}"
+
+set +e
+docker run \
+	--rm \
+	--volume /var/run/docker.sock:/var/run/docker.sock \
+	--volume "${REPO_ROOT}:/workspace:ro" \
+	--volume "${tmpdir}:/validation" \
+	--volume "${REPO_ROOT}/${STIG_RESULTS_DIR}:/results" \
+	--workdir /workspace \
+	"${CINC_AUDITOR_IMAGE}" \
+	exec /validation/profile \
+	--target "docker://${STIG_TARGET_CONTAINER}" \
+	--input-file /validation/inputs.yml \
+	--reporter cli "json:/results/${STIG_RESULTS_FILE}"
+status=$?
+set -e
+
+# CINC Auditor/InSpec exit codes: 0 = all controls passed, 100 = at least one
+# control failed, 101 = at least one control skipped. All three mean the run
+# completed and produced a report; only other codes indicate a runner error.
+# The legacy profile is expected to report failures until per-control PostgreSQL
+# 16 verification is complete, so failures must not abort the run.
+case "${status}" in
+0 | 100 | 101) ;;
+*)
+	echo "validation runner failed (exit ${status})" >&2
+	exit "${status}"
+	;;
+esac
+
+echo "${STIG_RESULTS_DIR}/${STIG_RESULTS_FILE}"

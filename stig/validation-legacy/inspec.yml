@@ -1,0 +1,18 @@
+name: timescaledb-ha-pg16-legacy-profile
+title: TimescaleDB HA PostgreSQL 16 Legacy STIG Profile Runner
+maintainer: TimescaleDB HA contributors
+license: Apache-2.0
+summary: Executes the forked Crunchy PostgreSQL STIG validation profile against the hardened TimescaleDB HA PostgreSQL 16 image
+version: 0.1.0
+inspec_version: ">= 4.0"
+
+# The forked Crunchy PostgreSQL STIG baseline is referenced as a portable,
+# commit-pinned dependency. It is never copied into this repository. Inputs are
+# supplied at run time from stig/inputs_timescaledb_ha_pg16_example.yml so the
+# profile evaluates against this image's paths and package names.
+depends:
+  - name: crunchy-data-postgresql-stig-baseline
+    git: https://github.com/IronGateLabs/crunchy-data-postgresql-stig-baseline.git
+    # InSpec's git fetcher honors ref/branch/tag (not commit); an immutable tag
+    # pins the PostgreSQL 16 portability fixes (commit cb21f93) reproducibly.
+    tag: pg16-portability-2

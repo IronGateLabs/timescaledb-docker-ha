@@ -1,0 +1,107 @@
+name: STIG validation
+
+# Builds a minimal hardened PostgreSQL 16 image (latest TimescaleDB only, loaded
+# locally — no registry push, so no Docker Hub credentials are required) and runs
+# the repository-owned STIG overlay against it. The forked legacy profile is run as
+# an additional, non-blocking step. Results are published as an artifact and mapped
+# back to traceability control identifiers.
+
+on:
+  workflow_dispatch:
+  # Trigger only on changes that can affect the validation result (image config,
+  # profiles, inputs, runner, build). Data/doc-only commits (traceability/mapping
+  # JSON, reports) intentionally do not rebuild. push-path filtering evaluates the
+  # pushed commit's files, unlike pull_request which matches the whole PR diff.
+  push:
+    paths:
+      - "scripts/stig/apply_stig_config.sh"
+      - "stig/validation-overlay/**"
+      - "stig/validation-legacy/**"
+      - "stig/inputs_timescaledb_ha_pg16_example.yml"
+      - "cicd/run-stig-validation"
+      - "cicd/start-stig-validation-target"
+      - "Dockerfile"
+      - "Makefile"
+      - ".github/workflows/stig-validation.yaml"
+
+concurrency:
+  group: stig-validation-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Build hardened PG16 image and run STIG validation
+    runs-on: ubuntu-22.04
+    timeout-minutes: 120
+    env:
+      PG_MAJOR: "16"
+      TIMESCALEDB_VERSIONS: latest
+      STIG_PG_PASSWORD: stig-validation-ci-only
+      STIG_TARGET_CONTAINER: ts-stig-validation
+
+    steps:
+      # The hardened build pulls in PostgreSQL and extension build artifacts and
+      # needs the extra space the hosted image otherwise occupies.
+      - name: Free up disk space
+        run: |
+          df -h
+          sudo rm -fr /usr/share/dotnet /usr/local/lib/android /opt/microsoft \
+                      /opt/hostedtoolcache /usr/local/.ghcup /usr/local/share/boost || true
+          sudo docker image prune --all --force || true
+          df -h
+
+      - name: Checkout code
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+
+      - name: Setup | Buildx
+        uses: docker/setup-buildx-action@8d2750c68a42422c14e847fe6c8ac0403b4cbd6f # v3.12.0
+        with:
+          buildkitd-config-inline: |
+            [worker.oci]
+              maxParallelism = 2
+
+      # build-stig sets DOCKER_TAG_POSTFIX=-all-stig and STIG_ENABLED=true; with
+      # PG_MAJOR=16 this loads localhost:5000/timescale/timescaledb-ha:pg16-all-stig
+      # into the local daemon (DOCKER_OUTPUT defaults to --load, so no push/login).
+      - name: Build hardened STIG image (PG16, latest TimescaleDB)
+        run: make build-stig PG_MAJOR=16 TIMESCALEDB_VERSIONS=latest
+
+      - name: Prune build cache
+        run: docker builder prune --force || true
+
+      - name: Start disposable hardened target
+        run: cicd/start-stig-validation-target
+
+      - name: Run repository STIG overlay
+        run: make validate-stig-overlay
+
+      # Non-blocking: executes the commit-pinned forked profile (requires network to
+      # fetch the dependency) and is expected to report failures until per-control
+      # PostgreSQL 16 verification is complete.
+      - name: Run forked legacy STIG profile
+        continue-on-error: true
+        run: make validate-stig-legacy
+
+      - name: Summarize results against traceability
+        if: always()
+        run: |
+          echo "## Overlay results"
+          scripts/stig/summarize_inspec_results.py \
+            .build/stig-validation/timescaledb-ha-pg16-overlay.json \
+            --traceability stig/postgres16-v1r2-traceability.json || true
+          if [ -f .build/stig-validation/timescaledb-ha-pg16-legacy.json ]; then
+            echo "## Legacy profile results"
+            scripts/stig/summarize_inspec_results.py \
+              .build/stig-validation/timescaledb-ha-pg16-legacy.json || true
+          fi
+
+      - name: Upload validation results
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: stig-validation-results
+          path: .build/stig-validation/*.json
+          if-no-files-found: warn
