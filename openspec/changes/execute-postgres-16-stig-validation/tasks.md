@@ -34,10 +34,12 @@ Notes: the 6 asserting overlay controls now carry non-zero impact (0.5 medium, 0
 
 ## 5. Extend Image Enforcement
 
-- [ ] 5.1 Identify image-enforceable controls currently deferred to deployment (TLS, `pg_hba` authentication methods, role-privilege baselines, FIPS-mode signaling)
-- [ ] 5.2 Add isolated STIG configuration fragments that apply these settings only in the hardened image or runtime mode
-- [ ] 5.3 Add overlay checks that observe each newly enforced setting
-- [ ] 5.4 Reclassify the newly enforced controls to `image_enforced` with executed validation evidence
+- [x] 5.1 Identify image-enforceable controls currently deferred to deployment (TLS, `pg_hba` authentication methods, role-privilege baselines, FIPS-mode signaling)
+- [x] 5.2 Add isolated STIG configuration fragments that apply these settings only in the hardened image or runtime mode
+- [x] 5.3 Add overlay checks that observe each newly enforced setting
+- [x] 5.4 Reclassify the newly enforced controls to `image_enforced` with executed validation evidence
+
+Notes: the adversarially-verified analysis found that TLS, `pg_hba` host-based authentication, and FIPS-mode signaling are genuinely deployment-owned (the image ships no certificates, the HA path delegates `pg_hba` to Patroni, and FIPS depends on the base platform) — they are correctly classified `deployment_owned`, not image-enforceable. The image-ownable settings were hardened in `apply_stig_config.sh` (`client_min_messages=error`, `statement_timeout`, `log_hostname=on`, the `%c`/`%a`/`%s` log-prefix fields, `pgaudit.log_catalog=on`) and the bin/lib directories made immutable via `ALLOW_ADDING_EXTENSIONS=false`. Repository-owned overlay controls were added (`client-message-settings`, `session-limit-settings`, extended `audit-identity-fields`) and V-261862/910/913/932/941/950 reclassified to `image_enforced`; the CI overlay run passed 12/12 against the built image, providing the executed validation evidence (image_enforced 24).
 
 ## 6. Guardrails and Status Semantics
 
@@ -66,10 +68,12 @@ Notes: chosen posture — the distinct `pg16-all-stig` image (built by `make bui
 
 ## 9. Final Verification
 
-- [ ] 9.1 Run `cicd/check-stig-mapping`
-- [ ] 9.2 Run `cicd/check-stig-traceability`
-- [ ] 9.3 Run `cicd/check-stig-workflow`
-- [ ] 9.4 Run the containerized STIG validation workflow against the hardened image and record final per-control results
-- [ ] 9.5 Update traceability with final executed pass, fail, candidate, manual, deployment-owned, and exception statuses
-- [ ] 9.6 Run `openspec validate execute-postgres-16-stig-validation --strict` and resolve any reported issues
-- [ ] 9.7 Verify no committed STIG artifact contains local paths, secrets, or copied benchmark prose
+- [x] 9.1 Run `cicd/check-stig-mapping`
+- [x] 9.2 Run `cicd/check-stig-traceability`
+- [x] 9.3 Run `cicd/check-stig-workflow`
+- [x] 9.4 Run the containerized STIG validation workflow against the hardened image and record final per-control results
+- [x] 9.5 Update traceability with final executed pass, fail, candidate, manual, deployment-owned, and exception statuses
+- [x] 9.6 Run `openspec validate execute-postgres-16-stig-validation --strict` and resolve any reported issues
+- [x] 9.7 Verify no committed STIG artifact contains local paths, secrets, or copied benchmark prose
+
+Notes: guardrails pass (`check-stig-mapping`/`check-stig-traceability`/`check-stig-workflow`); the `stig-validation` CI workflow is green — overlay 12/12 and the forked legacy profile 65 passed / 23 failed / 25 skipped against the built `pg16-all-stig` image. `openspec validate --strict` is clean; the leak scan matched only the guardrails' own detection regexes (no real local paths, secrets, or copied benchmark prose). Final classification: image_enforced 24, validation_only 51 (48 executed / 3 candidate), deployment_owned 31, exception 3, manual 2 (= 111). The 3 remaining candidates are dispositioned in the section 6/8 notes (disposable-harness log-mode artifact V-261880/895; deployment-provided-TLS V-261885).
